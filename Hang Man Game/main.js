@@ -9,7 +9,8 @@ for (var i = 0; i < word.length; i++) {
 }
 var remainingLetters = word.length;
 // The game loop
-while (remainingLetters > 0) {
+var trackGuess = true
+while (remainingLetters > 0 && remaingletters === trackGuess) {
     // show the player their progress
     alert(answerArray.join("."));
     // Get a guess from the Player
@@ -22,8 +23,11 @@ while (remainingLetters > 0) {
         // The length of the letter should be
     } else if (guess.length !== 1) {
         alert("Please enter a single letter 🤪 ");
+        // The case of letter should be lowercase
     } else if (guess.toLowerCase() !== guess) {
         alert("Please your letter should be lower case 😏 ");
+    } else if (answerArray === "_") {
+        alert("The letter is already Guess")
     } else {
         // Update the game state with the guess
         for (var j = 0; j < word.length; j++) {
