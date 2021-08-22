@@ -20,7 +20,7 @@ while (remainingLetters > 0 && remaingletters === trackGuess) {
     if (guess === null) {
         // exit the game loop
         break;
-        // The length of the letter should be
+        // The length of the letter should be single
     } else if (guess.length !== 1) {
         alert("Please enter a single letter 🤪 ");
         // The case of letter should be lowercase
