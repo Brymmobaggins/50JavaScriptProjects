@@ -1,5 +1,5 @@
 // create an array of words
-var words = ["commandment", "computer", "language", "controversy", "amazing", "government"]
+var words = ["commandment", "education", "language", "controversy", "amazing", "government"]
 // pick a random words
 var word = words[Math.floor(Math.random() * words.length)]
 
@@ -9,8 +9,7 @@ for (var i = 0; i < word.length; i++) {
 }
 var remainingLetters = word.length;
 // The game loop
-var trackGuess = true
-while (remainingLetters > 0 && remaingletters === trackGuess) {
+while (remainingLetters > 0) {
     // show the player their progress
     alert(answerArray.join("."));
     // Get a guess from the Player
@@ -22,10 +21,10 @@ while (remainingLetters > 0 && remaingletters === trackGuess) {
         break;
         // The length of the letter should be single
     } else if (guess.length !== 1) {
-        alert("Please enter a single letter 🤪 ");
+        alert("Please enter a single letter 😏 ");
         // The case of letter should be lowercase
     } else if (guess.toLowerCase() !== guess) {
-        alert("Please your letter should be lower case 😏 ");
+        alert("Please your letter should be lower case 🤪 ");
     } else if (answerArray === "_") {
         alert("The letter is already Guess")
     } else {
