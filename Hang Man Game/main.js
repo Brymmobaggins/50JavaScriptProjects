@@ -19,7 +19,7 @@ var showPlayerProgress = function (answerArray) {
 
 var getGuess = function () {
     // Get a guess from the Player
-    return prompt("Guess a letter, or click Cancel to stop playing.");
+    return prompt("Guess a letter, or click Cancel to stop playing 💁🏼‍♂️");
 };
 
 var updateGameState = function (guess, word, answerArray) {
@@ -35,13 +35,12 @@ var updateGameState = function (guess, word, answerArray) {
 
 var showAnswerAndCongratulatePlayer = function (answerArray) {
     showPlayerProgress(answerArray);
-    alert("Good job! The answer was " + answerArray.join(""));
+    alert("Good job! The answer was " + answerArray.join("").toUpperCase() + " 👍🏿");
 };
 
 var word = pickWord();
 var answerArray = setupAnswerArray(word);
 var remainingLetters = word.length;
-
 
 while (remainingLetters > 0) {
     showPlayerProgress(answerArray);
@@ -49,9 +48,9 @@ while (remainingLetters > 0) {
     if (guess === null) {
         break;
     } else if (guess.length !== 1) {
-        alert("Please enter a single letter 🤪");
+        alert("Please enter a single letter 🤪.");
     } else if (guess === guess.toUpperCase()) {
-        alert("The letter should be lowercase 🤪");
+        alert("Please the letter should be lowercase 🙄.");
     } else {
         var correctGuesses = updateGameState(guess, word, answerArray);
         remainingLetters -= correctGuesses;
