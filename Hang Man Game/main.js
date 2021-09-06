@@ -35,7 +35,7 @@ var updateGameState = function (guess, word, answerArray) {
 
 var showAnswerAndCongratulatePlayer = function (answerArray) {
     showPlayerProgress(answerArray);
-    alert("Good job! The answer was " + answerArray.join("").toUpperCase() + " 👍🏿");
+    alert("Good job! The answer was " + answerArray.join(" ").toUpperCase() + " 👍🏿");
 };
 
 var word = pickWord();
