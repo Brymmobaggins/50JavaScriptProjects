@@ -1,6 +1,7 @@
 const select = document.querySelector('select')
 const list = document.querySelector('ul')
 const h2 = document.querySelector('h2')
+const html = document.querySelector('html')
 
 
 // add `onchange` event handler to detect when the value of `select` menu is changed
@@ -27,3 +28,4 @@ function createCalender(days, choice) {
     }
 }
 createCalender(31, "")
+
