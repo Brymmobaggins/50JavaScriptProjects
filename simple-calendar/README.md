@@ -3,7 +3,7 @@
 
 ## Preview
 
-
+![img](img/simple-calendar-screenshot.png)
 
 ### Built with
   
