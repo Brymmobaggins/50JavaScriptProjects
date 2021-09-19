@@ -16,7 +16,6 @@ select.onchange = function () {
     createCalender(days, choice)
 }
 
-
 // function to look up days and selected and month
 function createCalender(days, choice) {
     list.innerHTML = ""
