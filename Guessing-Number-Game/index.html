@@ -45,11 +45,13 @@ html {
       input[type="submit"]:focus{
         transition: scale(2,9);
       }
-      
-      
       .lastResult {
         color: white;
         padding: 3px;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.5rem;
+      
       }
 </style>
   <body>
@@ -58,11 +60,11 @@ html {
       <p>We have selected a random <b>NUMBER</b> between 1 and 100. See if you can guess it in 10 turns or less. We'll tell you if your guess was too high or low.
       </p>
       <div class="form">
-        <label for="guessfield">Enter a Guess:</label>
-        <input type="text" name="guessField" id="guessField">
-        <input type="submit" value="Submit Guess" class="guessField">
+        <label for="guessField">Enter a Guess:</label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit Guess" class="guessSubmit">
       </div>
-      <div class="guessParas">
+      <div class="resultParas">
         <p class="guesses"></p>
         <p class="lastResult"></p>
         <p class="lowOrHi"></p>
