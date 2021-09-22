@@ -24,22 +24,22 @@ function checkGuess() {
         lastResult.style.backgroundColor = "Green"
         lowOrHi.textContent = ""
         setGameOver();
-
     } else if (guessCount === 10) {
         lastResult.textContent = " GAME OVER!!!"
-        lastResult.style.backgroundColor = "blue"
+        lastResult.style.backgroundColor = "#2e6aa7"
+        lowOrHi.textContent = ""
         setGameOver()
     } else {
         lastResult.textContent = " Your Guess is Wrong 😩!"
-        lastResult.style.backgroundColor = "Red"
+        lastResult.style.backgroundColor = "#b13c3c"
         if (playerGuess < randomNum) {
             lowOrHi.textContent = " Your Guess is less than 1"
         } else if (playerGuess > randomNum) {
-            lastResult.textContent = " Your Guess is greater 100"
+            lastResult.textContent = " Your Guess should be between 1 and 100"
         }
     }
     guessCount++
-    guessField.value = ""
+    // guessField.value = ""
     guessField.focus()
 }
 guessSubmit.addEventListener("click", checkGuess)
@@ -69,5 +69,5 @@ function resetGame() {
     guessField.focus();
 
     lastResult.style.backgroundColor = "White"
-    randomNumber = Math.floor(Math.random()) + 1;
+    randomNum = Math.floor(Math.random()) + 1;
 }
