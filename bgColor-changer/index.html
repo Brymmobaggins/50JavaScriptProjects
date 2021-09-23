@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    button {
+      display: block;
+      margin: 15rem auto;
+      max-width: 100%;
+      padding: 2rem;
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: "tahoma";
+      letter-spacing: 2px;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <button>Click Me🤪</button>
+    <script>
+      const btn = document.querySelector("button");
+
+      // return the random value of rgba
+      function random(number) {
+        return Math.floor(Math.random() * number);
+      }
+
+      // function to run whenever the button is clicked
+      btn.addEventListener("click", function (e) {
+        let rdColor =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+        document.body.style.backgroundColor = rdColor;
+      });
+    </script>
+  </body>
+</html>
