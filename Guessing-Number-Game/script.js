@@ -1,5 +1,5 @@
 // get random number from 1 and 100
-const randomNum = Math.floor(Math.random() * 100) + 1
+let randomNum = Math.floor(Math.random() * 100) + 1
 
 const guesses = document.querySelector(".guesses")
 const lastResult = document.querySelector(".lastResult")
@@ -20,26 +20,26 @@ function checkGuess() {
     guesses.textContent += playerGuess + "  "
 
     if (playerGuess === randomNum) {
-        lastResult.textContent = " Congratulations You Got it Right"
-        lastResult.style.backgroundColor = "Green"
+        lastResult.textContent = " Congratulations! You Got it Right🏅"
+        lastResult.style.color = "Green"
         lowOrHi.textContent = ""
         setGameOver();
     } else if (guessCount === 10) {
         lastResult.textContent = " GAME OVER!!!"
-        lastResult.style.backgroundColor = "#2e6aa7"
         lowOrHi.textContent = ""
         setGameOver()
     } else {
         lastResult.textContent = " Your Guess is Wrong 😩!"
-        lastResult.style.backgroundColor = "#b13c3c"
+        lastResult.style.color = "#b13c3c"
         if (playerGuess < randomNum) {
-            lowOrHi.textContent = " Your Guess is less than 1"
+            lowOrHi.textContent = " Your Guess was too low"
         } else if (playerGuess > randomNum) {
-            lastResult.textContent = " Your Guess should be between 1 and 100"
+            lowOrHi.textContent = " Your Guess was too high"
+            // lastResult.textContent = " Your Guess should be between 1 and 100"
         }
     }
     guessCount++
-    // guessField.value = ""
+    guessField.value = ""
     guessField.focus()
 }
 guessSubmit.addEventListener("click", checkGuess)
@@ -51,23 +51,21 @@ function setGameOver() {
     guessSubmit.disabled = true
     resetButton = document.createElement("button")
     resetButton.textContent = " Start new Game"
-    document.body.appendChild("resetButton")
+    document.body.appendChild(resetButton)
     resetButton.addEventListener("click", resetGame)
 
 }
 function resetGame() {
     guessCount = 1
-    let resetParas = document.querySelectorAll(".resetParas p")
-    for (var i = 0; i < resetParas.length; i++) {
+    const resetParas = document.querySelectorAll(".resultParas p")
+    for (let i = 0; i < resetParas.length; i++) {
         resetParas[i].textContent = ""
     }
     resetButton.parentNode.removeChild(resetButton)
-
     guessField.disabled = false
     guessSubmit.disabled = false
     guessField.value = ""
     guessField.focus();
 
-    lastResult.style.backgroundColor = "White"
-    randomNum = Math.floor(Math.random()) + 1;
+    randomNum = Math.floor(Math.random() * 100) + 1;
 }

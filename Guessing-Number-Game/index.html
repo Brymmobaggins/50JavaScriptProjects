@@ -45,7 +45,6 @@ html {
         transition: scale(2,9);
       }
       .lastResult {
-        color: #fafdff;
         padding: 3px;
         text-align: center;
         margin-top: 10px;
@@ -53,11 +52,20 @@ html {
         letter-spacing: 2px;
         border-radius:10px;      
       }
+      button{
+        padding: 10px;
+        border-radius:10px;
+        border: 2px solid #008000;
+        cursor: pointer; 
+        color: white;
+        letter-spacing: 1px;
+        background-color:#008000; 
+      }
 </style>
   <body>
     <div class="container">
       <h1>Guessing Game</h1>
-      <p>We have selected a random <b>NUMBER</b> between 1 and 100. See if you can guess it in 10 turns or less. We'll tell you if your guess was too high or low.
+      <p>We have selected a random <b>NUMBER</b> between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or low.
       </p>
       <div class="form">
         <label for="guessField">Enter a Guess:</label>
