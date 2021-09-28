@@ -29,13 +29,16 @@ function checkGuess() {
         lowOrHi.textContent = ""
         setGameOver()
     } else {
-        lastResult.textContent = " Your Guess is Wrong 😩!"
+        lastResult.textContent = " Your Guess is Wrong 😩"
         lastResult.style.color = "#b13c3c"
         if (playerGuess < randomNum) {
             lowOrHi.textContent = " Your Guess was too low"
         } else if (playerGuess > randomNum) {
             lowOrHi.textContent = " Your Guess was too high"
-            // lastResult.textContent = " Your Guess should be between 1 and 100"
+        } else if (playerGuess !== randomNum) {
+            lastResult.textContent = " Your Guess should be Number value 🤔"
+            lastResult.style.color = "#004680"
+            // guesses.textContent += playerGuess + " is not number "
         }
     }
     guessCount++
