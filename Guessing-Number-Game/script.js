@@ -20,7 +20,7 @@ function checkGuess() {
     guesses.textContent += playerGuess + "  "
 
     if (playerGuess === randomNum) {
-        lastResult.textContent = " Congratulations! You Got it Right🏅"
+        lastResult.textContent = "Congratulations! You Got it Right🏅"
         lastResult.style.color = "Green"
         lowOrHi.textContent = ""
         setGameOver();
@@ -29,16 +29,16 @@ function checkGuess() {
         lowOrHi.textContent = ""
         setGameOver()
     } else {
-        lastResult.textContent = " Your Guess is Wrong 😩"
+        lastResult.textContent = "Your Guess is Wrong 😩"
         lastResult.style.color = "#b13c3c"
         if (playerGuess < randomNum) {
-            lowOrHi.textContent = " Your Guess was too low"
+            lowOrHi.textContent = "Your Guess was too low"
         } else if (playerGuess > randomNum) {
-            lowOrHi.textContent = " Your Guess was too high"
+            lowOrHi.textContent = "Your Guess was too high"
         } else if (playerGuess !== randomNum) {
-            lastResult.textContent = " Your Guess should be Number value 🤔"
+            lastResult.textContent = "Your Guess should be Number value 🤔"
             lastResult.style.color = "#004680"
-            // guesses.textContent += playerGuess + " is not number "
+            lowOrHi.textContent = " "
         }
     }
     guessCount++
