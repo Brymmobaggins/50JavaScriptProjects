@@ -36,7 +36,7 @@ function checkGuess() {
         } else if (playerGuess > randomNum) {
             lowOrHi.textContent = "Your Guess was too high"
         } else if (playerGuess !== randomNum) {
-            lastResult.textContent = "Your Guess should be Number value 🤔"
+            lastResult.textContent = "Your Guess is not Number 🤔"
             lastResult.style.color = "#004680"
             lowOrHi.textContent = " "
         }
