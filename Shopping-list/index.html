@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping list</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style></style>
+  <body>
+    <header>
+      <h1>My Shopping list</h1>
+    </header>
+    <div>
+      <label for="item">Enter New item</label>
+      <input type="text" id="item" name="item" />
+      <button>Add item</button>
+    </div>
+    <ul></ul>
+    <script>
+      const input = document.getElementById("item");
+      const btn = document.querySelector("button");
+      const ul = document.querySelector("ul");
+
+      btn.addEventListener("click", function () {
+        let myItem = input.value;
+        input.value = "";
+
+        // create an element that hold reference to the list
+        const listItem = document.createElement("li");
+        const listText = document.createElement("span");
+        const listBtn = document.createElement("button");
+
+        listItem.appendChild(listText);
+        listText.textContent = myItem;
+
+        listItem.appendChild(listBtn);
+        listBtn.textContent = "Delete";
+        ul.appendChild(listItem);
+
+        listBtn.onclick = function (e) {
+          ul.removeChild(listItem);
+        };
+        input.focus();
+      });
+    </script>
+  </body>
+</html>
