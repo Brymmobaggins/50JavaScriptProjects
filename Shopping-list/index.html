@@ -5,45 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping list</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
-  <style></style>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    html {
+      font-family: "tahoma";
+      background-color: #e5d1b7;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    div {
+      margin: 4rem 10rem;
+    }
+    input {
+      outline: 0;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 15px;
+      letter-spacing: 0.1px;
+      width: 30%;
+    }
+    ::placeholder {
+      color: #898a8b5b;
+      letter-spacing: 0.5px;
+    }
+    button {
+      padding: 12px;
+      background-color: #3b8663;
+      color: #fbfcfd;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      border: none;
+    }
+    button:hover {
+      cursor: pointer;
+      opacity: 0.91;
+    }
+    p {
+      display: block;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #c43131;
+    }
+    li {
+      margin: 0rem 0rem 1.5rem 1.5rem;
+    }
+    li:nth-child(1) {
+      margin-top: 1.5rem;
+    }
+    li button {
+      margin: 0rem 0rem 0rem 5rem;
+      padding: 7px;
+      background-color: #c43131;
+    }
+  </style>
   <body>
-    <header>
-      <h1>My Shopping list</h1>
-    </header>
     <div>
-      <label for="item">Enter New item</label>
-      <input type="text" id="item" name="item" />
+      <h1>Groceries list</h1>
+      <input type="text" id="item" name="item" placeholder="e.g Eggs" />
       <button>Add item</button>
+      <p></p>
+      <ul></ul>
     </div>
-    <ul></ul>
-    <script>
-      const input = document.getElementById("item");
-      const btn = document.querySelector("button");
-      const ul = document.querySelector("ul");
-
-      btn.addEventListener("click", function () {
-        let myItem = input.value;
-        input.value = "";
-
-        // create an element that hold reference to the list
-        const listItem = document.createElement("li");
-        const listText = document.createElement("span");
-        const listBtn = document.createElement("button");
-
-        listItem.appendChild(listText);
-        listText.textContent = myItem;
-
-        listItem.appendChild(listBtn);
-        listBtn.textContent = "Delete";
-        ul.appendChild(listItem);
-
-        listBtn.onclick = function (e) {
-          ul.removeChild(listItem);
-        };
-        input.focus();
-      });
-    </script>
+    <script defer src="script.js"></script>
   </body>
 </html>
