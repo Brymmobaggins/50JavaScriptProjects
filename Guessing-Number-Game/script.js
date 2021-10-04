@@ -25,7 +25,7 @@ function checkGuess() {
         lowOrHi.textContent = ""
         setGameOver();
     } else if (guessCount === 10) {
-        lastResult.textContent = " GAME OVER!!!"
+        lastResult.textContent = "GAME OVER!!!"
         lowOrHi.textContent = ""
         setGameOver()
     } else {
@@ -53,7 +53,7 @@ function setGameOver() {
     guessField.disabled = true
     guessSubmit.disabled = true
     resetButton = document.createElement("button")
-    resetButton.textContent = " Start new Game"
+    resetButton.textContent = "Start new Game"
     document.body.appendChild(resetButton)
     resetButton.addEventListener("click", resetGame)
 
