@@ -11,7 +11,7 @@ btn.addEventListener("click", function () {
     const listBtn = document.createElement("button");
 
     listItem.appendChild(listText);
-    listText.textContent = input.value;
+    listText.textContent = myItem;
 
     listItem.appendChild(listBtn);
     listBtn.textContent = "Delete";
