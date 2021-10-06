@@ -10,32 +10,40 @@
     * {
       padding: 0;
       margin: 0;
+      box-sizing: border-box;
     }
     html {
       font-family: "tahoma";
-      background-color: #e5d1b7;
+      background-color: #f0d4b1;
     }
-    h1 {
-      margin-bottom: 1.5rem;
-      letter-spacing: 1px;
+    h2 {
+      margin-top: 4rem;
+      text-align: center;
     }
     div {
-      margin: 4rem 10rem;
+      margin: 0.1rem auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      max-width: 400px;
     }
     input {
       outline: 0;
+      margin: 20px 0px;
       padding: 10px 15px;
       border-radius: 5px;
       font-size: 15px;
       letter-spacing: 0.1px;
-      width: 30%;
+      width: 100%;
     }
     ::placeholder {
       color: #898a8b5b;
       letter-spacing: 0.5px;
     }
     button {
-      padding: 12px;
+      padding: 5px;
+      margin: 7px;
       background-color: #3b8663;
       color: #fbfcfd;
       letter-spacing: 1px;
@@ -46,17 +54,18 @@
       cursor: pointer;
       opacity: 0.91;
     }
-    p {
-      display: block;
-      margin-top: 5px;
+    /* p {
       font-size: 12px;
       color: #c43131;
-    }
+      margin-top: 4rem;
+      top: auto;
+    } */
     li {
       margin: 0rem 0rem 1.5rem 1.5rem;
+      align-self: center;
     }
     li:nth-child(1) {
-      margin-top: 1.5rem;
+      margin-top: 0.5rem;
     }
     li button {
       margin: 0rem 0rem 0rem 5rem;
@@ -65,13 +74,13 @@
     }
   </style>
   <body>
+    <h2>Shopping list</h2>
     <div>
-      <h1>My Shopping list</h1>
-      <input type="text" id="item" name="item" placeholder="e.g Eggs" />
+      <input type="text" id="item" name="item" placeholder="e.g Green salad" />
+      <!-- <p></p> -->
       <button>Add item</button>
-      <p></p>
-      <ul></ul>
     </div>
+    <ul style="display: flex; flex-direction: column"></ul>
     <script defer src="script.js"></script>
   </body>
 </html>

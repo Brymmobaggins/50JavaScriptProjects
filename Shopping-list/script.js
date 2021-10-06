@@ -5,7 +5,13 @@ const ul = document.querySelector("ul");
 btn.addEventListener("click", function () {
     let myItem = input.value;
     input.value = "";
-    
+
+    // condition to check if the input value is empty
+    if (myItem === "") {
+        e.preventDefault()   // to prevent default submit
+    } else {
+    }
+
     const listItem = document.createElement("li");
     const listText = document.createElement("span");
     const listBtn = document.createElement("button");
@@ -16,8 +22,8 @@ btn.addEventListener("click", function () {
     listItem.appendChild(listBtn);
     listBtn.textContent = "Delete";
     ul.appendChild(listItem);
-     
-    // button click to when is to deleted
+
+    // delete the listitem
     listBtn.onclick = function (e) {
         ul.removeChild(listItem);
     };
