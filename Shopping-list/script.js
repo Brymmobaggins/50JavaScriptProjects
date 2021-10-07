@@ -1,6 +1,7 @@
 const input = document.getElementById("item");
 const btn = document.querySelector("button");
 const ul = document.querySelector("ul");
+const para = document.querySelector("p")
 
 btn.addEventListener("click", function () {
     let myItem = input.value;
@@ -8,8 +9,10 @@ btn.addEventListener("click", function () {
 
     // condition to check if the input value is empty
     if (myItem === "") {
+        para.textContent = "Enter an item and add it to your list"
         e.preventDefault()   // to prevent default submit
     } else {
+        para.textContent = ""
     }
 
     const listItem = document.createElement("li");
