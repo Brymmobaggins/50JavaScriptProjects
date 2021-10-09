@@ -9,7 +9,7 @@
   
 ## Preview
 
-![alt](img/Screen%20Shot%202021-10-03%20at%203.36.04%20AM.png)
+![alt](img/Screen%20Shot%202021-10-08%20at%204.19.59%20PM.png)
 
 ## Built with
 
