@@ -1,5 +1,8 @@
-# Simple Calender of the year
+# Simple calender of the year
 
+## Link
+
+[Live demo](https://calendar-simple.netlify.app/)
 
 ## Preview
 
@@ -10,5 +13,4 @@
 - HTML
 - CSS
 - JavaScript
-
 
