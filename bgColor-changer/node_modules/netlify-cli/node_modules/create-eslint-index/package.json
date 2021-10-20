@@ -1,0 +1,47 @@
+{
+  "name": "create-eslint-index",
+  "version": "1.0.0",
+  "description": "Simplify the creation an index file for your ESLint plugin",
+  "license": "MIT",
+  "repository": "jfmengels/create-eslint-index",
+  "author": {
+    "name": "Jeroen Engels",
+    "email": "jfm.engels@gmail.com",
+    "url": "github.com/jfmengels"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "helper",
+    "index"
+  ],
+  "dependencies": {
+    "lodash.get": "^4.3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.15.1",
+    "coveralls": "^2.11.9",
+    "nyc": "^6.4.0",
+    "req-all": "^0.1.0",
+    "xo": "^0.15.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "xo": {
+    "esnext": true,
+    "space": 2
+  }
+}
