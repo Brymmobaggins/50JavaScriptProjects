@@ -8,4 +8,6 @@
 - CSS
 - Javascript
 
-# Live Demo
+## Live Demo
+
+[Live Demo](https://number-gaming.netlify.app/)
