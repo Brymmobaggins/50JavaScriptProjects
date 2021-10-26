@@ -20,4 +20,5 @@
 - HTML
 - CSS
 - JavaScript
+- Netlify
   
