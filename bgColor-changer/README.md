@@ -4,7 +4,7 @@
 
 ## links
 
-[Live Demo]( https://bgcolour.netlify.app/)
+[Live Demo](https://bgcolour.netlify.app/)
 
 ## Built with
 
