@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: helvetica, sans-serif;
+  width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2b2626;
+}
+
+label {
+  font-size: 20px;
+  color: aliceblue;
+}
+label[for="us"],
+label[for="uk"] {
+  margin-left: 15px;
+  font-size: 15px;
+}
+div {
+  padding-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 150px;
+}
+input[type="radio"] {
+  margin: 5px;
+  outline: 0;
+  background-color: #2b2626;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  background:#328532;
+  border: 0;
+  color: white;
+}
+p {
+  background: #ffc125;
+  color: #5e2612;
+  padding: 10px;
+  visibility: hidden;
+}
