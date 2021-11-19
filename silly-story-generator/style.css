@@ -38,9 +38,14 @@ button {
   padding: 10px;
   cursor: pointer;
   border-radius: 6px;
-  background:#328532;
+  background: #328532;
   border: 0;
   color: white;
+}
+button:hover,
+:focus {
+  opacity: 9;
+  border: 1px solid white;
 }
 p {
   background: #ffc125;
