@@ -9,8 +9,8 @@ function checkValid() {
   let password = document.getElementById("password").value;
   let email = document.getElementById("email").value;
   let passRGEX = /^[A-Z]*$/; // five capital letters
-  let userRGEX = /^[A-Za-z]+$/; // 
-  let emailRGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  let userRGEX = /^[A-Za-z]+$/; // only letters without spaces
+  let emailRGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/; // email validtion
 
   if (username === "") {
     showError(username, "username cannot be empty");
