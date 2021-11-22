@@ -15,9 +15,10 @@ body {
 .container {
   margin: 10em auto;
   height: 320px;
-  width: 300px;
+  width: 350px;
   padding: 10px;
   max-width: 100%;
+  /* border: 1px solid wheat; */
 }
 label {
   text-align: start;
@@ -39,10 +40,17 @@ label {
   text-align: right;
   right: 0;
   bottom: -15px;
+  /* display: ; */
 }
 .form-control.error small {
-  /* display: block; */
-  color: #ff1e00;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 100;
+  color: #d62e17;
+}
+.form-control.error input {
+  border: 2px solid #d62e17;
+  display: block;
 }
 
 .btn {
@@ -50,6 +58,6 @@ label {
   background: green;
   color: #f3f0e9;
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 20px;
   border-radius: 5px;
 }
