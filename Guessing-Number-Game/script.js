@@ -11,7 +11,6 @@ let guessCount = 1
 let resetButton;
 
 
-
 function checkGuess() {
     let playerGuess = Number(guessField.value)
     if (guessCount === 1) {

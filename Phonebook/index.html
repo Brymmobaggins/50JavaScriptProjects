@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      body {
+        background: black;
+        color: aliceblue;
+        margin: 0 auto;
+      }
+      input {
+        padding: 10px 5px;
+        width: 20%;
+        border-radius: 4px;
+      }
+      button {
+        padding: 10px;
+        margin-left: 10px;
+      }
+      p {
+        position: absolute;
+        top: 80px;
+        bottom: 0;
+        font-size: 25px;
+      }
+      span {
+        position: absolute;
+        top: 100%;
+        right: 43%;
+
+        font-size: 14px;
+        font-style: italic;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="title" style="text-align: center; margin-top: 4em">
+      Phone Book
+    </h1>
+    <div class="container">
+      <label for=""></label>
+      <input type="text" id="search" /> <button>Search</button>
+      <span></span>
+      <p></p>
+    </div>
+    <script>
+      const input = document.querySelector("input");
+      const btn = document.querySelector("button");
+      const para = document.querySelector("p");
+      const error = document.querySelector("span");
+
+      const contact = [
+        "Ayomide:08181468929",
+        "Papyne:08090635599",
+        "Ade:08037353036",
+        "Afo:08170705742",
+        "Mumsy:08056883428",
+        "Mtn:08062275159",
+      ];
+
+      btn.addEventListener("click", function () {
+        const searchContact = input.value;
+        input.value = "";
+        input.focus();
+
+        for (let i = 0; i < contact.length; i++) {
+          const splitContact = contact[i].split(":");
+          if (searchContact === "") {
+            error.textContent = "Your search cannot be empty";
+          } else if (splitContact[0].toLowerCase() === searchContact) {
+            para.textContent =
+              splitContact[0] + "'s  number is " + splitContact[1] + ".";
+            break;
+          } else {
+            para.textContent = "Contact cannot be found";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
