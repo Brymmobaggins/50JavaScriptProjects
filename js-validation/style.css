@@ -36,7 +36,6 @@ label {
 }
 .form-control small {
   position: absolute;
-  text-align: right;
   right: 0;
   bottom: -15px;
 }
