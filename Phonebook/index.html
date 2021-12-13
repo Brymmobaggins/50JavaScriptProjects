@@ -18,17 +18,16 @@
         margin: 0 auto;
       }
       input {
-        padding: 10px ;
+        padding: 10px;
         width: 20%;
         border-radius: 4px;
-        outline: 2px solid blue;
+        display: block;
       }
       button {
         padding: 10px;
         margin-left: 10px;
         border-radius: 4px;
-        cursor:pointer;
-      
+        cursor: pointer;
       }
       p {
         position: absolute;
@@ -69,20 +68,24 @@
         "Afo:08170705742",
         "Mumsy:08056883428",
         "Mtn:08062275159",
+        "Mariam:07089827591",
+        "Zainab:07037445228"
       ];
 
       btn.addEventListener("click", function () {
         const searchContact = input.value;
+
+        // empty the search input and focus it, ready for the next term to be entered
         input.value = "";
         input.focus();
 
         for (let i = 0; i < contact.length; i++) {
           const splitContact = contact[i].split(":");
           if (searchContact === "") {
-            error.textContent = "Your search cannot be empty";
+            error.textContent = "your search cannot be empty";
           } else if (splitContact[0].toLowerCase() === searchContact) {
             para.textContent =
-              splitContact[0] + "'s  number is " + splitContact[1] + ".";
+              splitContact[0] + "\'s  number is " + splitContact[1] + ".";
             break;
           } else {
             para.textContent = "Contact cannot be found";

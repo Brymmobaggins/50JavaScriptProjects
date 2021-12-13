@@ -2,10 +2,8 @@
 
 ## key concept
 
-- Multidimensional array
 - Eventt Listeners
-- for loop
-  
+- for loop and array
 
 ## Buit width
 
