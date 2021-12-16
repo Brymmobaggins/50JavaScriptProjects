@@ -15,13 +15,11 @@
       body {
         background: black;
         color: aliceblue;
-        margin: 0 auto;
       }
       input {
         padding: 10px;
-        width: 20%;
         border-radius: 4px;
-        display: block;
+        width: 20%;
       }
       button {
         padding: 10px;
@@ -69,7 +67,7 @@
         "Mumsy:08056883428",
         "Mtn:08062275159",
         "Mariam:07089827591",
-        "Zainab:07037445228"
+        "Zainab:07037445228",
       ];
 
       btn.addEventListener("click", function () {
@@ -85,7 +83,7 @@
             error.textContent = "your search cannot be empty";
           } else if (splitContact[0].toLowerCase() === searchContact) {
             para.textContent =
-              splitContact[0] + "\'s  number is " + splitContact[1] + ".";
+              splitContact[0] + "'s  number is " + splitContact[1] + ".";
             break;
           } else {
             para.textContent = "Contact cannot be found";

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function Library</title>
+  </head>
+  <body style="background: black; text-align: center; font-family: 'tahoma'">
+    <input
+      type="text"
+      class="numberClass"
+      style="padding: 10px ; font-size: 17px; margin-top: 4rem"
+    />
+    <p style="font-size: 20px; color: white"></p>
+    <script>
+      const input = document.querySelector(".numberClass");
+      const para = document.querySelector("p");
+
+      //  function to find the cube of a number
+      function cubed(num) {
+        return num * num * num;
+      }
+
+      //   function to find square of num
+      function squared(num) {
+        return num * num;
+      }
+      //  function to fing the factorial of a num
+      function factorial(num) {
+        var x = num;
+        while (x > 1) {
+          num *= x - 1;
+          x--;
+        }
+        return num;
+      }
+      //   function to find the cube root of a number
+      function cubedroot(num) {
+        return Math.cbrt(num);
+      }
+
+      // function to find the squareroot of a number
+      function squareRoot(num) {
+        return Math.sqrt(num);
+      }
+
+      input.onchange = function () {
+        let num = input.value;
+
+        if (isNaN(num)) {
+          para.textContent = "This is not a Number";
+        } else {
+          para.textContent =
+            num +
+            " Cubed is " +
+            cubed(num) +
+            ". " +
+            num +
+            " Squared is " +
+            squared(num) +
+            ". " +
+            num +
+            " factorial is " +
+            factorial(num) +
+            ". " +
+            num +
+            " Square root is " +
+            squareRoot(num) +
+            ". ";
+        }
+      };
+    </script>
+  </body>
+</html>
