@@ -2,8 +2,9 @@
 
 ## key concept
 
-- Eventt Listeners
+- Event Listeners
 - for loop and array
+- DOM methods
 
 ## Buit width
 
