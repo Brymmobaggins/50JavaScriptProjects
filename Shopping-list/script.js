@@ -16,15 +16,15 @@ btn.addEventListener("click", function () {
     }
 
     const listItem = document.createElement("li");
-    const listText = document.createElement("span");
-    const listBtn = document.createElement("button");
-
-    listItem.appendChild(listText);
-    listText.textContent = myItem;
-
-    listItem.appendChild(listBtn);
-    listBtn.textContent = "Delete";
     ul.appendChild(listItem);
+
+    const listText = document.createElement("span");
+    listText.textContent = myItem;
+    listItem.appendChild(listText);
+    
+    const listBtn = document.createElement("button");
+    listBtn.textContent = "Delete";
+    listItem.appendChild(listBtn);
 
     // delete the listitem
     listBtn.onclick = function (e) {
