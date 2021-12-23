@@ -1,4 +1,4 @@
-const playButton = document.getElementById('Play')
+const playButton = document.getElementById('play')
 const stopButton = document.getElementById('stop')
 const circle = document.getElementsByClassName("circle")
 const title = document.getElementById('title')
@@ -6,8 +6,8 @@ const title = document.getElementById('title')
 function onLight() {
     for (let i = 0; i < circle.length; i++) {
         circle[i].removeAttribute("style")
-        // circle[i].animationPlayState = "running"
-        // circle[i].WebkitAnimationPlayState = "running"
+        // circle[i].style.animationPlayState = "running"
+        // circle[i].style.WebkitAnimationPlayState = "running"
     }
 }
 
@@ -18,5 +18,5 @@ function offLight() {
         circle[i].style.background = "#563260"
     }
 }
-stopButton.addEventListener('click', offLight)
 playButton.addEventListener('click', onLight)
+stopButton.addEventListener('click', offLight)

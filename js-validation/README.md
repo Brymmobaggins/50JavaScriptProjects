@@ -20,4 +20,4 @@ for this project there are three required inputs for validation.
 - Logic conditions
 - resuable functions
 - Event listeners
-- buit in methods
+- Built in methods

@@ -1,7 +1,9 @@
-## function Library
+# function Library
 
-### key concept
+function to find the Square, Squareroot, Cubed, Cuberoot and factorial of a number.
 
-- function
+## key concept
+
+- DOM method
 - Return keyword
 - Event

@@ -8,7 +8,7 @@
 ## Built with
 
 - Html
-- CSS animation
+- CSS 
 - Vanilla Javascript
 
 ## key concept
@@ -16,6 +16,7 @@
 - Event
 - Animation
 - for loop
+- Dom methods
 
 ## useful resource
 

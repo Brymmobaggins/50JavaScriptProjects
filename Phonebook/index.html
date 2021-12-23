@@ -75,23 +75,22 @@
         // empty the search input and focus it, ready for the next term to be entered
         input.value = "";
         input.focus();
-
         for (let i = 0; i < contact.length; i++) {
           const splitContact = contact[i].split(":");
           if (searchContact === "") {
             error.textContent = "your search cannot be empty";
           } else if (searchContact === splitContact[0].toLowerCase()) {
             para.textContent =
-              splitContact[0] + "\'s  number is " + splitContact[1] + ".";
-          } else if(searchContact === splitContact[1]){
-             para.textContent = " This number belongs to " + splitContact[0] + "."      
+              splitContact[0] + "'s  number is " + splitContact[1] + ".";
+          // } else if (searchContact === splitContact[1]) {
+          //   para.textContent =
+          //     " This number belongs to " + splitContact[0] + ".";
             break;
           } else {
             para.textContent = "Contact cannot be found";
           }
         }
       });
-    
     </script>
   </body>
 </html>

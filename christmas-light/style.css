@@ -34,6 +34,7 @@ body {
   letter-spacing: 5px;
   font-size: 1.5rem;
   text-shadow: 0 0 30px white;
+  text-align: center;
 }
 .circle {
   display: flex;
@@ -170,7 +171,6 @@ body {
 }
 .r {
   color: #4169e1;
-  animation: glow-1 1s ease-in-out;
 }
 .a {
   color: #68b394;
