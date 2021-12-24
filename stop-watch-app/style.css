@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #e9a9c3;
+  font-family: "luckiest Guy";
+}
+
+.container {
+  margin: 150px auto;
+  text-align: center;
+  position: relative;
+}
+p {
+  padding: 20px;
+  font-size: 12rem;
+  color: hsl(180, 10%, 57%);
+}
+span {
+  letter-spacing: 2px;
+  padding: 5px;
+}
+button {
+  border: none;
+  border-radius: 7px;
+  padding: 20px 10px;
+  font-family: "luckiest guy";
+  color: #f5f5f5;
+  margin: 20px;
+  letter-spacing: 1px;
+}
+#start {
+  background-color: #008000;
+}
+#stop {
+  background-color: #8b0000;
+}
+#reset {
+  background-color: #aa7734;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  opacity: 0.55;
+}
