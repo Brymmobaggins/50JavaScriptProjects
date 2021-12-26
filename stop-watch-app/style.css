@@ -25,22 +25,11 @@ span {
 }
 button {
   border: none;
-  border-radius: 7px;
   padding: 20px 10px;
-  font-family: "luckiest guy";
-  color: #f5f5f5;
   width: 100px;
-  margin: 20px;
-  letter-spacing: 1px;
-}
-#start {
-  background-color: #008000;
-}
-#stop {
-  background-color: #8b0000;
-}
-#reset {
-  background-color: #aa7734;
+  background: transparent;
+  font-size: 25px;
+  margin: 15px;
 }
 
 button:hover,
