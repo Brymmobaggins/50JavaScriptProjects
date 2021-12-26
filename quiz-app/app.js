@@ -1,20 +1,15 @@
-const form = document.getElementById('form')
+const startButton = document.getElementById('start-btn')
+const questionContainerItems = document.getElementById('question-container')
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault()
-    check()
-})
+startButton.onclick = startGame
 
-let score = 5;
-let resetButton;
-let nextQuestion
-function check() {
-    let q1 = document.quiz.question1.value
-    if (q1 === "JavaScript") {
-        score *= 5
-        document.write(score)
-    } else {
-        document.write("Never give up")
-    }
+
+function startGame() {
+    console.log("start")
+    startButton.classList.add('hide')
+    questionContainerItems.classList.remove('hide')
+
+}
+function nextQuestion() {
 
 }
