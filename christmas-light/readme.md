@@ -1,9 +1,12 @@
 # Christmas Light application
 
-
 ## Preview
 
 ![](img/Screen%20Shot%202021-12-20%20at%2012.57.27%20AM.png)
+
+## Live Demo
+
+[Live Demo](https://christmax-light.netlify.app/)
 
 ## Built with
 
