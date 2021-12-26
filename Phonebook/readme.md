@@ -6,7 +6,7 @@
 - for loop and array
 - DOM methods
 
-## Buit width
+## Build with
 
 - HTML
 - CSS 
