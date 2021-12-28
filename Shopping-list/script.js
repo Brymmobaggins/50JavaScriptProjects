@@ -23,7 +23,7 @@ btn.addEventListener("click", function () {
     listItem.appendChild(listText);
     
     const listBtn = document.createElement("button");
-    listBtn.textContent = "Delete";
+    listBtn.textContent = "X";
     listItem.appendChild(listBtn);
 
     // delete the listitem
