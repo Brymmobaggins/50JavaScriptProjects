@@ -2,9 +2,9 @@
 
 ## Preview
 
-![img](/stop-watch-app/img/Screen%20Shot%202021-12-26%20at%206.04.44%20AM.png)
+![alt](/stop-watch-app/img/Screen%20Shot%202021-12-26%20at%206.04.44%20AM.png)
 
-## links
+## Links
 
 [Live Demo](https://stop-watch-1.netlify.app/)
 
@@ -19,7 +19,7 @@
 - Click event
 - Set interval
 
-## resources
+## Resources
 
-- font awesome
+- [Font awesome](www.fontawesome.com)
 - [Google fonts](www.Googlefont.com)

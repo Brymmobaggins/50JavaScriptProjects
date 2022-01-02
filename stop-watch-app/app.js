@@ -9,7 +9,7 @@ let interval ;
 
 startButton.onclick = function () {
     clearInterval(interval)
-    interval = setInterval(startTime, 60)
+    interval = setInterval(startTime, 10)
 }
 stopButton.onclick = function () {
     clearInterval(interval)
