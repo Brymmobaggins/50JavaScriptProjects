@@ -15,22 +15,25 @@
         <label>E-mail</label>
         <input type="email" />
         <label>Password</label>
-        <span class="material-icons visible">visibility</span>
+        <span class="material-icons visibility">visibility_off</span>
         <input type="password" id="pass-word" />
         <input type="button" value="Submit" />
       </form>
     </div>
     <script>
-      const visibleToggle = document.querySelector(".visible");
+      const visibleToggle = document.querySelector(".visibility");
       const input = document.getElementById("pass-word");
       let password = true;
 
       visibleToggle.addEventListener("click", function () {
         if (password) {
           input.setAttribute("type", "text");
+          visibleToggle.textContent = "visibility";
         } else {
           input.setAttribute("type", "password");
+          visibleToggle.textContent = "visibility_off";
         }
+        password = !password;
       });
     </script>
   </body>
