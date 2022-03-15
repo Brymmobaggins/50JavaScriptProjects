@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle image</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label>Name</label>
+        <input type="text" />
+        <label>E-mail</label>
+        <input type="email" />
+        <label>Password</label>
+        <span class="material-icons visible">visibility</span>
+        <input type="password" id="pass-word" />
+        <input type="button" value="Submit" />
+      </form>
+    </div>
+    <script>
+      const visibleToggle = document.querySelector(".visible");
+      const input = document.getElementById("pass-word");
+      let password = true;
+
+      visibleToggle.addEventListener("click", function () {
+        if (password) {
+          input.setAttribute("type", "text");
+        } else {
+          input.setAttribute("type", "password");
+        }
+      });
+    </script>
+  </body>
+</html>

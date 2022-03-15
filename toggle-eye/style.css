@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons");
+
+body {
+  color: black;
+  background-color: bisque;
+  font-family: "tahoma";
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 300px;
+  border: 1px solid rgb(44, 43, 42);
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  outline-color: green;
+}
+.material-icons{
+  position: absolute;
+  top: 59.5%;
+  right: 6%;
+}
+span{
+  color: #aaa;
+  
+}
+label {
+  margin-top: 5px;
+  display: inline-block;
+}
+input[type="button"] {
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+  font-family: "tahoma";
+  color: antiquewhite;
+  width: 50%;
+  background-color: rgb(57, 100, 57);
+  border: 0;
+  letter-spacing: 1px;
+}

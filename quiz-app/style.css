@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-size: 20px;
+  font-size: 25px;
 }
 :root {
   --btn-bgColor: hsl(187, 32%, 50%);
@@ -42,12 +42,14 @@ body {
   border-radius: 5px;
   border: 2px solid var(--borderColor);
   color: aliceblue;
+  cursor: pointer;
 }
 .btn:hover {
   border-color: hsl(0, 0%, 100%);
 }
 .btn.correct {
   background-color: var(--btn-correct);
+  color: black;
 }
 .btn.wrong {
   background-color: var(--btn-wrong);

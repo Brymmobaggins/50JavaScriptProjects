@@ -1,6 +1,6 @@
 // get random number from 1 and 100
 let randomNum = Math.floor(Math.random() * 100) + 1
-
+ 
 const guesses = document.querySelector(".guesses")
 const lastResult = document.querySelector(".lastResult")
 const lowOrHi = document.querySelector(".lowOrHi")
@@ -12,7 +12,7 @@ let resetButton;
 
 
 function checkGuess() {
-    let playerGuess = Number(guessField.value)
+    let playerGuess = Number(guessField.value)u
     if (guessCount === 1) {
         guesses.textContent = " Previous guess: "
     }
@@ -45,7 +45,6 @@ function checkGuess() {
     guessField.focus()
 }
 guessSubmit.addEventListener("click", checkGuess)
-
 
 
 function setGameOver() {
