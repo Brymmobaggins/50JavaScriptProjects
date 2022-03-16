@@ -2,7 +2,7 @@
 
 ## Preview
 
-![](img/Screen%20Shot%202021-12-20%20at%2012.57.27%20AM.png)
+![alt](img/Screen%20Shot%202021-12-20%20at%2012.57.27%20AM.png)
 
 ## Live Demo
 
