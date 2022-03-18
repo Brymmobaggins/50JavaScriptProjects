@@ -12,25 +12,30 @@ body {
 
 .container {
   width: 300px;
-  border: 1px solid rgb(44, 43, 42);
+  border: 1px solid white;
   padding: 10px;
   border-radius: 5px;
   position: relative;
+  background-color: white;
 }
 input {
   width: 100%;
+  background-color:transparent;
   box-sizing: border-box;
+  border: none;
   padding: 10px 12px;
-  outline-color: green;
+  font-size: 18px;
+  outline:0;
+  border-bottom: 1.5px solid #769e9e;
 }
-.material-icons{
+
+.material-icons {
   position: absolute;
   top: 59.5%;
   right: 6%;
 }
-span{
+span {
   color: rgb(70, 67, 67);
-
 }
 label {
   margin-top: 5px;
