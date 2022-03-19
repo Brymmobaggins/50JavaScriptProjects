@@ -16,7 +16,7 @@
         <input type="email" />
         <label>Password</label>
         <span class="material-icons visibility">visibility_off</span>
-        <input type="password" id="pass-word" />
+        <input type="password" id="pass-word" autocomplete />
         <input type="button" value="Submit" />
       </form>
     </div>
@@ -33,7 +33,7 @@
           input.setAttribute("type", "password");
           visibleToggle.textContent = "visibility_off";
         }
-        password != pasword;
+        password = !password;
       });
 
       //
