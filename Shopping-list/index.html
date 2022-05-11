@@ -12,9 +12,12 @@
       margin: 0;
       box-sizing: border-box;
     }
+    :root {
+      --ft-color: blue;
+    }
     html {
       font-family: "tahoma";
-      background-color:#1E1E24;
+      background-color: #1e1e24;
     }
     body {
       padding: 30px;
@@ -22,7 +25,7 @@
     h2 {
       margin-top: 4rem;
       text-align: center;
-      color:#fff8f0;
+      color: var(--ft-color);
     }
     div {
       margin: 0.1rem auto;
@@ -64,24 +67,23 @@
     li {
       margin: 0rem 0rem 1.5rem 1.5rem;
       align-self: center;
-      color:#fff8f0;
-
+      color: #fff8f0;
     }
     li button {
       margin: 0rem 0rem 0rem 5rem;
       padding: 6px;
       background-color: #c43131;
     }
+    /* .darkmode {
+      background: #000;
+      color: white;
+    } */
   </style>
   <body>
     <h2>Shopping list</h2>
+    <!-- <button id="mode">on</button> -->
     <div>
-      <input
-        type="text"
-        id="item"
-        name="item"
-        placeholder="e.g Vegetables"
-      />
+      <input type="text" id="item" name="item" placeholder="e.g Vegetables" />
       <button type="">Add item</button>
     </div>
     <p></p>

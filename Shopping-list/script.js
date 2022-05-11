@@ -3,6 +3,8 @@ const btn = document.querySelector("button");
 const ul = document.querySelector("ul");
 const para = document.querySelector("p")
 
+// const toggleBtn = document.getElementById('mode')
+
 btn.addEventListener("click", function () {
     let myItem = input.value;
     input.value = "";
@@ -32,4 +34,11 @@ btn.addEventListener("click", function () {
     };
     input.focus();
 });
+
+// toggleBtn.onclick = function(){
+//     let element = document.body
+//     element.classList.toggle("darkmode")
+
+// }
+
 
