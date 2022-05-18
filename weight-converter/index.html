@@ -13,7 +13,8 @@
         margin: 0;
         box-sizing: border-box;
     }
-    html{
+
+    html {
         font-family: "tahoma";
     }
 
@@ -33,7 +34,8 @@
         padding: 10px 5px;
         width: 100%;
     }
-    label:first-child(1){
+
+    label:first-child() {
         margin-top: 20px;
     }
 
@@ -47,16 +49,23 @@
     <div class="container">
         <h2 style="text-align: center;">Weight Converter</h2>
         <label for="">Pounds</label>
-        <input type="number" placeholder="Pounds">
+        <input type="number" id="input-pounds" placeholder="Pounds">
+
         <label for="">Kilograms</label>
         <input type="number" placeholder="Kilograms">
+
         <label for="number">Grams</label>
         <input type="number" placeholder="Grams">
+
         <label for="number">Ounces</label>
         <input type="number" placeholder="Ounces">
     </div>
-    <script>
 
+    <script>
+        function weightConverter(inputPounds, inputKilo, inputGrams, inputOunce) {
+            const pounds = document.getElementById('input-pound')
+            pounds.textContent = inputpounds / 2.2046
+        }
     </script>
 
 </body>
