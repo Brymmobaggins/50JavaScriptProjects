@@ -10,23 +10,26 @@
 </head>
 
 <body>
-
-    <h2>Pasword Validation</h2>
-    <p>Try Submit the form</p>
-    <div class="container">
-        <form action="">
-            <p> Name: <input type="text" name="name" id="name"></p>
-            <p> Name: <input type="email" name="email" id="email"></p>
-            <p> Password: <input type="email" name="pass-word" id="pass-word"></p>
-            <input type="submit" value="submit"></input>
-        </form>
-        <div id="message">
-            <h4>Password Must Contain</h4>
+    <div class="password-container">
+        <!-- <h2>Password Validation</h2> -->
+        <h3>Try Submit the form</h3>
+        <div class="container">
+            <form action="">
+                <p> Name: <input type="text" name="name" id="name"></p>
+                <p> Email: <input type="email" name="email" id="email"></p>
+                <p> Password: <input type="password" name="pass-word" id="pass-word" required></p>
+                <input type="submit" value="Submit"></input>
+            </form>
+            <div id="message">
+                <h4>Password Must Contain the following</h4>
+                <p id="letter" class="invalid"><b>Lowercase</b>letters</p>
+                <p id="capital" class="invalid"><b>Uppercase(capital) </b>letters</p>
+                <p id="number" class="invalid"><b>Numbers </b>letters</p>
+                <p id="length" class="invalid">Minimun of <b>8 characters</b>letter</b> </p>
+            </div>
         </div>
-
     </div>
-
-
+    <script src="app.js"></script>
 </body>
 
 </html>

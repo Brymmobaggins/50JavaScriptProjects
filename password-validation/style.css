@@ -1,8 +1,59 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Signika:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.container{
-    
+:root {
+  --bd-font: "Patrick Hand", sans-serif;
+  --hd-font: "font-family", sans-serif;
+}
+html {
+  font-family: var(--bd-font);
+}
+body {
+  background-color: aliceblue;
+}
+h2 {
+  font-family: var(--hd-font);
+}
+.password-container {
+  height: 450px;
+  width: 30%;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+form p {
+  margin-top: 10px;
+}
+input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #706565;
+  border-radius: 4px;
+  outline-color: #bfeabf;
+}
+input[type="submit"] {
+  margin-top: 15px;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 16px;
+  font-family: var(--bd-font);
+  background-color: #5eb55e;
+  border: 0;
+  letter-spacing: 2px;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.valid {
+  color: green;
+}
+
+#message {
+  display: none;
 }
