@@ -49,11 +49,33 @@ input[type="submit"]:hover {
   cursor: pointer;
   opacity: 0.9;
 }
+#message {
+  display: none;
+  position: relative;
+  padding: 20px;
+}
+#message p {
+  font-size: 15px;
+  padding: 5px 35px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
 
 .valid {
   color: green;
 }
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "\2714";
+}
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
 
-#message {
-  display: none;
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "\2716";
 }
