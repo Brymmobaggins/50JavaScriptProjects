@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #96c0d8;
+}
+body {
+  font-family: "tahoma";
+}
+li {
+  list-style: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: var(--bg-color);
+}
+header a {
+  display: block;
+  padding: 20px;
+  margin-right: 50px;
+  background-color: rgb(216, 208, 197);
+}
+.container {
+  margin-top: 6rem;
+  padding: 0px 50px;
+  height: 300px;
+}
+.sign-up p {
+  color: rgb(138, 9, 9);
+}
+.col {
+  display: flex;
+}
+.row {
+  flex: 50%;
+}
+.eduffice-text button {
+  font-size: 20px;
+  width: 30%;
+  height: 15%;
+  margin-top: 1.4rem;
+  background-color: #64c25c;
+  color: white;
+  border: 1px solid #008000;
+  border-radius: 6px;
+  opacity: 1;
+}
+button:hover {
+  opacity: 10;
+  cursor: pointer;
+}
+.eduffice-text h1 {
+  font-size: 40px;
+}
+.eduffice-text h2 {
+  margin-top: 1rem;
+  font-weight: lighter;
+}
+.sign-up {
+  display: flex;
+  justify-content: center;
+  max-width: 35%;
+  max-height: 400px;
+  padding: 25px;
+  background-color: var(--bg-color);
+}
+label {
+  display: inline-block;
+  margin-top: 20px;
+}
+input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-size: 18px;
+  border: 1px solid #797575;
+  border-radius: 4px;
+  outline-color: #80c780;
+}
+::placeholder {
+  font-size: 15px;
+  color: #dbdbdb;
+}
+.sign-up button {
+  margin: 25px auto;
+  width: 100%;
+  height: 15%;
+  cursor: pointer;
+  font-size: 18px;
+}
+.eduffice-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.copy-right ul {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 25px;
+}
+.copy-right ul li {
+  padding: 5px;
+  color: #487ab3;
+}
+.eduffice-footer {
+}
+.eduffice-info ul {
+  display: flex;
+  justify-content: space-between;
+}
+.eduffice-info ul li {
+  padding: 5px;
+  color: #588ecc;
+}
+.eduffice-footer span {
+  margin-right: 25px;
+}
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}

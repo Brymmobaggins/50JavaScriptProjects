@@ -2,8 +2,6 @@ const select = document.querySelector('select')
 const list = document.querySelector('ul')
 const h2 = document.querySelector('h2')
 const html = document.querySelector('html')
-
-
 // register `onchange` event property to fire when the value of `select` menu is changed
 select.onchange = function () {
     let choice = select.value
@@ -12,7 +10,7 @@ select.onchange = function () {
     if (choice === "Febuary") {
         days = 28
     } else if (choice === "April" || choice === "June" || choice === "September" || choice === "November") {
-        days = 30
+        days = 30 
     }
     createCalender(days, choice)
 }

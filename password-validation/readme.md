@@ -14,5 +14,6 @@
  
 ## Resources
 
-I was able  to achieve the font "Patrick hand" on [Google fonts](Google.font.com) which makes my project very friendly to users.
+I was able  to achieve the font "Patrick hand" on [Google fonts](https://fonts.google.com/specimen/Patrick+Hand?query=Patr) which makes my project very friendly to users.
+
 

@@ -4,10 +4,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border:1px solid red */
 }
 :root {
   --bd-font: "Patrick Hand", sans-serif;
-  --hd-font: "font-family", sans-serif;
 }
 html {
   font-family: var(--bd-font);
@@ -16,7 +16,8 @@ body {
   background-color: aliceblue;
 }
 h2 {
-  font-family: var(--hd-font);
+  font-family: tahoma;
+  font-size: 20px;
 }
 .password-container {
   height: 450px;

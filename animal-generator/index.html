@@ -20,14 +20,14 @@
 
       animalButton.onclick = getRandomAnimal;
 
-      // function getRandomAnimal() {
-      //   // using `fetch` function
-      //   fetch("https://v2.jokeapi.dev/joke/Miscellaneous,Spooky?blacklistFlags=religious,political,racist,sexist,sexist,explicit")
-      //     .then((res) => res.json())
-      //     .then((data) => {
-      //       animalResult.textContent = `<img src="${data.url}" />`;
-      //     });
-      // }
+      function getRandomAnimal() {  
+        // using `fetch` function
+        fetch("https://v2.jokeapi.dev/joke/Miscellaneous,Spooky?blacklistFlags=religious,political,racist,sexist,sexist,explicit")
+          .then((res) => res.json())
+          .then((data) => {
+            animalResult.textContent = `<img src="${data.url}" />`;
+          });
+      }
     </script>
   </body>
 </html>
