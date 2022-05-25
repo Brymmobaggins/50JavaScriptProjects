@@ -12,12 +12,13 @@
 <body>
     <div class="password-container">
         <!-- <h2>Password Validation</h2> -->
-        <h2 >Try Submit the form</h2>
+        <h2>Try Submit the form</h2>
         <div class="container">
             <form action="">
-                <p> Name: <input type="text" name="name" id="name"></p>
-                <p> Email: <input type="email" name="email" id="email"></p>
-                <p> Password: <input type="password" name="pass-word" id="pass-word" required></p>
+                <p> Name: <input type="text" name="name" id="name" required></p>
+                <p> Email: <input type="email" name="email" id="email" required></p>
+                <p> Password: <input type="password" name="pass-word" id="pass-word"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></p>
                 <input type="submit" value="Submit"></input>
             </form>
             <div id="message">

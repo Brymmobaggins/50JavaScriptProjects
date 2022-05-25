@@ -5,7 +5,7 @@ const capital = document.getElementById('capital')
 const length = document.getElementById('length')
 const number = document.getElementById('number')
 
-// whenevers user clicks on the password field, show the message box
+// whenever user clicks on the password field, show the message box
 password.onfocus = function () {
     messageBox.style.display = "block"
 }
