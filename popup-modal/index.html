@@ -15,17 +15,37 @@
 
     <div class="modal" id="modal">
         <div class="modal-header">
-            <div class="title">This is heading</div>
             <button class="close-btn">&times;</button>
+            <div class="title">Sign up to create an accout</div>
         </div>
         <div class="modal-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eos assumenda error accusamus tempora ut
-            autem rerum consectetur et, nihil hic officiis. Ipsum enim, saepe cumque tempora voluptate quaerat eius!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit hic quibusdam commodi enim autem vero
-            voluptas quo rem veniam. In voluptatibus, veniam doloremque consequuntur laboriosam sequi voluptatem omnis
-            minima quod.
+            <div class="first-body">
+                <label for="">Name</label>
+                <p><input type="text" placeholder="e.g florin pop"></p>
+                <label for="">Email</label>
+                <p><input type="email"></p>
+                <!-- <label for="">Password</label>
+                <p><input type="password" id="password"></p> -->
+            </div>
+            <fieldset class="gender">
+                <legend>Please select your Gender</legend>
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label><br>
+            </fieldset>
+            <div class="age">
 
+                <p>Select your age</p>
+                <input type="radio" id="age-10" name="age">
+                <label for="age-10">0-10</label><br>
+                <input type="radio" id="age-20" name="age">
+                <label for="age-20">10-20</label><br>
+            </div>
+
+            <p><input type="submit" value="Submit"></p>
         </div>
+
     </div>
     <div class="overlay"></div>
 
