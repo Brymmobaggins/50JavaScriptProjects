@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light Switching</title>
+    <style>
+        body {
+            background-color: rgb(72, 68, 68);
+
+        }
+
+        .canvas {
+            width: 600px;
+            height: 500px;
+            margin: 50px auto;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .bulb-off {
+            width: 265px;
+            height: 400px;
+            background: url(img/lightoff.png) no-repeat;
+            margin: auto;
+        }
+
+        .bulb-on {
+            width: 265px;
+            height: 400px;
+            background: url(img/lighton.png) no-repeat;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas">
+        <h2>Turn on the light ON and OFF</h2>
+        <div id="bulb" class="bulb-off"></div>
+    </div>
+    <button id="switch">OFF</button>
+    <script>
+        const switchButton = document.querySelector('#switch')
+        const bulb = document.querySelector('#bulb')
+
+        switchButton.onclick = function () {
+            if (bulb.classList.add("bulb-off")) {
+                // bulb.classList.add("bulb-on")
+                switchButton.textContent = "ON"
+            } else {
+                // bulb.classList.remove("bulb-on")
+                // switchButton.textContent = "OFF"
+
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
