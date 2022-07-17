@@ -33,29 +33,60 @@
             background: url(img/lighton.png) no-repeat;
             margin: auto;
         }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -50px;
+        }
+
+        button {
+            padding: 10px 45px;
+            margin-left: 10px;
+            color: antiquewhite;
+            border: 0;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        #switch-off {
+            background-color: #c41c1c;
+        }
+
+        #switch-on {
+            background-color: rgb(41, 105, 41);
+        }
     </style>
 </head>
 
 <body>
     <div class="canvas">
-        <h2>Turn on the light ON and OFF</h2>
         <div id="bulb" class="bulb-off"></div>
     </div>
-    <button id="switch">OFF</button>
+    <div class="btn">
+        <button id="switch-off">OFF</button>
+        <button id="switch-on">ON</button>
+
+    </div>
     <script>
-        const switchButton = document.querySelector('#switch')
+        const offButton = document.querySelector('#switch-off')
+        const onButton = document.querySelector('#switch-on')
         const bulb = document.querySelector('#bulb')
+         
+        // click on the OFF button
+        offButton.onclick = function () {
+            bulb.classList.remove("bulb-on")
 
-        switchButton.onclick = function () {
-            if (bulb.classList.add("bulb-off")) {
-                // bulb.classList.add("bulb-on")
-                switchButton.textContent = "ON"
-            } else {
-                // bulb.classList.remove("bulb-on")
-                // switchButton.textContent = "OFF"
-
-            }
         }
+        // click on the ON button
+        onButton.onclick = function () {
+            bulb.classList.add("bulb-on")
+
+        }
+
     </script>
 
 
