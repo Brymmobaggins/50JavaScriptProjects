@@ -1,12 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
 
-*{
+* {
     padding: 0;
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
 }
-body{
+
+:root {
+    --bg-color: aliceblue;
+    --ft-color: #5a5656;
+    --ft-family: 'DynaPuff',
+        cursive;
+}
+
+body {
     background-color: aliceblue;
     font-family: tahoma;
+    font-family: 'DynaPuff', cursive;
 
+}
+
+.container {
+    width: 30%;
+    margin: 4em auto;
+    border: 1px solid #24211e;
+    border-radius: 5px;
+    padding: 10px;
+    /* font-weight: lighter; */
+    position: relative;
+}
+
+/* .amount-contro{
+} */
+.amount-control img {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    height: 6%;
+}
+
+.guest-control img {
+    position: absolute;
+    top: 195px;
+    left: 20px;
+    height: 5%;
+    /* bottom: 0; */
+}
+
+input,
+select {
+    width: 100%;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 15px;
+    /* border: 1px solid azure; */
+}
+
+input:focus {
+    background-color: antiquewhite;
+    border: 1px solid #229622;
+}
+
+#guest,
+#bill {
+    text-align: right;
+
+}
+
+label {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+select {
+    width: 100%;
+}
+
+button {
+    border: 0;
+    background-color: rgb(61, 168, 132);
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    color: aliceblue;
+    border-radius: 5px;
+    font-family: var(--ft-family);
+    transition: 0.2s;
+    opacity: 0.8;
+
+}
+
+button:hover {
+    opacity: 2;
+    cursor: pointer;
+}
+
+#tip-amount {
+    background-color: green;
+    text-align: center;
+    padding: 16px;
+    border-radius: 5px;
+    min-width: 250px;
+    color: whitesmoke;
+    margin: auto;
+    position: fixed;
+    bottom: 80px;
+    /* visibility: hidden; */
+}
+
+#tip-amount.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeOut 0.5s 2.5s;
+    animation: fadein 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        bottom: 30px;
+        opacity: 1
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    from {
+        bottom: 30px;
+        opacity: 1
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
 }
