@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vowel Counter</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            --ft-family: "luckiest guy";
+            --ft-family: 'Shadows Into Light', cursive;
         }
 
         body {
@@ -20,16 +22,16 @@
             font-family: var(--ft-family);
             letter-spacing: 1.5px;
             font-weight: 300;
-            color: aliceblue;
+            color: rgb(251, 253, 255);
             display: flex;
             height: 100vh;
             justify-content: center;
             align-items: center;
         }
 
-        header {
-            /* text-align: center; */
-            margin-top: 40px;
+        h3,
+        p {
+            font-weight: 400;
         }
 
         .container input {
@@ -48,63 +50,54 @@
             text-transform: lowercase;
         }
 
+        .container p {
+            font-size: 20px;
+            position: absolute;
+            color: #4c974c;
+            font-size: 20px;
+            top: 50px;
+            bottom: 0;
+            left: 30px;
+
+
+        }
+
+        form {
+            position: relative;
+        }
+
         .container button {
             font-size: 15px;
             font-family: var(--ft-family);
-            padding: 8px 12px;
+            padding: 5px 10px;
             border: 0;
             border-radius: 5px;
             background-color: #4c974c;
             color: aliceblue;
-            opacity: 9;
+            opacity: 0.8;
         }
 
         button:hover {
             cursor: pointer;
-            opacity: 7;
-            /* border:2px solid green; */
+            opacity: 9;
         }
     </style>
 </head>
 
 <body>
-    <!-- <header>
-        vowel counter
-    </header> -->
     <main>
+        <h3 style="text-align: center;">Vowel letters Counter</h3>
         <div class="container">
             <form action="" id="form">
                 <input type="text" id="input" placeholder="Enter your letter here">
-                <button onclick="" id="submit">Count Vowels</button>
+                <button onclick="checkVowel()" id="submit">Count Vowels</button>
                 <p id="show"></p>
             </form>
 
         </div>
     </main>
-    <script>
-        const input = document.getElementById('input').value
-        const vowelCountShow = document.getElementById('show')
-        const submitButton = document.getElementById('submit')
-        const form = document.getElementById('form')
-        
-        form.addEventListener('submit', function (e) {
-            e.preventDefault()
-            checkVowel()
-        })
-        
-        
-        function checkVowel() {
-            let count = 0;
-            const vowel = ["a", "e", "i", "o", "u"]
-            for (let i = 0; i < input.length; i++) {
-                for (let j = 0; j < vowel.length; j++) {
-                    if (input[i] === vowel[j]) {
-                        count++
-                    }       
-                }
-            }
-            vowelCountShow.textContent = count 
-        }
+    <script src="./app.js">
+
     </script>
 
 </body>
