@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            --ft-family: "luckiest guy";
+        }
+
+        body {
+            background-color: pink;
+            font-family: var(--ft-family);
+            letter-spacing: 1.5px;
+            font-weight: 300;
+            color: aliceblue;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            /* text-align: center; */
+            margin-top: 40px;
+        }
+
+        .container input {
+            padding: 10px 15px;
+            font-size: 16px;
+            outline: 0;
+            border: 0;
+            border-radius: 5px;
+
+        }
+
+        ::placeholder {
+            font-size: 12px;
+            font-family: var(--ft-family);
+            letter-spacing: 1px;
+            text-transform: lowercase;
+        }
+
+        .container button {
+            font-size: 15px;
+            font-family: var(--ft-family);
+            padding: 8px 12px;
+            border: 0;
+            border-radius: 5px;
+            background-color: #4c974c;
+            color: aliceblue;
+            opacity: 9;
+        }
+
+        button:hover {
+            cursor: pointer;
+            opacity: 7;
+            /* border:2px solid green; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        vowel counter
+    </header> -->
+    <main>
+        <div class="container">
+            <form action="" id="form">
+                <input type="text" id="input" placeholder="Enter your letter here">
+                <button onclick="" id="submit">Count Vowels</button>
+                <p id="show"></p>
+            </form>
+
+        </div>
+    </main>
+    <script>
+        const input = document.getElementById('input').value
+        const vowelCountShow = document.getElementById('show')
+        const submitButton = document.getElementById('submit')
+        const form = document.getElementById('form')
+        
+        form.addEventListener('submit', function (e) {
+            e.preventDefault()
+            checkVowel()
+        })
+        
+        
+        function checkVowel() {
+            let count = 0;
+            const vowel = ["a", "e", "i", "o", "u"]
+            for (let i = 0; i < input.length; i++) {
+                for (let j = 0; j < vowel.length; j++) {
+                    if (input[i] === vowel[j]) {
+                        count++
+                    }       
+                }
+            }
+            vowelCountShow.textContent = count 
+        }
+    </script>
+
+</body>
+
+</html>
