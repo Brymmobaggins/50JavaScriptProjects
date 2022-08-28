@@ -2,15 +2,20 @@ const vowelCountShow = document.getElementById('show')
 const form = document.getElementById('form')
 
 form.addEventListener('submit', function (e) {
-    e.preventDefault()                        // prevent default submit
-    if(input.value === ""){
-        vowelCountShow.textContent = "Please enter some characters"
+    e.preventDefault()                           // prevent default submit
+    if (input.value === "") {
+        vowelCountShow.textContent = "Please enter some words"
+    } else if (isNaN(input.value)) {
+        checkVowel()
+    } else {
+        vowelCountShow.textContent = "Numbers are not allow"
+
     }
 })
 
-input.onfocus = function(){
-    vowelCountShow.textContent = ""
-    input.value = ""
+input.onfocus = function () {                     // when input is focus 
+    vowelCountShow.textContent = ""               // clear text
+    input.value = ""                              // clear input value
 }
 
 function checkVowel() {
@@ -24,6 +29,7 @@ function checkVowel() {
             }
         }
     }
-    vowelCountShow.textContent = "Your vowel input is " + count // assign count to display the text
+    // vowelCountShow.textContent = input + " has " + count + " vowels"
+    vowelCountShow.textContent = input + " has " + count + " vowel"// assign count to display the text
 }
 
