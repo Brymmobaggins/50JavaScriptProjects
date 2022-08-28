@@ -29,18 +29,24 @@
             align-items: center;
         }
 
-        h3,
-        p {
+        h3 {
             font-weight: 400;
+            margin-bottom: 20px;
+            text-transform: capitalize;
         }
 
         .container input {
             padding: 10px 15px;
             font-size: 16px;
+            color: #146eaa;
             outline: 0;
             border: 0;
             border-radius: 5px;
 
+        }
+
+        input:focus {
+            background-color: #e2e2e2;
         }
 
         ::placeholder {
@@ -51,14 +57,12 @@
         }
 
         .container p {
-            font-size: 20px;
             position: absolute;
-            color: #4c974c;
+            color: #146eaa;
             font-size: 20px;
             top: 50px;
             bottom: 0;
-            left: 30px;
-
+            left: 10px;
 
         }
 
@@ -74,23 +78,24 @@
             border-radius: 5px;
             background-color: #4c974c;
             color: aliceblue;
-            opacity: 0.8;
+            opacity: 0.9;
+            transition: 0.2s;
         }
 
         button:hover {
             cursor: pointer;
-            opacity: 9;
+            opacity: 8;
         }
     </style>
 </head>
 
 <body>
     <main>
-        <h3 style="text-align: center;">Vowel letters Counter</h3>
+        <h3 style="text-align: center;">VOWEL COUNTER</h3>
         <div class="container">
-            <form action="" id="form">
-                <input type="text" id="input" placeholder="Enter your letter here">
-                <button onclick="checkVowel()" id="submit">Count Vowels</button>
+            <form  id="form">
+                <input type="text" id="input" placeholder="type some words" autocomplete="off" >
+                <button onclick="checkVowel()" >Count Vowels</button>
                 <p id="show"></p>
             </form>
 
