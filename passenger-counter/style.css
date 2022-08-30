@@ -22,8 +22,11 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* border:1px solid #29294a; */
+    background-color: #5e6464;
+    border-radius: 10px;
+    border: 3px solid black;
     height: 300px;
+    max-width: 80%;
     text-align: center;
 }
 
@@ -36,7 +39,7 @@ button {
     display: block;
     margin: 10px auto;
     border-radius: 5px;
-    border: none;
+    border: 1px solid black;
     color: #0d0d0e;
     letter-spacing: 1px;
     cursor: pointer;
@@ -47,12 +50,19 @@ button {
 button:hover {
     opacity: 6;
 }
-h2{
+
+h2 {
     margin-top: 1em;
 }
-h1,
-h2,
+
 p {
+    font-size: 16px;
+    color: aliceblue
+}
+
+
+h1,
+h2 {
     color: aliceblue;
     font-size: 22px;
 }

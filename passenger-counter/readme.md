@@ -3,11 +3,11 @@
 
 ## Preview
 
-![alt](../passenger-counter/img/Screen%20Shot%202022-08-30%20at%205.35.43%20PM.png)
+![alt](../passenger-counter/img/Screen%20Shot%202022-08-30%20at%206.21.46%20PM.png)
 
-## links
+## Links
 
-[live Demo]()
+[Live Demo]()
 
 ## Built with
 
