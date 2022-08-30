@@ -29,7 +29,6 @@ function checkVowel() {
             }
         }
     }
-    // vowelCountShow.textContent = input + " has " + count + " vowels"
-    vowelCountShow.textContent = input + " has " + count + " vowel"// assign count to display the text
+   vowelCountShow.textContent = input + " has " + count + " vowel"// assign count to display the text
 }
 
