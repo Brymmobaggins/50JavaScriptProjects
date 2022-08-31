@@ -12,7 +12,7 @@ let resetButton;
 
 
 function checkGuess() {
-    let playerGuess = Number(guessField.value)u
+    let playerGuess = Number(guessField.value)
     if (guessCount === 1) {
         guesses.textContent = " Previous guess: "
     }
