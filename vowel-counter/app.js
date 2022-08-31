@@ -8,7 +8,7 @@ form.addEventListener('submit', function (e) {
     } else if (isNaN(input.value)) {
         checkVowel()
     } else {
-        vowelCountShow.textContent = "Numbers are not allow"
+        vowelCountShow.textContent = "Numbers are not allowed"
 
     }
 })
