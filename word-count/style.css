@@ -36,6 +36,7 @@ h4 {
 p {
     font-family: 'Silkscreen', cursive;
     color: aliceblue;
+    margin-top: 10px;
 
 }
 
@@ -46,6 +47,11 @@ input {
     font-size: 16px;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.error {
+    font-family: tahoma;
+    color: red;
 }
 
 input:focus {

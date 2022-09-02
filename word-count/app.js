@@ -6,18 +6,19 @@ form.addEventListener('submit', function (e) {
     countWord()                // invoke the `countWord` function 
 })
 
+
+// function to run whenever the form is the submit
 function countWord() {
+    const showLength = document.querySelector('p')
     let input = document.getElementById('string').value
-    let showLength = document.querySelector('p')
-    let count = input.showLength
+    let count = input.length
 
     if (input === "") {
-        input.style.BorderColor = "red"
+        showLength.textContent = "Your input cannot be empty"
     } else {
-        showLength.textContent = count
-
+        showLength.innerHTML = `<h1>${count}</h1>`
+        showLength.classList.remove('error')
     }
 
 }
-
 
