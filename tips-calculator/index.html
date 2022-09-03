@@ -6,29 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip calculator</title>
-    <script src="https://use.fontawesome.com/be53ced940.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body style="font-family: tahoma;">
+    <div class="">
+    </div>
     <div class="container">
+
+        <h2>TIP CALCULATOR</h2>
         <div class="bill-amount">
             <p>Bill amount</p>
             <img src="./icon-dollar.svg" alt="">
             <input type="number" id="amount" placeholder="0.00">
         </div>
-        <p>Tip amount</p>
-        <div class="tip-amount">
-            <button id="five" value="5%">5%</button>
-            <button id="ten" value="10%">10%</button>
-            <button id="fifteen" onclick="calculate()" value="15%">15%</button>
+        <div class="bill-amount">
+            <p>How many people sharing the bill</p>
+            <!-- <img src="./icon-dollar.svg" alt=""> -->
+            <input type="number" id="people">
         </div>
-        <div class="custom-tip">
-            <input type="number" id="custom" placeholder="Custom Tip">
-        </div>
-        <div class="tip-footer">
-            <h3 id="message">$0.00<br>/person</h3>
-        </div>
+
+        <p>How was your service</p>
+        <select name="" id="">
+            <option disabled selected value="0">Choose....</option>
+            <option value="0.3"> 30% - outstanding</option>
+            <option value="0.2"> 20% - Good</option>
+            <option value="0.15"> 15% - It was Ok</option>
+            <option value="0.10"> 10% - Bad</option>
+            <option value="0.05"> 5% - Terrible</option>
+        </select>
+        <button>Calculate</button>
     </div>
 
     <script src="./app.js"></script>
