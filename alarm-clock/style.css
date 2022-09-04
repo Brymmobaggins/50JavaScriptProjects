@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "tahoma";
+}
+
+html {
+    font-size: 16px;
+}
+
+:root {
+    --bg-colour: #a2d2ff;
+    --top-date: #1d3557;
+    --head-days: #457b9d;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+body {
+    background: var(--bg-colour);
+    color: #d6d6d6;
+    text-align: center;
+}
+
+.container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    width: 30%;
+    border-radius: 5px;
+
+}
+
+.alarm-top>p {
+    padding: 1.2rem 0;
+    background-color: var(--top-date)
+}
+
+.alarm-heading {
+    background-color: var(--head-days);
+    padding: 1.8rem;
+}
+
+.alarm-heading p {
+    font-size: 25px;
+}
+
+.time-days h2 {
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding-bottom: 1rem;
+}
+
+.time-days {
+    background-color: var(--top-date);
+    padding: 1.8rem;
+}
+.alarm-moment{
+    background-color:var(--head-days);
+}
+input[type="radio"]{
+    /* display: block; */
+    /* margin: 2rem ; */
+}

@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarm clock</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
+        <div class="alarm-top">
 
+            <p>Add Alarm</p>
+        </div>
+        <div class="alarm-heading">
+            <p>Morning Alarm</p>
+        </div>
+        <div class="time-days">
 
-        
+            <h2>00:00</h2>
+            <a href="">MON</a>
+            <a href="">TUES</a>
+            <a href="">WED</a>
+            <a href="">THURS</a>
+            <a href="">FRI</a>
+            <a href="">SAT</a>
+            <a href="">SUN</a>
+        </div>
+
+        <div class="alarm-moment">
+            <div class="">
+                <input type="radio" id="repeat" name="alarm-moment">
+                <label for="repeat">Repeat</label>
+                <input type="radio" id="fade-in" name="alarm-moment">
+                <label for=" fade-in">Fade in</label>
+            </div>
+            <div>
+                <input type="radio" id="snooze" name="alarm-moment" value="snooze">
+                <label for="snooze">Snooze</label>
+                <input type="radio" id="" name="alarm-moment" value="vibration">
+                <label for="vibration">Vibrate</label>
+            </div>
+            <input type="range">
+            <div class="alarm-button">
+                <button>Cancel</button>
+                <button>Save</button> 
+            </div>
+        </div>
     </div>
 
-    
+
 </body>
-</html> 
+
+</html>
