@@ -1,8 +1,6 @@
 
 const form = document.querySelector('form')
 
-
-
 form.addEventListener("submit", function (e) {
     e.preventDefault()
 
@@ -11,10 +9,10 @@ form.addEventListener("submit", function (e) {
     let poundsTokg
 
     if ((input.value <= 0) || (isNaN(input.value))) {
-        result.innerHTML = "<span>Please some enter numbers!</span>"
+        result.innerHTML = "<span>Kindly, enter some numbers! 😏 </span>"
         result.classList.add('error')
         input.classList.add('error')
-        setTimeout(() => {
+        setTimeout(function() {
             result.innerHTML = ""
             result.classList.remove("error")
             input.classList.remove('error')
@@ -22,12 +20,19 @@ form.addEventListener("submit", function (e) {
         }, 2000);
         input.value = ""
     } else {
+        poundsTokg = Number(input.value) / 2.2
+        result.innerHTML = `<b>${poundsTokg.toFixed(2)}</b>`
+        result.classList.add("sucess")
+        input.classList.add("sucess")
+        setTimeout( function(){
+            result.innerHTML = ""
+            result.classList.remove("sucess")
+            input.classList.remove("sucess")
+            input.value = ""
+
+        }, 4000);
 
     }
-
-
-
-
 
 
 })
