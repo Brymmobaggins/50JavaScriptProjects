@@ -2,7 +2,7 @@
 const form = document.getElementById('form')
 
 form.addEventListener('submit', function (e) {
-    e.preventDefault()           // prevent default submi
+    e.preventDefault()           // prevent default submit
     countWord()                // invoke the `countWord` function 
 })
 

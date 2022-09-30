@@ -1,139 +1,142 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+   /* * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
 
-body {
-    font-family: Tahoma;
-    font-weight: 600;
-}
-
-
-#open-btn {
-    background-color: aquamarine;
-    color: #0f1113;
-    display: block;
-    /* margin: 5rem auto; */
-    border: 1px solid black;
-    padding: 10px 25px;
-    margin: 20px;
-    cursor: pointer;
-}
-
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    max-width: 100%;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    z-index: 10;
-    /* opacity: 0; */
-}
-
-/* .modal.show {
-    /* opacity: 1;
-    pointer-events: auto;
-    display: none; */
+   body {
+       font-family: Tahoma;
+       font-weight: 600;
+   }
 
 
-.modal-header {
-    /* padding: 10px 15px; */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    /* border-bottom: 1px solid black; */
-}
+   #open-btn {
+       background-color: aquamarine;
+       color: #0f1113;
+       display: block;
+       margin: 5rem auto;
+       border: 1px solid black;
+       padding: 10px 25px;
+       margin: 20px;
+       cursor: pointer;
+   }
 
-.modal-header .title {
-    text-align: center;
-    font-weight: bold;
-}
+   .modal {
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       width: 500px;
+       max-width: 100%;
+       background-color: white;
+       border: 1px solid black;
+       border-radius: 10px;
+       z-index: 10;
+       opacity: 0;
+   }
 
-.modal .close-btn {
-    outline: 0;
-    border: 0;
-    font-weight: bold;
-    font-size: 1.25rem;
-    background: none;
-    cursor: pointer;
-    padding: 10px;
-    margin: 10px;
-}
-
-.modal .close-btn:hover {
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
-
-}
-
-.modal-body {
-    padding: 10px 15px;
-}
-
-.modal-body label {
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.first-body input {
-    width: 100%;
-    border-radius: 4px;
-    font-size: 16px;
-    /* margin-top: 5px; */
-    padding: 10px 15px;
-    border: 1px solid black;
-    outline-color: hsl(117, 25%, 56%);
-}
-
-input:focus {
-    background-color: azure;
-}
-
-input[type="submit"] {
-    background: #4f8f2d;
-    color: white;
-    letter-spacing: 1px;
-    /* font-weight: bold; */
-    font-size: 1.2rem;
-    margin-top: 15px;
-    cursor: pointer;
-    border: 0;
-    width: 100%;
-    padding: 10px 15px;
-}
-
-input[type="submit"]:hover {
-    opacity: 0.9;
+   .modal.show {
+       opacity: 1 pointer-events: auto;
+       display: none;
 
 
-}
+   }
 
-fieldset,
-.age {
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 4px;
-}
+   .modal-header {
+       padding: 10px 15px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       border-bottom: 1px solid black;
+   }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
-    /* opacity: 0; */
-    /* overflow: 0; */
-    background-color: rgba(0, 0, 0, 0.7)
-}
+   .modal-header .title {
+       text-align: center;
+       font-weight: bold;
+   }
 
-.overlay.show {
-    opacity: 1;
-    pointer-events: auto;
-}
+   .modal .close-btn {
+       outline: 0;
+       border: 0;
+       font-weight: bold;
+       font-size: 1.25rem;
+       background: none;
+       cursor: pointer;
+       padding: 10px;
+       margin: 10px;
+   }
+
+   .modal .close-btn:hover {
+       border-radius: 50%;
+       background-color: rgba(0, 0, 0, 0.1);
+
+   }
+
+   .modal-body {
+       padding: 10px 15px;
+   }
+
+   .modal-body label {
+       display: inline-block;
+       margin-top: 10px;
+       font-weight: bold;
+   }
+
+   .first-body input {
+       width: 100%;
+       border-radius: 4px;
+       font-size: 16px;
+       margin-top: 5px;
+       padding: 10px 15px;
+       border: 1px solid black;
+       outline-color: hsl(117, 25%, 56%);
+   }
+
+   input:focus {
+       background-color: azure;
+   }
+
+   input[type="submit"] {
+       background: #4f8f2d;
+       color: white;
+       letter-spacing: 1px;
+       font-weight: bold;
+       font-size: 1.2rem;
+       margin-top: 15px;
+       cursor: pointer;
+       border: 0;
+       width: 100%;
+       padding: 10px 15px;
+   }
+
+   input[type="submit"]:hover {
+       opacity: 0.9;
+
+
+   }
+
+   fieldset,
+   .age {
+       padding: 10px;
+       margin-top: 10px;
+       border-radius: 4px;
+   }
+
+   .overlay {
+       position: fixed;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       pointer-events: none;
+       opacity: 0;
+       overflow: 0;
+       background-color: rgba(0, 0, 0, 0.7)
+   }
+
+   .overlay.show {
+       opacity: 1;
+       pointer-events: auto;
+   }
+
+   */ */
