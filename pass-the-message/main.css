@@ -1,23 +1,61 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: tahoma;
 }
 
-body{
+body {
     background-color: black;
     display: flex;
     height: 100vh;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
-.container{
-    background-color:aliceblue;
-    /* width: 50%; */
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 0.938rem;
+
+}
+
+h4 {
+    visibility: hidden;
+}
+
+.container {
+    padding: 0.625rem;
+    background-color: aliceblue;
+    /* height: 50%; */
+    min-width: 50%;
     border: 1px solid wheat;
 }
-input{
+
+input {
     width: 100%;
     padding: 10px;
+    display: block;
+    font-size: 18px;
+}
+input[type="text"]:focus{
+    border:1px solid green;
+
+}
+
+input[type="submit"] {
+    background-color: #6bd0d0;
+    width: 25%;
+    margin: 10px auto;
+    cursor: pointer;
+
+}
+
+.show {
+    /* color: red; */
+    background-color: #eda2a2;
+    visibility: visible;
+    padding: 10px;
+    text-align: center;
+
 }

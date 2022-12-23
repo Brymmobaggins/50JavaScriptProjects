@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,44 @@
     <title>Pass the Message</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <div class="container">
-        <h4>Pass The Mesage</h4>
-        <form action="message-form">
+        <h3>A Message You Would Like To Pass</h3>
+        <form id="form">
             <input type="text" id="message">
-            <input type="button" id="submit-btn" value="Submit">
+            <input type="submit" id="submit-btn" value="Submit">
+            <h4 id="feedback">Plese Enter a Message</h4>
         </form>
+        <h3>Last Mesage Delivered: </h3>
+        <h3 id="MessageContent"></h3>
     </div>
     <script>
-        const button = document.getElementById('submit-btn')
+        const form = document.querySelector('#form')
 
+        form.addEventListener("submit", function (event) {
+            // prevent default form submission
+            event.preventDefault()
 
-        button.addEventListener('click' function{})
+            //  get user's input from form
+            const message = document.getElementById('message')
+            const feedback = document.getElementById('feedback')
 
+            if (message.value === "") {
+                feedback.classList.add('show')
+                setTimeout(function () {
+                    feedback.classList.remove('show')
+                }, 2000)
 
+            } else {
+                // change message content and clear the input
 
-
+                MessageContent.textContent = message.value
+                message.value = ""
+            }
+        })
     </script>
-    
+
 </body>
+
 </html>
