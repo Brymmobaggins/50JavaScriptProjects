@@ -28,7 +28,7 @@ h4 {
     padding: 0.625rem;
     background-color: aliceblue;
     /* height: 50%; */
-    min-width: 50%;
+    min-width: 60%;
     border: 1px solid wheat;
 }
 
@@ -38,22 +38,20 @@ input {
     display: block;
     font-size: 18px;
 }
-input[type="text"]:focus{
-    border:1px solid green;
 
-}
 
 input[type="submit"] {
     background-color: #6bd0d0;
     width: 25%;
     margin: 10px auto;
     cursor: pointer;
+    color: #fff1f1;
 
 }
 
 .show {
     /* color: red; */
-    background-color: #eda2a2;
+    background-color: #e8cdcd;
     visibility: visible;
     padding: 10px;
     text-align: center;
