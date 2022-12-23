@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: tahoma;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items:center;
+}
+.container{
+    background-color:aliceblue;
+    /* width: 50%; */
+    border: 1px solid wheat;
+}
+input{
+    width: 100%;
+    padding: 10px;
+}
