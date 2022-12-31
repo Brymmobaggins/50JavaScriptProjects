@@ -1,0 +1,30 @@
+* {
+    font-family: "tahoma";
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+  
+}
+
+.calculator {
+    width: 50%;
+    height: 300px;
+    border: 1px solid red;
+   
+}
+
+
+input {
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    /* gap: 2rem; */
+}
+
+button {
+    flex: 4;
+}
