@@ -10,7 +10,7 @@ After you enter a text into the input box, upon pressing the `enter` key. your m
 After the enter key is pressed, the textbox value should return to an empty textbox.
 if no input is submitted, an alert should show (using the `show` class in the CSS file) in the last message Delivered section  and then disappear in 2 seconds.
 
-## Bult With
+## Built With
 
 - HTML
 - CSS
