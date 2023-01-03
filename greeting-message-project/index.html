@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic greeting message</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: azure;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #454539;
+            width: 50%;
+            margin: 2rem auto;
+            height: 500px;
+            background-color:#4aa0dd;
+        }
+
+        #message {
+            margin-top: 4rem;
+            font-family: "luckiest guy";
+            letter-spacing: 1.5px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 4rem;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #f0f760;
+            color:#302828;
+        }
+
+        button:hover,
+        :focus {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        .light-morning {
+            color: orange;
+        }
+        .dark-evening{
+            color: azure;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: #e8c580;">Click the button to get the message</h1>
+        <div id="message"></div>
+        <button>Get the message</button>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
