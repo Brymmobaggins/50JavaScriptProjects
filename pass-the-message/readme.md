@@ -1,6 +1,6 @@
 # Pass the message App
 
-## Preview 
+## Preview
 
 ![Project image](../pass-the-message/img/Screen%20Shot%202022-12-23%20at%204.00.58%20AM.png)
 
@@ -19,7 +19,7 @@ if no input is submitted, an alert should show (using the `show` class in the CS
 ## key concept
 
 - event
-- DOM 
+- DOM
 - Flow Structure(condition)
 - Time function
 
