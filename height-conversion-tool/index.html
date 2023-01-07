@@ -5,98 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Height Conversion tool</title>
-    <!-- embbeded styling -->
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: "tahoma";
-        }
-
-        body {
-            background-color: #f8fbfb;
-        }
-
-        .container {
-            width: 50%;
-            height: 350px;
-            margin: 2rem auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        form {
-            position: relative;
-            width: 50%;
-            height: 300px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            font-size: 25px;
-        }
-
-        input {
-            display: block;
-            font-size: 20px;
-            width: 100%;
-            letter-spacing: 1.5px;
-            padding: 5px 10px;
-        }
-
-        input[type="submit"] {
-            border: 0;
-            margin-top: 10px;
-            background-color: #689268;
-            color: white;
-            width: 100%;
-            display: block;
-
-        }
-
-        input[type="submit"]:hover {
-            cursor: pointer;
-            opacity: 0.8;
-        }
-
-        #results {
-            color: orange;
-            text-align: center;
-            font-size: 25px;
-            margin-top: 20px;
-
-        }
-    </style>
+    <title>Height Converter Tool</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-
 
 <body>
     <div class="container">
         <form>
-            <h1>Height Converter</h1>
-
-
-            <label for="Feet">Feet</label> <input id="feet">
-
-
-
-            <label for="Inches ">Inches </label><input id="inches">
-
-
-            <input type="submit" value="Convert to CM">
-            <div id="results"></div>
+            <h1>Height Converter tool</h1>
+            <label for="feet">Feet</label>
+            <input id="feet">
+            <label for="inches">inches</label>
+            <input id="inches">
+            <button id="btn">Convert to cm</button>
+            <h2 id="results"></h2>
         </form>
     </div>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

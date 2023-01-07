@@ -1,18 +1,20 @@
+
+// get the form from the DOM
 const form = document.querySelector('form')
 
 form.addEventListener("submit", function (e) {
-    e.preventDefault // prevent default submission
+    e.preventDefault() // prevent default submission
 
 
     // get user input from the form
-    let feet = document.querySelector('#feet')
-    let inches = document.querySelector('#inches')
-    const results = document.querySelector('#results')
+    let feet = document.querySelector("#feet")
+    let inches = document.querySelector("#inches")
+    const results = document.querySelector("#results")
 
     //  convert user input to integer
     feet = parseInt(feet.value)
     inches = parseInt(inches.value)
-    
+
     //  condition to check if user input is a number
     if (isNaN(feet) || isNaN(inches)) {
         results.textContent = "Please enter a Valid number!"
