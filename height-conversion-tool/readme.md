@@ -2,9 +2,9 @@
 
 ## Preview
 
-![alt](https://)
+![project image](img/Screen%20Shot%202023-01-07%20at%209.43.33%20PM.png)
 
-## what would you see 
+## What would you see 
 
 - You would see two input boxes and a button
 - The first input box takes values of inches,  the value should not be should not be greater 11 and less than 0. 
@@ -13,17 +13,25 @@
 
 ## Built with
 
-- HTML 
-- CSS 
+- HTML
+- CSS
 - JavaScript
+  
+## What i did 
+
+- firstly, i reference the form from the DOM as assigned it to a variable `form` and also prevented the form from default submission.
+  
+- Secondly, i created a function `convertToCM` . The code inside function `convertToCM` is to get the user input, convert the value to integer(number), check if the value is a number. calcute the feets, inches and return the results.
+  
+- lastly, i called `convertToCM` function on form event
   
 ## Key concopt
 
 - DOM
 - Event(submit)
 - Flow control (conditions)
-- In Built function `parseInt`
-- In Built function `isNaN`
+- Built in function `parseInt()`
+- Buil in function `isNaN()`
   
 ## Lines of code 
 
@@ -32,7 +40,3 @@
 ## New thing learned 
 
 - I learned about the using `parseInt()` function that converts a string to integer. Secondly, i learned the concept of using `isNaN()` which was pretty helpful to check whether a value is a number.
-
-
-
-

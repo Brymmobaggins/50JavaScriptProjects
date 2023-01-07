@@ -1,13 +1,15 @@
 
-//  get the form from DOM
+//  get form from DOM
 const form = document.querySelector("form")
 
 form.addEventListener("submit", function (e) {
-    e.preventDefault() // prevent submission
-    convertToCm()
+    e.preventDefault() // prevent default form submission 
+    convertToCm()   // function call
 
 })
 
+
+// function to convert to cm
 function convertToCm() {
 
     // get user input
