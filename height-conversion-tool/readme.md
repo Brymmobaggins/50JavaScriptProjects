@@ -25,18 +25,18 @@
   
 - lastly, i called `convertToCM` function on form event
   
-## Key concopt
+## Key concept
 
 - DOM
 - Event(submit)
 - Flow control (conditions)
 - Built in function `parseInt()`
-- Buil in function `isNaN()`
+- Built in function `isNaN()`
   
 ## Lines of code 
 
-37 lines of codes including whitespaces and commments
+37 lines of codes including whitespaces and comments
 
 ## New thing learned 
 
-- I learned about the using `parseInt()` function that converts a string to integer. Secondly, i learned the concept of using `isNaN()` which was pretty helpful to check whether a value is a number.
+- I learned about the using `parseInt()` function that converts a string to integer(number). Secondly, i learned the concept of using `isNaN()` which was pretty helpful to check whether a value is a number.
