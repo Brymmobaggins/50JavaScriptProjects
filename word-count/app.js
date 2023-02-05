@@ -15,9 +15,17 @@ function countWord() {
 
     if (input === "") {
         showLength.textContent = "Your input cannot be empty"
+        showLength.classList.add("error")
+        setTimeout(function () {
+            showLength.textContent = " "
+        }, 2000)
     } else {
         showLength.innerHTML = `<h1>${count}</h1>`
-        showLength.classList.remove('error')
+        showLength.classList.remove("error")
+        setTimeout(function(){
+            showLength.textContent = " "
+        }, 2000)
+
     }
 
 }
