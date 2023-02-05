@@ -1,4 +1,4 @@
-
+// getting the form element from DOM
 const form = document.getElementById('form')
 
 form.addEventListener('submit', function (e) {
@@ -13,6 +13,7 @@ function countWord() {
     let input = document.getElementById('string').value
     let count = input.length
 
+    // condition to check if the input is empty
     if (input === "") {
         showLength.textContent = "Your input cannot be empty"
         showLength.classList.add("error")
@@ -20,11 +21,11 @@ function countWord() {
             showLength.textContent = " "
         }, 2000)
     } else {
-        showLength.innerHTML = `<h1>${count}</h1>`
+        showLength.innerHTML = `<h1>You entered ${count} characters</h1>`
         showLength.classList.remove("error")
-        setTimeout(function(){
+        setTimeout(function () {
             showLength.textContent = " "
-        }, 2000)
+        }, 3000)
 
     }
 
