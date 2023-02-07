@@ -24,8 +24,9 @@ function countWord() {
         showLength.innerHTML = `<h1>You entered ${count} characters</h1>`
         showLength.classList.remove("error")
         setTimeout(function () {
-            showLength.textContent = " "
-        }, 3000)
+            showLength.textContent = ""
+u          
+        }, 2000)
 
     }
 
