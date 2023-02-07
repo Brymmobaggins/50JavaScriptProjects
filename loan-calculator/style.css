@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: tahoma;
+}
+
+body {
+    background-color: rgb(167, 204, 205);
+    color: white;
+}
+
+h1 {
+    padding-top: 15px;
+    font-size: 35px;
+}
+
+.loan-container {
+    margin: 4rem auto;
+    background-color: #021301;
+    max-width: 50%;
+    height: 400px;
+    text-align: center;
+    border-radius: 6px;
+    animation-name: changeBg;
+    animation-duration: 5s;
+    /* animation-iteration-count: 10; */
+}
+
+#month,
+#amount,
+#interest-rate {
+    width: 50%;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 6px;
+    outline: 0;
+
+}
+
+input:focus {
+    background-color: #e3f2f9;
+    transition: 0.2s;
+
+}
+
+/* remove arrow/spinner */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* add animation */
+@keyframes changeBg {
+    from {
+        background-color: rgb(243, 224, 224);
+    }
+}
+
+to {
+    background-color: rgb(227, 227, 215);
+}
+
+
+
+@media (max-width:720px) {
+
+    h1 {
+        font-size: 20px;
+    }
+    .loan-container{
+        padding: 0 15px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    #month,
+    #amount,
+    #interest-rate {
+        width: 100%;
+        display: block;
+
+    }
+}
