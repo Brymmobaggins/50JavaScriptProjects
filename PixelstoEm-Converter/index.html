@@ -6,69 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel to Em Converter</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: tahoma;
-            /* font-size: 16px; */
-        }
-
-        body {
-            background-color: aliceblue;
-        }
-
-
-        .container {
-            position: fixed;
-            background-color: white;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 10px;
-            border: 1px solid black;
-            height: 250px;
-            max-width: 45%;
-            padding: 1em;
-        }
-
-        label {
-            display: inline-block;
-            margin-top: 8px;
-
-        }
-
-        input {
-            width: 100%;
-            display: block;
-            padding: 8px 10px;
-            border-radius: 5px;
-            border: 0;
-            font-size: 16px;
-            outline: green solid 0.5px;
-        }
-
-        input:focus {
-            background-color: #f2f2b1;
-        }
-
-        /* hide default arrow on input */
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-
-            ;
-    </style>
+    <link rel="stylesheet" href="main.css">
+        
 </head>
-
 <body>
     <div class="container">
-        <h3 style="text-align: center;">PIXEL to EM Converter</h3>
+        <h3>PIXEL to EM Converter</h3>
         <div class="input-Pixel">
             <label for="">PIXELS</label>
-            <input type="number">
+            <input type="number"
         </div>
         <div class="input-em">
             <label for="">EM</label>
