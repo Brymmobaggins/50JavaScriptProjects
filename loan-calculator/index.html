@@ -10,11 +10,11 @@
 <body>
     <div class="loan-container">
         <h1>Loan Calculator</h1>
-        <p>Loan Amount <input id="amount" min="1" type="number" max="50000000"> </p>
-        <p>Interest Rate %<input type="number" id="interest-rate"min="1" max="100" step="0.1" value="10" > </p>
-        <p>Month to Pay<input id="month" type="number"> </p>
+        <p>Loan Amount <input id="amount" min="1" type="number" max="50000000" onchange="calculateLoan()"> </p>
+        <p>Interest Rate %<input type="number" id="interest-rate"min="1" max="100" step="0.1" value="10" onchange="calculateLoan()"> </p>
+        <p>Month to Pay<input id="month" type="number"onchange="calculateLoan()"> </p>
         <h2 id="show-payment"></h2>
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
