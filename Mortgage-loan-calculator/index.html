@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loan-container">
+        <h1>Loan Calculator</h1>
+        <p>Loan Amount N<input id="amount" min="1" type="number" max="50000000" onchange="calculateLoan()"></p>
+        <p>Interest Rate %<input id="interest-rate" min="0" max="100" step=".1" value="10" onchange="calculateLoan()"></p>
+        <p>Month to Pay<input id="month" type="number" value ="1" step="1" onchange="calculateLoan()"> </p>
+        <h2 id="show-payment"></h2>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
