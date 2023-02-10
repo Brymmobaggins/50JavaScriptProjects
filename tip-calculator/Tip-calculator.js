@@ -5,15 +5,15 @@ let total = document.getElementById('total')
 let calculate = document.getElementById('calculate-btn')
 
 
+// function to run whenever the button is clicked
 calculate.onclick = function () {
     // covert bill value to number/integer 
     billAmount = Number(billAmount.value) 
 
-    // covert percentage tip value to number/integer 
+    // convert percentage tip value to number/integer 
     percentageTip = Number(percentageTip.value)
 
-
-    // check if
+    // check if bill amout is number, less than and empty
     if (isNaN(billAmount) || billAmount <= 0 || billAmount === null) {
         alert("Please enter a Bill Amount")
     }
