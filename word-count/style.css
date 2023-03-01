@@ -5,6 +5,7 @@
     /* font-family: 'Silkscreen', cursive; */
 }
 
+/* root background */
 :root {
     background-color: #424552;
 }
@@ -48,15 +49,22 @@ input {
     border-radius: 5px;
 }
 
+/* style input focus */
+input:focus {
+    border: 2px solid #236c23;
+    background-color:aliceblue;
+}
+
+/* error class */
 .error {
     font-family: tahoma;
     color: red;
+    /* border: 1px solid red; */
 }
 
-input:focus {
-    border: 2px solid #236c23;
-}
 
+
+/* styling button */
 .container button {
     margin-top: 1.5em;
     cursor: pointer;
@@ -70,7 +78,7 @@ input:focus {
     opacity: 0.8;
     transition: 0.3s;
 }
-
+/* hover on button */
 button:hover {
     opacity: 9;
 }
