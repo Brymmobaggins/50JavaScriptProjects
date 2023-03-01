@@ -11,7 +11,7 @@ allBtns.addEventListener('click', counter)
 let value = 0
 
 // function that for count color
-function showRed() {
+function showColor() {
     if (value <= 0) {
         display.style.color = 'Red'
     } else {
