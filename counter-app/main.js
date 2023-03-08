@@ -10,7 +10,7 @@ allBtns.addEventListener('click', counter)
 
 let value = 0
 
-// function that for count color
+// function that turns the count to red
 function showColor() {
     if (value <= 0) {
         display.style.color = 'Red'
@@ -19,8 +19,6 @@ function showColor() {
     }
 
 }
-
-
 // function that runs whenever the buttons is clicked
 function counter(e) {
     // variable that target the id of every button
@@ -30,13 +28,13 @@ function counter(e) {
     if (btn === 'increase') {
         value++
         display.textContent = value
-        showRed()
+        showColor()
 
         // if the id value is "decrease" count decreases
     } else if (btn === 'decrease') {
         value--
         display.textContent = value
-        showRed()
+        showColor()
 
         // if it is otherwise count goes back to zero
     } else {
@@ -44,5 +42,6 @@ function counter(e) {
         display.textContent = value
     }
 }
+
 
 

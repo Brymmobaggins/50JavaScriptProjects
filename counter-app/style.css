@@ -1,4 +1,4 @@
-* {
+      * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -80,6 +80,10 @@ h2 {
 
 /* when the screen is less than 720px */
 @media (max-width:720px) {
+
+    body{
+        background-color:pink;
+    }
     h1 {
         font-size: 1.5rem;
         padding: 0 2rem;
