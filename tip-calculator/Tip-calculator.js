@@ -13,7 +13,7 @@ calculate.onclick = function () {
     // convert percentage tip value to number/integer 
     percentageTip = Number(percentageTip.value)
 
-    // check if bill amout is number, less than and empty
+    // check if bill amout is number, less than zero or empty
     if (isNaN(billAmount) || billAmount <= 0 || billAmount === null) {
         alert("Please enter a Bill Amount")
     }
