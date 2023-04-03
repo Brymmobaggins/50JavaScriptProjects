@@ -1,20 +1,26 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dollar to Naira</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <header class="title">Converter</header>
-        <p class="input-data">
-            <label for="">Enter Number of Dollar</label>
-            <input type="text" name="" id="">
-        </p>
-        <button class="btn">Convert</button>
+      <header class="title">Converter</header>
+      <p class="input-data">
+        <label>Enter Number of Dollar</label>
+        <input type="number" id="Dollar" />
+
+        <label>Naira Value</label>
+        <input id="naira" disabled/>
+        
+      </p>
+      <button id="convert" class="btn" onclick="NairatoDollar()">
+        Convert
+      </button>
     </main>
-    
-</body>
-</html> -->
+    <script src="./coverter.js"></script>
+  </body>
+</html>
