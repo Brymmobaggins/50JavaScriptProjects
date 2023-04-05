@@ -4,10 +4,10 @@
 
 ![project image](img/Screen%20Shot%202023-01-07%20at%209.43.33%20PM.png)
 
-## What would you see 
+## What you would see 
 
 - You would see two input boxes and a button
-- The first input box takes values of inches,  the value should not be should not be greater 11 and less than 0. 
+- The first input box takes values of inches,  the value should not be show, if value is should  not be greater 11 and less than 0. 
 - The other input box takes the value for feet, the value should not be less than 0.
 - When a user click on the button, it converts the both value to centimeter(cm) and display the results.
 
