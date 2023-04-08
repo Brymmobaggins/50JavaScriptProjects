@@ -1,5 +1,7 @@
 # Dollar to naira
 
+## link
+
 ## Preview
 ![Project Preview](./Screen%20Shot%202023-04-05%20at%209.56.24%20PM.png)
 
@@ -17,10 +19,11 @@
 - Logic Comparison
 
 ## What i did
+firstly, the major thing i did, i got did input value from the dollar input box and multiply it by 750. i display the output on the naira interface and concatenate it with naira(N) sign in a function.
 
-## Built width
+
+## Built with
 - html
 - Plain JavaScript
 - CSS 
 
-!

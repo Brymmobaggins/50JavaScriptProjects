@@ -4,8 +4,6 @@
     box-sizing: border-box;
     font-family: "tahoma";
     letter-spacing: 1.5px;
-    /* font-size: 28px; */
-    /* font-weight: bold; */
 }
 body{
     background-color:#f9f5f1;
@@ -13,62 +11,41 @@ body{
 
 .title {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .container {
     margin: 2rem auto;
-    /* border: 1px solid wheat; */
-    max-width: 20%;
     text-align: center;
-}
-
-label {
-    display: inline-block;
-    margin-top: 10px;
+    max-width: 500px;
 }
 
 input {
     width: 100%;
-    color:#85c22a;
-    font-size: 20px;
-    font-weight: 700;
     height: 40px;
     padding: 0 10px;
     border-radius: 5px;
+    margin-top: 20px;
     text-align: center;
-    outline-color: #aad6aa;
+    font-size: 20px;
 }
 
 #naira {
     color: #2780ed;
 }
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input:focus {
-    background-color: white;
-}
-
-::placeholder {
-    font-size: 20px;
-    font-weight: 600;
-
+::placeholder{
+    font-size: 15px;
 }
 
 button {
     display: block;
     margin: 0 auto;
     background: #85c22a;
-    font-weight: 600;
+    font-weight: bold;
     color: white;
-    padding: 8px 15px;
-    opacity: 1;
-    border: 0;
+    padding: 8px 25px;
+    opacity: 2;
 }
 
 button:hover {
