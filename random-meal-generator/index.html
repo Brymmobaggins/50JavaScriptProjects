@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Meal Generator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.0.3/skeleton.css"
+    />
+  </head>
 
-<body>
-    <h1>Are you starving? 😔 </h1>
-    <!-- <div class="get-meal">
-
-    </div> -->
-    <button id="fetch-meal">
-        GET MEAL 🍗
-    </button>
-    <div class="show-meal">
-
+  <body>
+    <div class="container">
+      <div class="row text-center">
+        <h3>feeling Hungry?</h3>
+        <h5>Get some Random Meal by clicking below</h5>
+        <button class="button-primary" id="get-meal">Get meal</button>
+      </div>
     </div>
-  <script src="app.js"></script>
 
-</body>
+    <div id="meal" class="row meal"></div>
 
+    <script src="./app.js"></script>
+  </body>
 </html>
