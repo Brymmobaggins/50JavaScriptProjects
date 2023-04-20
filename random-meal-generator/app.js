@@ -1,5 +1,5 @@
-const mealButton = document.getElementById('get-meal')
-const mealContainer = document.getElementById('meal')
+const mealButton = document.getElementById('get-meal');
+const mealContainer = document.getElementById('meal');
 
 mealButton.onclick = function(){
     fetch("https://themealdb.com/api/json/v1/1/random.php")
@@ -8,27 +8,26 @@ mealButton.onclick = function(){
             createMeal(res.meals[0])
         })
 
-}
+};
 
 
 function createMeal(meal) {
-  const ingredients = [ ];
+  const ingredients = [];
 
   for(let i = 1; i <= 20; i++){
-    if(meal[`strIngredient{i}`]){
+    if(meal[`strIngredient${i}`]){
         ingredients.push(
             `${meal[`strIngredient${i}`]} -  
             ${meal[`strMeasure${i}`]}`)
     }else{
-
         break;
      }
     }
-    // console.log(ingredients)
+
 
     mealContainer.innerHTML =  
     `<div class="row">
-       <div class="column five">
+       <div class="columns five">
        <img src="${meal.strMealThumb}" alt="meal img" />
        <p> <strong>Category: </strong>${meal.strCategory}</p>
         
@@ -39,13 +38,13 @@ function createMeal(meal) {
         <ul>
         ${ingredients.map(ingredient =>`
           <li>
-            ${ingredients}
-          </li>` ).join('')}
+            ${ingredient}
+          </li>`).join('')}
           </ul>
 
        </div>
 
-       <div class="column seven">
+       <div class="columns seven">
        <h4>${meal.strMeal}</h4>
         <p>${meal.strInstructions}</p>
        </div>
@@ -53,7 +52,7 @@ function createMeal(meal) {
     </div>
     <div class="row">
     <h5>Video Recipe</h5>
-    <div class="videpWrapper">
+    <div class="videoWrapper">
     <iframe src="https:\/\/www.youtube.com\/embed/${meal.strYoutube.slice(-11)}" />
     </div>
      </div>

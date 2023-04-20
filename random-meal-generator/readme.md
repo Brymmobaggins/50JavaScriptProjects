@@ -9,10 +9,12 @@
 ## Buit with 
 
 - HTML 
-- CSS 
+- Skeleton CSS 
 - JS 
 
-## concept 
+## key concept 
 
-DOM manipulation 
-fetech Data from APi
+- DOM manipulation 
+- fetch Data from API
+- string literal
+- 
