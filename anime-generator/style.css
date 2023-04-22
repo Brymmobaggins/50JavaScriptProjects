@@ -8,7 +8,7 @@ body {
 }
 
 #anime-result {
-    /* border: 1px solid red; */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,6 @@ body {
 
 button {
     border: 0;
-    /* width: 300px; */
     padding: 10px;
     margin: 10px;
     border-radius: 6px;
