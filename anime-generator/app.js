@@ -9,7 +9,11 @@ function getAnime() {
     fetch('https://nekos.best/api/v2/neko')
         .then(response => response.json())
         .then(data => {
-            animeContainer.innerHTML = `<img src="${data.results[0].url}" lazy="loading" />`;
+            animeContainer.innerHTML = `<h3><strong>Name: </strong> ${data.results[0].artist_name}</h3>
+            <img src="${data.results[0].url}" lazy="loading" />
+
+               
+            
+            `;
         })
 }
-

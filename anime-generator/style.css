@@ -1,45 +1,39 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #141413;
-}
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ body{
+    font-family: "tahoma";
+    background: #d9d7d7;
+ }
 
-#anime-result {
+ h3 {
+     text-align: center;
+     margin-top: 40px;
+ }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 500px;
-    margin: 10px;
-    border-radius: 5px;
-}
+ #anime-result img {
+     display: block;
+     margin: 0 auto;
+     width: 50%;
+     height: 450px;
+     border-radius: 8px;
 
-#anime-result img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+ }
 
-button {
-    border: 0;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 6px;
-    background-color: #e4f8e6;
-    cursor: pointer;
-    letter-spacing: 1.5px;
+ button {
+     margin: 0 auto;
+     display: block;
+     margin-top: 20px;
+     padding: 10px;
+     letter-spacing: 1.5px;
+     border-radius: 6px;
+     background-color: #a7e0e0;
+     border: 0;
+     font-weight: bold;
+ }
 
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-button:focus {
-    outline: 0;
-
-}
+ button:hover {
+     cursor: pointer;
+ }

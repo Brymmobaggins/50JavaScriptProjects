@@ -1,6 +1,6 @@
 ## Anime Character Generator
 
-##![Preview](./Screen%20Shot%202023-04-22%20at%202.51.53%20PM.png)
+##![Preview](./Screen%20Shot%202023-04-22%20at%2010.05.49%20PM.png)
 
 
 ##[Live Demo]()
