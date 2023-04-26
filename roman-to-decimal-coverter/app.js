@@ -1,44 +1,37 @@
 
-const convertBtn = document.getElementById('convert')
-let roman = document.getElementById('roman').value
+const convertButton = document.getElementById('convert')
 
-convertBtn.onclick = function () {
+convertButton.addEventListener('click', romanToNumber)
 
+function romanToNumber() {
+    let input = document.getElementById('roman-value').value
 
-}
+    var roman = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
 
-if (roman === "" || isNaN(roman)) {
-    // alert("no number")
-}
+    let result = 0
 
-function convertToRoman() {
-    let num = parseInt(roman)
-    let romanNum = ""
-    if (num < 1 || num > 3999) {
-        return "error"
-    }
-    if (num < 1000) {
-        romanNum = "M"
-    } else if (num < 2000) {
-        romanNum = "CM"
-    } else if (num < 3000) {
-        romanNum = "D"
-    } else if (num < 4000) {
-        romanNum = "CD"
-    } else if (num < 5000) {
-        romanNum = "C"
-    } else if (num < 6000) {
-        romanNum = "XC"
-    } else if (num < 7000) {
-        romanNum = "L"
-    } else if (num < 8000) {
-        romanNum = "XL"
-    } else if (num < 9000) {
-        romanNum = "X"
-        } else if (num < 10000) {
-            romanNum = "IX"
-            } else if (num < 11000) {
+    for (let i = 0; i < input.length; i++) {
+        let current = roman[input[i]];
+        let next = roman[input[i + 1]];
+
+        if (current < next) {
+            result += next - current;
+            i++
+        } else {
+            result += current;
+        }
 
     }
+    console.log(result)
+
 }
- 
+// console.log()
+
