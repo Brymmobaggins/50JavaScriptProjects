@@ -1,11 +1,13 @@
 
 const convertButton = document.getElementById('convert')
+// const numberResult = document.getElementById('result')
 
 convertButton.addEventListener('click', romanToNumber)
 
-function romanToNumber() {
-    let input = document.getElementById('roman-value').value
 
+function romanToNumber() {
+    let num = document.getElementById('roman-value').value
+    // input.toUpperCase()
     var roman = {
         I: 1,
         V: 5,
@@ -18,20 +20,22 @@ function romanToNumber() {
 
     let result = 0
 
-    for (let i = 0; i < input.length; i++) {
-        let current = roman[input[i]];
-        let next = roman[input[i + 1]];
+    for (let i = 0; i < num.length; i++) {
+        let current = roman[num[i]];
+        let next = roman[num[i + 1]];
 
         if (current < next) {
             result += next - current;
             i++
+            document.getElementById("display-roman").innerHTML = num
+
         } else {
             result += current;
         }
 
     }
-    console.log(result)
+    return result
 
+    // console.log(result)
 }
-// console.log()
 
