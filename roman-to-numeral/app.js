@@ -27,13 +27,12 @@ function romanToNumber() {
 
         if (current < next) {
             num -= next - current;
-            // i++
         } else {
             num += current;
         }
 
     }
-    result.innerHTML = `<h1>sss ${num}</h1>`
+    result.innerHTML = num
 
     // console.log(result)
 }
