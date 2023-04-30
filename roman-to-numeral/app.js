@@ -24,7 +24,6 @@ function romanToNumber() {
     let num = 0
 
     if (numInput == "" || numInput == null ) {
-        // showError.classList.add("error")
         errorMessage.classList.add("error")
 
     } else {
