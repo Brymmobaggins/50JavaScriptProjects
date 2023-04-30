@@ -34,7 +34,21 @@ input {
     padding: 10px 5px;
     display: block;
     font-size: 18px;
-    outline-color: #d4a373;
+    /* outline-color: none; */
+}
+input:focus{
+    /* outline-color: hsl(120, 7%, 62%); */
+    border:3px solid #555;
+}
+span{
+    display: inline-block;
+    font-size: small;
+    visibility: hidden;
+}
+
+.error {
+    color: #f44336;
+    visibility: visible;
 }
 
 button {
@@ -49,10 +63,12 @@ button {
     transition: 0.5 2s;
     color: #faf4e7;
 }
-button:hover{
+
+button:hover {
     opacity: 1;
     cursor: pointer;
 }
-P{
+
+P {
     font-size: 20px;
 }

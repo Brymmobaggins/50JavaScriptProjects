@@ -2,6 +2,8 @@
 const convertButton = document.getElementById('convert')
 
 convertButton.addEventListener('click', romanToNumber)
+// const inputError = document.querySelector('input')
+const errorMessage = document.querySelector('span')
 
 
 function romanToNumber() {
@@ -21,6 +23,16 @@ function romanToNumber() {
     let result = document.getElementById("show-roman")
     let num = 0
 
+    if (numInput == "" || numInput == null ) {
+        // showError.classList.add("error")
+        errorMessage.classList.add("error")
+
+    } else {
+        errorMessage.classList.remove("error")
+        result.innerHTML = num
+
+    }
+
     for (let i = 0; i < numInput.length; i++) {
         let current = roman[numInput[i]];
         let next = roman[numInput[i + 1]];
@@ -32,7 +44,9 @@ function romanToNumber() {
         }
 
     }
-    result.innerHTML = num
+
+    // result.innerHTML = num
+    // num = ""
 
     // console.log(result)
 }
