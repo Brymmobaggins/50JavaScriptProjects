@@ -1,9 +1,9 @@
 
 const convertButton = document.getElementById('convert')
+const errorMessage = document.querySelector('span')
+const input = document.querySelector('input')
 
 convertButton.addEventListener('click', romanToNumber)
-// const inputError = document.querySelector('input')
-const errorMessage = document.querySelector('span')
 
 
 function romanToNumber() {
@@ -23,12 +23,21 @@ function romanToNumber() {
     let result = document.getElementById("show-roman")
     let num = 0
 
-    if (numInput == "" || numInput == null ) {
+    if (numInput == "" || numInput == null) {
         errorMessage.classList.add("error")
+
+        setTimeout(() => {
+            errorMessage.classList.remove("error")
+            result.innerHTML = ""
+
+        }, 2000);
+    }
+
+    else if ( ) {
+        errorMessage.textContent = "Enter roman in capital letter"
 
     } else {
         errorMessage.classList.remove("error")
-        result.innerHTML = num
 
     }
 
@@ -43,10 +52,7 @@ function romanToNumber() {
         }
 
     }
-
-    // result.innerHTML = num
-    // num = ""
-
-    // console.log(result)
+    result.innerHTML = `<p>Number value is: ${num}</p>`
 }
+
 

@@ -15,7 +15,7 @@ body {
 
 .container {
     padding: 10px;
-    height: 200px;
+    height: 250px;
     border: 1px solid #e3c7c7;
     border-radius: 6px;
 }
@@ -34,12 +34,11 @@ input {
     padding: 10px 5px;
     display: block;
     font-size: 18px;
-    /* outline-color: none; */
 }
-input:focus{
-    /* outline-color: hsl(120, 7%, 62%); */
-    border:3px solid #555;
+input.error{
+    border:1px solid #f44336;
 }
+
 span{
     display: inline-block;
     font-size: small;
@@ -55,7 +54,7 @@ button {
     display: block;
     margin: 10px auto;
     padding: 5px 10px;
-    background: #aec26b;
+    background: #95a365;
     border: 0;
     letter-spacing: 1px;
     font-weight: bold;
