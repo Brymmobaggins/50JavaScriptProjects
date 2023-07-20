@@ -1,0 +1,17 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: "tahoma";
+}
+
+.modal{
+    width: 50%;
+
+}
+input{
+    width: 100%;
+    display: block;
+    /* font-size: 18px; */
+    padding: 12px 10px;
+}
+
