@@ -4,27 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modal Pop up</title>
-    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="modal.css" />
   </head>
   <body>
-
-    <div class="modal-btn">
-        <button class="open-modal">open modal</button>
-    </div>
-    <main>
+    <div class="container">
+      <div>
+        <button class="open-modal btn">open modal</button>
+      </div>
       <div class="modal">
         <!-- The Close Button -->
-        <span id="close-modal">&times;</span>
-        <p>Hello, this is a Modal dialog</p>
-        <!-- <dialog> -->
-          <form class="form">
-            <label for="text">Name<input type="text" /></label>
-            <label for="email">Email<input type="text" /></label>
-            <button type="submit"></button>
-          </form>
-        <!-- </dialog> -->
+        <span class="close-modal">&times;</span>
+        <p>
+          The Modal is Awesome, i am pretty sure you would love it, click outside the modal and see what happens.
+        </p>
+
+        <form>
+          <label for="email"
+            ><b>Email</b><input type="text" id="email" autocomplete="off"
+          /></label>
+          <input type="submit" />
+        </form>
       </div>
-    </main>
+    </div>
     <script src="modal.js"></script>
   </body>
 </html>
