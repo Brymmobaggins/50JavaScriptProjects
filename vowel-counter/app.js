@@ -11,6 +11,7 @@ form.addEventListener('submit', function (e) {
         vowelCountShow.textContent = "Numbers are not allowed"
 
     }
+
 })
 
 input.onfocus = function () {                     // when input is focus 
@@ -31,7 +32,7 @@ function checkVowel() {
     }
     if (count > 1) {
         vowelCountShow.innerHTML = `${input} have ${count} vowels`;
-    }else{
+    } else {
         vowelCountShow.innerHTML = `${input} has ${count} vowel`;
 
     }
