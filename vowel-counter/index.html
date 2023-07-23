@@ -1,111 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vowel Counter</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            --ft-family: 'Shadows Into Light', cursive;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        --ft-family: "Shadows Into Light", cursive;
+      }
 
-        body {
-            background-color: pink;
-            font-family: var(--ft-family);
-            letter-spacing: 1.5px;
-            font-weight: 300;
-            color: rgb(251, 253, 255);
-            display: flex;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-        }
+      body {
+        background-color: pink;
+        font-family: var(--ft-family);
+        letter-spacing: 1.5px;
+        font-weight: 300;
+        color: rgb(251, 253, 255);
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
 
-        h3 {
-            font-weight: 400;
-            margin-bottom: 20px;
-            text-transform: capitalize;
-        }
+      h3 {
+        font-weight: 800;
+        color:#000;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+      }
 
-        .container input {
-            padding: 10px 15px;
-            font-size: 16px;
-            color: #146eaa;
-            outline: 0;
-            border: 0;
-            border-radius: 5px;
+      .container input {
+        padding: 10px 15px;
+        font-size: 16px;
+        color: #146eaa;
+        outline: 0;
+        border: 0;
+        border-radius: 5px;
+      }
 
-        }
+      input:focus {
+        background-color: #e2e2e2;
+        border: 1px solid #90a570;
+      }
 
-        input:focus {
-            background-color: #e2e2e2;
-            border:1px solid #90a570;
-        }
+      ::placeholder {
+        font-size: 12px;
+        font-family: var(--ft-family);
+        letter-spacing: 1px;
+        text-transform: lowercase;
+      }
 
-        ::placeholder {
-            font-size: 12px;
-            font-family: var(--ft-family);
-            letter-spacing: 1px;
-            text-transform: lowercase;
-        }
+      .container p {
+        position: absolute;
+        color: #146eaa;
+        font-size: 20px;
+        top: 50px;
+        bottom: 0;
+        left: 10px;
+      }
 
-        .container p {
-            position: absolute;
-            color: #146eaa;
-            font-size: 20px;
-            top: 50px;
-            bottom: 0;
-            left: 10px;
+      form {
+        position: relative;
+      }
 
-        }
+      .container button {
+        font-size: 15px;
+        font-family: var(--ft-family);
+        padding: 5px 10px;
+        border: 0;
+        border-radius: 5px;
+        background-color: #4c974c;
+        color: aliceblue;
+        opacity: 0.9;
+        transition: 0.2s;
+      }
 
-        form {
-            position: relative;
-        }
-
-        .container button {
-            font-size: 15px;
-            font-family: var(--ft-family);
-            padding: 5px 10px;
-            border: 0;
-            border-radius: 5px;
-            background-color: #4c974c;
-            color: aliceblue;
-            opacity: 0.9;
-            transition: 0.2s;
-        }
-
-        button:hover {
-            cursor: pointer;
-            opacity: 8;
-        }
+      button:hover {
+        cursor: pointer;
+        opacity: 8;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <h3 style="text-align: center;">VOWEL COUNTER</h3>
-        <div class="container">
-            <form  id="form">
-                <input type="text" id="input" placeholder="type some words" autocomplete="off" >
-                <button onclick="checkVowel()" >Count Vowels</button>
-                <p id="show"></p>
-            </form>
-
-        </div>
+      <h3 style="text-align: center">VOWEL COUNTER</h3>
+      <div class="container">
+        <form id="form">
+          <input
+            type="text"
+            id="input"
+            placeholder="type some words"
+            autocomplete="off"
+          />
+          <button onclick="checkVowel()">Count Vowels</button>
+          <p id="show"></p>
+        </form>
+      </div>
     </main>
-    <script src="./app.js">
-
-    </script>
-
-</body>
-
+    <script src="./app.js"></script>
+  </body>
 </html>

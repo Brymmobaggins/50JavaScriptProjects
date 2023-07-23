@@ -29,6 +29,10 @@ function checkVowel() {
             }
         }
     }
-   vowelCountShow.textContent = input + " has " + count + " vowel"// assign count to display the text
-}
+    if (count > 1) {
+        vowelCountShow.innerHTML = `${input} have ${count} vowels`;
+    }else{
+        vowelCountShow.innerHTML = `${input} has ${count} vowel`;
 
+    }
+}
