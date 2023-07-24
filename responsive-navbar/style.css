@@ -63,26 +63,33 @@ body {
     border-radius: 10px;
 }
 
-/* media query when the screen size/width is 400px or less */
-@media (max-width:400px) {
+/* media query when the screen size/width is 600px or less */
+@media (max-width:600px) {
     .toggle-button{
         display: flex;
     }
     .navbar-link{
-        /* display: none;  */
+        display: none; 
         width: 100%;
     }
     .nav-bar{
         flex-direction: column;
         align-items:flex-start
     }
-    .nav-bar ul{
+    .navbar-link ul{
         width: 100%;
         flex-direction: column;
         /* align-items:center; */
     }
-    .nav-bar li{
+    .navbar-link li{
         text-align: center;
     }
+    .navbar-link ul li a{
+        padding: .5rem 1rem;
+    }
+    .navbar-link.active{
+        display: flex;
+    }
+
     
 }
