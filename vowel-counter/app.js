@@ -31,9 +31,9 @@ function checkVowel() {
         }
     }
     if (count > 1) {
-        vowelCountShow.innerHTML = `${input} have ${count} vowels`;
+        vowelCountShow.innerHTML = `${input} have ${count} vowel letters`;
     } else {
-        vowelCountShow.innerHTML = `${input} has ${count} vowel`;
+        vowelCountShow.innerHTML = `${input} has ${count} vowel letter`;
 
     }
 }
