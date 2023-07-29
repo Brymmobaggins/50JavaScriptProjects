@@ -14,15 +14,19 @@ body {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    max-width: 500px;
+    width: 100%;
 }
 
 input {
     width: 100%;
+    margin-bottom: 0.75rem;
     height: 80px;
     padding: 0 15px;
     font-size: 2rem;
-    background-color: black;
-    color: aliceblue;
+    background-color: #d6d6d6;
+    color: #175a95;
+    outline: 0;
 }
 
 .buttons {
