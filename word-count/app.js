@@ -7,28 +7,25 @@ form.addEventListener('submit', function (e) {
 })
 
 
-// function to run whenever the form is the submit
 function countWord() {
-    const showLength = document.querySelector('p')
-    let input = document.getElementById('string').value
-    let count = input.length
-
+    const wordCountDisplay = document.querySelector('p');
+    const userInput = document.getElementById('string').value;
+    const characterCount = userInput.length;
+  
     // condition to check if the input is empty
-    if (input === "") {
-        showLength.textContent = "Your input cannot be empty"
-        showLength.classList.add("error")
-        setTimeout(function () {
-            showLength.textContent = " "
-        }, 2000)
+    if (userInput === "") {
+      wordCountDisplay.textContent = "Your input cannot be empty";
+      wordCountDisplay.classList.add("error");
+      setTimeout(function() {
+        wordCountDisplay.textContent = " ";
+      }, 2000);
     } else {
-        showLength.innerHTML = `<h1>You entered ${count} characters</h1>`
-        showLength.classList.remove("error")
-        setTimeout(function () {
-            showLength.textContent = ""
-u          
-        }, 2000)
-
+      wordCountDisplay.innerHTML = `<h1>You entered ${characterCount} characters</h1>`;
+      wordCountDisplay.classList.remove("error");
+      setTimeout(function() {
+        wordCountDisplay.textContent = "";
+      }, 2000);
     }
-
-}
+  }
+  
 
