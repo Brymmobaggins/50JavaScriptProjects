@@ -3,9 +3,9 @@ const form = document.getElementById('form')
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()                           // prevent default submit
-    if (input.value === "") {
+    if (userInput.value === "") {
         vowelCountShow.textContent = "Please enter some words"
-    } else if (isNaN(input.value)) {
+    } else if (isNaN(userInput.value)) {
         checkVowel()
     } else {
         vowelCountShow.textContent = "Numbers are not allowed"
@@ -13,27 +13,27 @@ form.addEventListener('submit', function (e) {
     }
 
 })
-
+// clear input
 input.onfocus = function () {                     // when input is focus 
     vowelCountShow.textContent = ""               // clear text
     input.value = ""                              // clear input value
 }
-
+// check vowel
 function checkVowel() {
-    let count = 0;                                // create variable that holds the count 
-    const input = document.getElementById('input').value // get the value with an input
-    const vowel = ["a", "e", "i", "o", "u"]       // an array of vowel letters
-    for (let i = 0; i < input.length; i++) {      // loop through the input value
-        for (let j = 0; j < vowel.length; j++) {   // loop through the array of vowel letters
-            if (input[i] === vowel[j]) { // if statement to check if each iteration of input is the same as each iteration of vowel
-                count++                 // if yes, count increases by 1
+    let vowelCount = 0;                                // create variable that holds the count 
+    const userInput = document.getElementById('input').value // get the value with an input
+    const vowels = ["a", "e", "i", "o", "u"]       // an array of vowel letters
+    for (let i = 0; i < userInput.length; i++) {      // loop through the input value
+        for (let j = 0; j < vowels.length; j++) {   // loop through the array of vowel letters
+            if (input[i] === vowels[j]) { // if statement to check if each iteration of input is the same as each iteration of vowel
+                vowelCount++                 // if yes, count increases by 1
             }
         }
     }
-    if (count > 1) {
-        vowelCountShow.innerHTML = `${input} have ${count} vowel letters`;
+    if (vowelCount > 1) {
+        vowelCountShow.innerHTML = `${userInput} have ${vowelCount} vowel letters`;
     } else {
-        vowelCountShow.innerHTML = `${input} has ${count} vowel letter`;
+        vowelCountShow.innerHTML = `${userInput} has ${vowelCount} vowel letter`;
 
     }
 }
