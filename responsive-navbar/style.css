@@ -79,7 +79,7 @@ body {
     .navbar-link ul{
         width: 100%;
         flex-direction: column;
-        /* align-items:center; */
+
     }
     .navbar-link li{
         text-align: center;
