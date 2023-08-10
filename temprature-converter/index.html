@@ -4,34 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temprature Converter</title>
-    <!-- tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="flex justify-center align-center h-screen">
+  <body>
     <main>
-      <div class="bg-red-100 w-1/2 max-w-100">
-        <h1 class="text-2xl font-bold text-center my-10">
-          Temperature Converter
-        </h1>
-        <div class="flex justify-center col-row">
-          <label for="degree">Degree</label><br />
-          <input
-            type="text"
-            class="px-3 py-2 border border-slate-600 rounded focus:outline-none focus:ring focus:ring-sky-500"
-          />
-          <select id="" class="px-3 py-2 block focus:outline-none">
-            <option value="celcius">Celcius</option>
-            <option value="fahrenhiet">Fahrenhiet</option>
-          </select>
-          <button
-            class="px-5 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white font-bold"
-          >
-            Convert
-          </button>
+      <div class="top">
+        <h2>Temperature Converter</h2>
+      </div>
+      <div class="container">
+        <div class="box">
+          <div>
+            <label for="degree">Degree</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label for="type">Type</label> <br />
+            <select name="measure" id="measure">
+              <option value="Select the type" disabled>Select the type</option>
+              <option value="celcius">Celcius</option>
+              <option value="fahrenhiet">Fahrenhiet</option>
+            </select>
+          </div>
+          <div class="btn">
+            <!-- <br /> -->
+            <button>Convert</button>
+          </div>
         </div>
-
-        <label for="result">Result</label><br />
-        <input type="text" class="px-3 py-2 border border-slate-600 rounded" />
+        <div>
+          <label for="result">Result</label>
+          <input id="result" disabled />
+        </div>
       </div>
     </main>
   </body>
