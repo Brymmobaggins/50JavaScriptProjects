@@ -15,19 +15,19 @@
         <div class="box">
           <div>
             <label for="degree">Degree</label>
-            <input type="text" />
+            <input type="text" id="degree" />
           </div>
           <div>
             <label for="type">Type</label> <br />
-            <select name="measure" id="measure">
-              <option value="Select the type" disabled>Select the type</option>
+            <select id="measure">
+              <option value="choose your temperature" >Select the type</option>
               <option value="celcius">Celcius</option>
               <option value="fahrenhiet">Fahrenhiet</option>
             </select>
           </div>
           <div class="btn">
             <!-- <br /> -->
-            <button>Convert</button>
+            <button id="convert-btn">Convert</button>
           </div>
         </div>
         <div>
@@ -36,5 +36,6 @@
         </div>
       </div>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
