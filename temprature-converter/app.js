@@ -3,15 +3,13 @@ const convertButton = document.getElementById('convert-btn');
 const resultElement = document.getElementById('result');
 const measureSelect = document.getElementById('measure')
 
-
-
 // Celsius conversion funtion
 function convertToCelsius(fahrenheit) {
     return ((fahrenheit - 32) * 5 / 9)
 }
 
 // fahrenheit conversion function
-function convetToFahrenheit(celsius) {
+function convertToFahrenheit(celsius) {
     return ((celsius * 1.8)) + 32
 }
 
@@ -26,17 +24,21 @@ const handleConvert = () => {
         conversionResult = ""
     } else if (Number.isNaN(inputValue)) {
         alert("Please enter a valid number");
-        conversionResult = ""
     } else {
 
-
-        // use ternary for simple condition
-        conversionResult = measureSelect.value === 'celsius' ? convertToCelsius(inputValue) : convetToFahrenheit(inputValue)
+        // ternary of simple condition
+        conversionResult =
+            measureSelect.value === 'celsius'
+                ? convertToCelsius(inputValue)
+                : convertToFahrenheit(inputValue);
     }
-    resultElement.value = conversionResult
 
-}
-convertButton.onclick = handleConvert
+    resultElement.value = conversionResult;
+
+};
+
+convertButton.onclick = handleConvert;
+
 
 
 
