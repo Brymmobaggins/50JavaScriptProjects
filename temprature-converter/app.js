@@ -3,17 +3,7 @@ const convertButton = document.getElementById('convert-btn');
 const resultElement = document.getElementById('result');
 const measureSelect = document.getElementById('measure')
 
-// convertBtn.onclick = function () {
-//     let choice = document.getElementById('measure').value
-//     if (choice == "celcius") {
-//         let celcius = (inputTemperature - 32) * 5 / 9
-//         resultElement.value = celcius
-//     } else  (choice == "fahrenhiet") {
-//         let fahrenheit = (inputTemperature * 1.8) + 32
-//         resultElement.value = fahrenheit
-//     }
 
-// }
 
 // Celsius conversion funtion
 function convertToCelsius(fahrenheit) {
@@ -26,20 +16,27 @@ function convetToFahrenheit(celsius) {
 }
 
 // click event 
-convertButton.onclick = () => {
+const handleConvert = () => {
     // convert input to number
-    const inputTemp = Number(inputTemperature.value)
-
-    let result
-
-    if (measureSelect.value === "celsius") {
-        result = convertToCelsius(inputTemp)
+    const inputValue = Number(inputTemperature.value)
+    let conversionResult
+    //  validate input
+    if (inputValue == "") {
+        alert("Please enter a temperature")
+        conversionResult = ""
+    } else if (Number.isNaN(inputValue)) {
+        alert("Please enter a valid number");
+        conversionResult = ""
     } else {
-        result = convetToFahrenheit(inputTemp)
+
+
+        // use ternary for simple condition
+        conversionResult = measureSelect.value === 'celsius' ? convertToCelsius(inputValue) : convetToFahrenheit(inputValue)
     }
-    resultElement.value = result
+    resultElement.value = conversionResult
 
 }
+convertButton.onclick = handleConvert
 
 
 
