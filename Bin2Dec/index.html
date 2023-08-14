@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary to Decimal Converter</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              purple: "#6f42c1",
+
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-2xl text-white bg-purple p-3">
+        Binary to decimal Converter
+      </h1>
+    </header>
+    <main>
+      <div
+        class="m-auto w-1/2 h-3/6 max-w-xs p-2 mt-5 border border-slate-600 rounded"
+      >
+        <div class="flex flex-row justify-between">
+          <div class="">
+            <input
+              type="text"
+              id="binary"
+              class="border border-slate-600 rounded p-2"
+            />
+          </div>
+          <div>
+            <button
+              id="btn"
+              class="bg-purple hover:bg-purple-500 text-white font-bold border p-2 rounded outline-2 outline"
+            >
+              Convert
+            </button>
+          </div>
+        </div>
+        <h1>Result</h1>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
