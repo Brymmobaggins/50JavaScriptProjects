@@ -4,17 +4,17 @@ const resultElement = document.getElementById('result');
 let measureSelect = document.getElementById('measure')
 
 // temperature measurent symbols
-const fahrenheitSymbol = '°F'
-const celsiusSymbol = '°C';
+const fahrenheitDegreeSymbol = '°F';
+const celsiusDegreeSymbol = '°C';
 
 
 
-// Celsius conversion funtion
+// fahrenheit to celsius conversion funtion
 function fahrenheitToCelsius(fahrenheit) {
     return (fahrenheit - 32) * 5 / 9
 }
 
-// fahrenheit conversion function
+// celsius to fahrenheit conversion function
 function celsiusToFahrenheit(celsius) {
     return (celsius * 1.8) + 32.
 }
@@ -24,10 +24,11 @@ function celsiusToFahrenheit(celsius) {
 const handleConvert = () => {
     // convert input to number
     let inputValue = Number(inputTemperature.value)
+
     let choice = measureSelect.value
     let conversionResult
 
-    //  check validate input
+    //  check valide input
     if (inputValue == "") {
         alert("Please enter a value")
         conversionResult = ""
@@ -39,8 +40,8 @@ const handleConvert = () => {
         // ternary of simple condition
         conversionResult =
             choice == 'celsius'
-                ? celsiusToFahrenheit(inputValue).toFixed(2) + fahrenheitSymbol
-                : fahrenheitToCelsius(inputValue).toFixed(2) + celsiusSymbol;
+                ? celsiusToFahrenheit(inputValue).toFixed(2) + fahrenheitDegreeSymbol
+                : fahrenheitToCelsius(inputValue).toFixed(2) + celsiusDegreeSymbol;
     }
 
     resultElement.value = conversionResult;
