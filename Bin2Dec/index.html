@@ -11,7 +11,6 @@
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
               purple: "#6f42c1",
 
             },
@@ -20,7 +19,7 @@
       };
     </script>
   </head>
-  <body>
+  <body class="bg-slate-100">
     <header>
       <h1 class="text-2xl text-white bg-purple p-3">
         Binary to decimal Converter
@@ -28,26 +27,26 @@
     </header>
     <main>
       <div
-        class="m-auto w-1/2 h-3/6 max-w-xs p-2 mt-5 border border-slate-600 rounded"
+        class="bg-gray-300 m-auto w-full h-52 max-w-sm p-2 mt-5 border border-slate-600 rounded"
       >
         <div class="flex flex-row justify-between">
-          <div class="">
+          <div>
             <input
               type="text"
               id="binary"
-              class="border border-slate-600 rounded p-2"
+              class="block text-lg border border-slate-600 rounded p-3 focus:outline-purple"
             />
           </div>
           <div>
             <button
               id="btn"
-              class="bg-purple hover:bg-purple-500 text-white font-bold border p-2 rounded outline-2 outline"
+              class="bg-purple text-white font-bold border p-3 rounded outline-0 outline"
             >
               Convert
             </button>
           </div>
         </div>
-        <h1>Result</h1>
+        <h1 class="text-3xl font-bold text-green text-center mt-4" id="result"></h1>
       </div>
     </main>
     <script src="script.js"></script>
