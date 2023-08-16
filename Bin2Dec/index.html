@@ -10,18 +10,20 @@
       tailwind.config = {
         theme: {
           extend: {
-            // container: {
-            //   center: true,
-            // },
+            container: {
+            },
             colors: {
               purple: "#6f42c1",
             },
           },
         },
+        fontFamly:{
+          sans:[ 'Tahoma', "sans serif"],
+        }
       };
     </script>
   </head>
-  <body class="bg-purple">
+  <body class="bg-purple font-mono">
     <header class="bg-gray-300 p-3">
       <h1 class="lg:text-2xl md:text-base font-bold">
         Binary to decimal Converter
@@ -33,7 +35,7 @@
       >
         <div class="flex justify-between gap-3">
           <div>
-            <label class="block font-bold text-xl mb-2">Decimal</label>
+            <label class="block font-bold text-xl mb-1">Decimal</label>
             <input
               type="text"
               id="decimal-input"
@@ -41,7 +43,7 @@
             />
           </div>
           <div>
-            <label class="block font-bold text-xl mb-2">Binary</label>
+            <label class="block font-bold text-xl mb-1">Binary</label>
             <input
               type="text"
               id="binary-input"
