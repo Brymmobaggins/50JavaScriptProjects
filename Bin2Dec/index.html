@@ -10,43 +10,49 @@
       tailwind.config = {
         theme: {
           extend: {
+            // container: {
+            //   center: true,
+            // },
             colors: {
               purple: "#6f42c1",
-
             },
           },
         },
       };
     </script>
   </head>
-  <body class="bg-slate-100">
-    <header>
+  <body class="bg-purple">
+    <header class="w-full">
       <h1 class="text-2xl text-white bg-purple p-3">
         Binary to decimal Converter
       </h1>
     </header>
     <main>
       <div
-        class="bg-gray-300 m-auto w-full h-52 max-w-sm p-2 mt-5 border border-slate-600 rounded"
+        class="bg-gray-300 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 h-48 max-w-sm sm:max-w-md p-4 mt-5 border border-slate-600 rounded"
       >
-        <div class="flex flex-row justify-between">
+        <div class="flex justify-between gap-3">
           <div>
+            <label class="block font-bold text-xl mb-2">Decimal</label>
             <input
               type="text"
-              id="binary"
-              class="block text-lg border border-slate-600 rounded p-3 focus:outline-purple"
+              id="decimal-input"
+              class="relative text-base block w-full border border-slate-600 rounded p-3 focus:outline-purple"
             />
           </div>
           <div>
-            <button
-              id="btn"
-              class="bg-purple text-white font-bold border p-3 rounded outline-0 outline"
-            >
-              Convert
-            </button>
+            <label class="block font-bold text-xl mb-2">Binary</label>
+            <input
+              type="text"
+              id="binary-input"
+              class="relative text-base w-full border border-slate-600 rounded p-3 focus:outline-purple"
+            />
           </div>
         </div>
-        <h1 class="text-3xl font-bold text-green text-center mt-4" id="result"></h1>
+        <h1
+          class="text-base text-red-500 font-bold  text-center mt-4"
+          id="error-message"
+        ></h1>
       </div>
     </main>
     <script src="script.js"></script>

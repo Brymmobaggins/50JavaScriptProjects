@@ -1,45 +1,50 @@
-let binaryInput = document.getElementById('binary-input')
-let errorMessage = document.getElementById('error-message')
-let decimalInput = document.getElementById("decimal-input")
+let binaryNumberInput = document.getElementById('binary-input')
+let errorMessageDisplay = document.getElementById('error-message')
+let decimalNumberOutput = document.getElementById("decimal-input")
 
 
 // convert decimal to binary when user input the binary field
-decimalInput.addEventListener('input', function () {
+decimalNumberOutput.addEventListener('input', function () {
 
-    // convert input to a number
-    let decValue = parseInt(decimalInput.value)
+    // get decimal value entered
+    const decimalValue = parseInt(decimalNumberOutput.value)
 
-    if (decValue < 0 || isNaN(decValue)) {
-        errorMessage.textContent = "Please a valid decimal input"
-    } else {
-        // clear error message and set it back after conversion
-        errorMessage.textContent = ""
-        binaryInput.value = decValue.toString(2)
+    // convert to binary and update binary input field
+    binaryNumberInput.value = decimalValue.toString(2)
 
-    }
 })
 
-binaryInput.addEventListener("input", function () {
+binaryNumberInput.addEventListener("input", function () {
+    
+    // get user input
+    const binaryValue = binaryNumberInput.value
 
-    let binaryValue = binaryInput.value
+    // validate input
+    if (isValidBinary(binaryValue)) {
 
-    if (validateBinary(binaryValue)) {
-        decimalInput.value = parseInt(binaryValue, 2)
-        errorMessage.textContent = ""
+        // convert to decimal and output
+        decimalNumberOutput.value = parseInt(binaryValue, 2)
+        errorMessageDisplay.textContent = ""
     } else {
-        errorMessage.textContent = "Please enter a valid binary input"
+        //  show error message
+        errorMessageDisplay.textContent = "Please enter a valid binary number"
     }
 
 
 
-    function validateBinary(num) {
-        for (let i = 0; i < num.length; i++) {
-            if (num[i] != "1" && num[i] != "0") {
-                return false
-            } 
+
+    // validate binary input 
+    function isValidBinary(binaryStr) {
+
+        // loop through each character in input
+        for (let char of binaryStr) {
+            // check if character is 0 or 1
+            if (char !== '0' && char !== '1') {
+                return false;
+            }
         }
-        return true
+        // input contains only 0s and 1s
+        return true;
+
     }
-
-
 })
