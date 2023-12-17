@@ -1,8 +1,8 @@
 # Image slider
 
-## What i did
+## What I did
 
-Building JavaScript has been challenge but simple. all i did is to access different images from inside an array. And to make accesss image easier , i just needed to make sure images had the same name but different numbers so they can be access by index.
+Building JavaScript has been challenging but simple. All I did is to access different images from inside an array. To make access to images easier, I just needed to make sure images had the same name but different numbers so they could be accessed by index.
 
 ## What you would see
 
