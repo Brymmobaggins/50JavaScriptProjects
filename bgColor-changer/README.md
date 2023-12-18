@@ -15,5 +15,5 @@
 ## Key Concept
 
 - Event object
-- Event properties
+- Event Properties
 - Math random
