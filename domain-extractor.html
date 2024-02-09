@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domain Extractor</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: monospace;
+      }
+      body {
+        background-color: black;
+        color: azure;
+      }
+      .container {
+        height: 150px;
+        width: 50%;
+        max-width: 35%;
+        /* border: 1px solid white; */
+        margin: 5rem auto;
+        padding: 0.5rem;
+      }
+      input {
+        width: 100%;
+        display: block;
+        padding: 8px 10px;
+        outline: 0;
+      }
+
+      input:focus {
+        outline: 1px solid #559f94;
+      }
+      button {
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+        font-weight: 900;
+        padding: 1px 26px;
+        margin: 0 auto;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label for="url-value">Enter URL</label>
+      <input type="url" id="url-value" placeholder="e.g www.google.com" />
+      <button onclick="extractDomain()">Get your domain</button>
+      <p
+        style="font-size: 18px; margin-top: 0.5rem; text-align: center"
+        id="show"
+      ></p>
+    </div>
+    <script>
+      let showResult = document.getElementById("show");
+
+      function extractDomain() {
+        let urlValue = document.getElementById("url-value").value;
+        let urlResult = urlValue.split(".")[1];
+
+        if (!urlValue) {
+          alert("Please enter a URL");
+        } else if (!checkCom(urlValue)) {
+          alert("Enter a valid URL");
+        } else {
+          showResult.innerHTML = `Your Domain name is  <b style="color:azure">${urlResult}</b>`;
+        }
+        urlValue.value = "";
+      }
+
+      function checkCom(str) {
+        return str.includes(".com");
+      }
+    </script>
+  </body>
+</html>
