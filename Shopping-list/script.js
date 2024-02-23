@@ -23,7 +23,7 @@ btn.addEventListener("click", function () {
     const listText = document.createElement("span");
     listText.textContent = myItem;
     listItem.appendChild(listText);
-    
+
     const listBtn = document.createElement("button");
     listBtn.textContent = "X";
     listItem.appendChild(listBtn);
@@ -33,12 +33,8 @@ btn.addEventListener("click", function () {
         ul.removeChild(listItem);
     };
     input.focus();
+    input.value = ""
 });
 
-// toggleBtn.onclick = function(){
-//     let element = document.body
-//     element.classList.toggle("darkmode")
-
-// }
 
 
