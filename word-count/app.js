@@ -1,7 +1,6 @@
 // getting the form element from DOM
-const form = document.getElementById('form')
-const wordCountResult = document.querySelector('p');
 
+const wordCountResult = document.querySelector('p');
 
 
 function countWord() {
