@@ -45,8 +45,8 @@ function createNote() {
         //  Adding date to span element
         dateEl.textContent = new Date().toLocaleDateString()
 
-        const editBtn = document.createElement('button')
-        editBtn.textContent = 'Edit'
+        const editBtn = document.createElement('span')
+        editBtn.innerHTML = `<span class="material-icons" id="btn">edit</span>`
 
 
         // Apppending  all children to their respective parent

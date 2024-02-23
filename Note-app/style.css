@@ -56,7 +56,10 @@ header button {
   flex-direction: column;
   left: 5%;
   top: 20%;
-
+}
+#btn {
+  color: #170101;
+  border: 0;
 }
 textarea {
   font-family: "Roboto", sans-serif;
@@ -94,7 +97,7 @@ button:hover {
   margin-bottom: 20px;
   margin-right: 20px;
 }
-.card-footer{
+.card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
