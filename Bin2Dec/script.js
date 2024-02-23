@@ -15,7 +15,7 @@ decimalNumberOutput.addEventListener('input', function () {
 })
 
 binaryNumberInput.addEventListener("input", function () {
-    
+
     // get user input
     const binaryValue = binaryNumberInput.value
 
