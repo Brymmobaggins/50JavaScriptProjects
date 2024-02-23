@@ -16,7 +16,6 @@ body {
     transform: translate(-50%, -50%);
     background-color: #9396bf;
     box-shadow: 3px 1px 8px 0px rgba(117, 117, 223, 0.75);
-
     width: 500px;
 }
 
@@ -35,7 +34,7 @@ h2 {
 }
 
 .count-btn {
-    display: flex;
+    display: flex; 
     flex-direction: row;
     align-items: center;
 }
