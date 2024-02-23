@@ -57,9 +57,9 @@ header button {
   left: 5%;
   top: 20%;
 }
-#btn {
-  color: #170101;
-  border: 0;
+#edit-icon {
+  color: #4d4645;
+  /* border: 0; */
 }
 textarea {
   font-family: "Roboto", sans-serif;
@@ -88,13 +88,12 @@ button:hover {
 .card {
   width: 300px;
   height: 100px;
-  background-color: rgb(237, 182, 44);
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-right: 20px;
 }
 .card-footer {
@@ -115,7 +114,7 @@ p {
   font-size: 14px;
 }
 span {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 @media screen and (min-width: 768px) {
@@ -142,5 +141,6 @@ span {
   textarea {
     width: 100%;
     padding: 10px;
+    font-size: 18px;
   }
 }
