@@ -16,7 +16,7 @@
 - DOM
 - Events
 - function
-- JavaScript REGEX (Regular Expression)
+- JavaScript REGEX (Regular Expression
 
 ### Lines of Codes
 
