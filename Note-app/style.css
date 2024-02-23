@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "inter", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 header {
   display: flex;
@@ -58,14 +56,11 @@ header button {
   flex-direction: column;
   left: 5%;
   top: 20%;
-  /* position: fixed; */
-  /* left: 0; */
-  /* top: 0; */
-  /* overflow: auto; */
-  /* display: none; */
-}
-textarea{
 
+}
+textarea {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 .modal button {
   padding: 10px;
@@ -99,12 +94,25 @@ button:hover {
   margin-bottom: 20px;
   margin-right: 20px;
 }
+.card-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .date {
   font-size: 12.5px;
   font-weight: bold;
 }
 .hideModal {
   display: none;
+}
+span,
+p {
+  font-weight: 300;
+  font-size: 14px;
+}
+span {
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {
@@ -124,11 +132,11 @@ button:hover {
     flex-wrap: wrap;
   }
   .modal {
-    width: 750px;
-    left: 20%;
+    width: 650px;
+    left: 25%;
     top: 20%;
   }
-  textarea{
+  textarea {
     width: 100%;
     padding: 10px;
   }

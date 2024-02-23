@@ -6,8 +6,6 @@ const modal = document.querySelector('.modal')
 const addNoteBtn = document.querySelector('#add-note')
 const cardContainer = document.querySelector('.cards-container')
 
-
-
 openModalBtn.addEventListener('click', function () {
     modal.style.display = "block"
     overlay.style.display = "block"
@@ -34,19 +32,27 @@ function createNote() {
     } else {
         const cardDiv = document.createElement('div')
         cardDiv.classList.add('card')
-        cardDiv.textContent = noteText
+        cardDiv.innerHTML = `<p>${noteText}</p>`
 
         // changes card background color randomly
         cardDiv.style.backgroundColor = randomColor()
 
+        const cardfooter = document.createElement("div")
+        cardfooter.classList.add("card-footer")
         //  Creating a span element for date
-        const dateSpan = document.createElement('span')
-        dateSpan.textContent = new Date().toLocaleTimeString()
+        const dateEl = document.createElement('span')
+
+        //  Adding date to span element
+        dateEl.textContent = new Date().toLocaleDateString()
+
+        const editBtn = document.createElement('button')
+        editBtn.textContent = 'Edit'
 
 
-
-        // Apppending children to parent
-        cardDiv.appendChild(dateSpan)
+        // Apppending  all children to their respective parent
+        cardDiv.appendChild(cardfooter)
+        cardfooter.appendChild(editBtn)
+        cardfooter.appendChild(dateEl)
         cardContainer.appendChild(cardDiv)
 
 
@@ -54,6 +60,8 @@ function createNote() {
     }
 
 }
+
+// Function to generate random color
 function randomColor() {
     let color = "hsl(" + Math.random() * 360 + ", 100%, 75%)"
     return color
