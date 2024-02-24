@@ -39,7 +39,7 @@ function createNote() {
     } else {
         const cardDiv = document.createElement('div')
         cardDiv.classList.add('card')
-        cardDiv.innerHTML = noteText
+        cardDiv.innerHTML = `<p>${noteText}</p>`
 
         // changes card background color randomly
         cardDiv.style.backgroundColor = randomColor()
@@ -53,7 +53,9 @@ function createNote() {
         dateEl.textContent = new Date().toLocaleDateString()
 
         const editBtn = document.createElement('button')
-        editBtn.innerHTML = `<span class="material-symbols-outlined id="edit-icon" >edit</span>`
+        editBtn.innerHTML = `<span class="material-symbols-outlined">
+        edit_square
+        </span>`
 
         editBtn.addEventListener('click', function () {
             editNote(noteText)
@@ -84,7 +86,7 @@ function editNote(noteText) {
 
 // function  to close the modal when click outside modal
 window.onclick = function (event) {
-  if (event.target === overlay) {
-    closeModal();
-  }
+    if (event.target === overlay) {
+        closeModal();
+    }
 };

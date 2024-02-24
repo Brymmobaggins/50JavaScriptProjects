@@ -6,34 +6,9 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 main {
   height: 100vh;
   width: 100vw;
-}
-.container {
-  max-width: 1000px;
-  padding: 10px;
-  margin: 0 auto;
-}
-h1 {
-  font-weight: bold;
-  /* font-size: 75px; */
-}
-header button {
-  border: none;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 100%;
-  background-color: rgb(20, 20, 20);
-  color: white;
-  font-size: 20px;
 }
 .overlay {
   position: absolute;
@@ -57,11 +32,37 @@ header button {
   left: 5%;
   top: 20%;
 }
-#edit-icon {
-  color: #4d4645;
-  /* border: 0; */
+.container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-textarea {
+.container {
+  max-width: 1000px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.container h1 {
+  font-weight: bold;
+}
+.container header button {
+  border: none;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  font-size: 20px;
+}
+button {
+  color: #4a4141;
+  background-color: transparent;
+  border: none;
+}
+
+.modal textarea {
   font-family: "Roboto", sans-serif;
   width: 100%;
 }
@@ -80,9 +81,9 @@ button:hover {
   opacity: 0.8;
 }
 .modal .close {
-  background-color: #df8484;
+  background-color: #f37070;
 }
-.cards-container {
+.container .cards-container {
   margin-top: 15px;
 }
 .card {
@@ -96,26 +97,61 @@ button:hover {
   margin-bottom: 10px;
   margin-right: 20px;
 }
+.card p {
+  font-weight: 300;
+}
 .card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.date {
-  font-size: 12.5px;
-  font-weight: bold;
-}
-.hideModal {
-  display: none;
-}
-span,
-p {
-  font-weight: 300;
-  font-size: 14px;
-}
+
 span {
-  opacity: 0.9;
+  opacity: 0.3;
 }
+
+/* img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+} */
 
 @media screen and (min-width: 768px) {
   h1 {
@@ -141,6 +177,6 @@ span {
   textarea {
     width: 100%;
     padding: 10px;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
