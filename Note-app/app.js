@@ -31,11 +31,11 @@ addNoteBtn.addEventListener("click", function () {
     document.getElementById('note-text').value = ""
 })
 
+const noteText = document.getElementById('note-text').value
 function createNote() {
-    const noteText = document.getElementById('note-text').value
 
     if (!noteText) {
-        alert("Enter Some notes")
+        alert("Please enter note text")
     } else {
         const cardDiv = document.createElement('div')
         cardDiv.classList.add('card')
@@ -87,6 +87,12 @@ function editNote(noteText) {
 // function  to close the modal when click outside modal
 window.onclick = function (event) {
     if (event.target === overlay) {
-        closeModal();
+        shakeModal()
     }
 };
+
+// function to shake the modal
+function shakeModal() {
+    modal.classList.add('shake');
+}
+
