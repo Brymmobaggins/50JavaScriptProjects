@@ -1,10 +1,13 @@
 
 const openModalBtn = document.querySelector('#open-modal')
-const overlay = document.querySelector('.overlay')
+const overlay = document.querySelector('#overlay')
 const closeModalBtn = document.querySelector('.close')
 const modal = document.querySelector('.modal')
 const addNoteBtn = document.querySelector('#add-note')
 const cardContainer = document.querySelector('.cards-container')
+
+// const div = cardContainer.querySelector('.cards-container')
+// console.log(div)
 
 // function to open the modal
 function openModal() {
@@ -31,11 +34,12 @@ addNoteBtn.addEventListener("click", function () {
     document.getElementById('note-text').value = ""
 })
 
-const noteText = document.getElementById('note-text').value
 function createNote() {
+    const noteText = document.getElementById('note-text').value
 
     if (!noteText) {
         alert("Please enter note text")
+        openModal()
     } else {
         const cardDiv = document.createElement('div')
         cardDiv.classList.add('card')
@@ -70,7 +74,7 @@ function createNote() {
 
 }
 
-// Function to generate random color
+// Function to generate random color for the card background color
 function randomColor() {
     let color = "hsl(" + Math.random() * 360 + ", 100%, 75%)"
     return color
@@ -85,14 +89,35 @@ function editNote(noteText) {
 }
 
 // function  to close the modal when click outside modal
+// window.onclick = function (event) {
+//     if (event.target.id == "overlay") {
+//         event.target.classList.remove('shake')
+//         void event.target.offsetWidth
+//         event.target.classList.add('shake');
+
+//     } else {
+//         event.target.classList.remove("shake")
+
+//     }
+//     // console.log(event)
+
+// };
 window.onclick = function (event) {
-    if (event.target === overlay) {
-        shakeModal()
+    shakeModal(event)
+}
+function shakeModal(event) {
+    if (event.target.id === "overlay") {
+        event.target.classList.remove('shake')
+        void event.target.offsetWidth
+        event.target.classList.add('shake');
     }
-};
+    return false
+}
 
 // function to shake the modal
-function shakeModal() {
-    modal.classList.add('shake');
-}
+// function shakeModal(event) {
+//     event.target.classList.remove('shake');
+//     void event.target.offsetWidth
+//     event.classList.add('shake');
+// }
 
