@@ -6,8 +6,9 @@ const modal = document.querySelector('.modal')
 const addNoteBtn = document.querySelector('#add-note')
 const cardContainer = document.querySelector('.cards-container')
 
-// const div = cardContainer.querySelector('.cards-container')
-// console.log(div)
+openModalBtn.addEventListener("click", openModal)
+closeModalBtn.addEventListener("click", closeModal)
+
 
 // function to open the modal
 function openModal() {
@@ -20,36 +21,32 @@ function closeModal() {
     overlay.style.display = "none";
 }
 
-openModalBtn.addEventListener('click', function () {
-    openModal()
-})
-closeModalBtn.addEventListener('click', function () {
-    closeModal()
-})
-
 // 
 addNoteBtn.addEventListener("click", function () {
     closeModal()
     createNote()
-    document.getElementById('note-text').value = ""
+    document.getElementById("note-text").value = ""
 })
 
-function createNote() {
-    const noteText = document.getElementById('note-text').value
 
-    if (!noteText) {
+function createNote() {
+
+    const noteInput = document.getElementById('note-text').value.trim()
+
+
+    if (!noteInput) {
         alert("Please enter note text")
         openModal()
     } else {
         const cardDiv = document.createElement('div')
-        cardDiv.classList.add('card')
-        cardDiv.innerHTML = `<p>${noteText}</p>`
+        cardDiv.className = "card"
+        cardDiv.innerHTML = `<p>${noteInput}</p>`
 
         // changes card background color randomly
         cardDiv.style.backgroundColor = randomColor()
 
         const cardfooter = document.createElement("div")
-        cardfooter.classList.add("card-footer")
+        cardfooter.className = "card-footer"
         //  Creating a span element for date
         const dateEl = document.createElement('span')
 
@@ -62,13 +59,24 @@ function createNote() {
         </span>`
 
         editBtn.addEventListener('click', function () {
-            editNote(noteText)
+            editNote(noteInput)
         })
+
+        const deletBtn = document.createElement("button")
+        deletBtn.innerHTML = `<span class="material-symbols-outlined">delete
+        </span>`
+
+        deletBtn.addEventListener("click", function(){
+            cardDiv.remove()
+        })
+
         // Apppending  all children to their respective parent
         cardDiv.appendChild(cardfooter)
+        cardfooter.appendChild(deletBtn)
         cardfooter.appendChild(editBtn)
         cardfooter.appendChild(dateEl)
         cardContainer.appendChild(cardDiv)
+
 
     }
 
@@ -76,48 +84,45 @@ function createNote() {
 
 // Function to generate random color for the card background color
 function randomColor() {
-    let color = "hsl(" + Math.random() * 360 + ", 100%, 75%)"
+    const color = "hsl(" + Math.random() * 360 + ", 100%, 75%)"
     return color
 }
 
-
 //  function to edit note
-function editNote(noteText) {
+function editNote(noteInput) {
     openModal()
-    document.getElementById('note-text').value = noteText
-
+    document.getElementById("note-text").value = noteInput
+    // createNote().value = ""
+    // const updateDiv = document.getElementById("div")
 }
 
-// function  to close the modal when click outside modal
+
 // window.onclick = function (event) {
+//     shakeModal(event)
+// }
+// function shakeModal(event) {
 //     if (event.target.id == "overlay") {
 //         event.target.classList.remove('shake')
 //         void event.target.offsetWidth
 //         event.target.classList.add('shake');
-
-//     } else {
-//         event.target.classList.remove("shake")
-
 //     }
-//     // console.log(event)
-
-// };
-window.onclick = function (event) {
-    shakeModal(event)
-}
-function shakeModal(event) {
-    if (event.target.id === "overlay") {
-        event.target.classList.remove('shake')
-        void event.target.offsetWidth
-        event.target.classList.add('shake');
-    }
-    return false
-}
-
-// function to shake the modal
-// function shakeModal(event) {
-//     event.target.classList.remove('shake');
-//     void event.target.offsetWidth
-//     event.classList.add('shake');
+//     return true
 // }
+
+// function saveNotes() {
+
+//     // empty array to notes
+//     let notes = []
+
+//     // get all the P element in carddiv
+//     cardDiv.querySelectorAll("p").forEach(element => {
+//         notes.push(element.textContent.trim())
+//         console.log()
+
+//     });
+//     // set note to local storage and convert to JSON format
+//     localStorage.setItem("notes", JSON.stringify(notes))
+
+// }
+
 

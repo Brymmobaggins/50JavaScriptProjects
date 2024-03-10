@@ -63,8 +63,9 @@ button {
 }
 
 .modal textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
   width: 100%;
+
 }
 .modal button {
   padding: 10px;
@@ -105,9 +106,12 @@ button:hover {
   align-items: center;
   justify-content: space-between;
 }
-
+.card-footer > *{
+  cursor: pointer;
+}
 span {
   opacity: 0.5;
+  /* text-align: right; */
 }
 
 .shake{
