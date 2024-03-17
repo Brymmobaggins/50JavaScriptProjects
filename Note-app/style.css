@@ -65,7 +65,6 @@ button {
 .modal textarea {
   font-family: inherit;
   width: 100%;
-
 }
 .modal button {
   padding: 10px;
@@ -106,18 +105,36 @@ button:hover {
   align-items: center;
   justify-content: space-between;
 }
-.card-footer > *{
+.card-footer > * {
   cursor: pointer;
 }
 span {
   opacity: 0.5;
   /* text-align: right; */
 }
+/* .alert{
+  text-align: center;
+  font-size: medium;
+  position: absolute; 
+  position: relative;
+  z-index: 19;
+  top: 10%;
+  bottom: 50%;
+  padding: 0.5rem;
 
-.shake{
+
+.error {
+  background: #fda4af;
+}
+.success {
+  background-color: #4ade80;
+}
+*/
+
+.shake {
   animation: shake 0.3s;
   animation-iteration-count: 2;
-} 
+}
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);

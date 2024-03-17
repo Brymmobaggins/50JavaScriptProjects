@@ -1,101 +1,97 @@
+const openModalBtn = document.querySelector("#open-modal");
+const overlay = document.querySelector("#overlay");
+const closeModalBtn = document.querySelector(".close");
+const modal = document.querySelector(".modal");
+const addNoteBtn = document.querySelector("#add-note");
+const cardContainer = document.querySelector(".cards-container");
 
-const openModalBtn = document.querySelector('#open-modal')
-const overlay = document.querySelector('#overlay')
-const closeModalBtn = document.querySelector('.close')
-const modal = document.querySelector('.modal')
-const addNoteBtn = document.querySelector('#add-note')
-const cardContainer = document.querySelector('.cards-container')
-
-openModalBtn.addEventListener("click", openModal)
-closeModalBtn.addEventListener("click", closeModal)
-
+openModalBtn.addEventListener("click", openModal);
+closeModalBtn.addEventListener("click", closeModal);
 
 // function to open the modal
 function openModal() {
-    modal.style.display = "block"
-    overlay.style.display = "block"
+  modal.style.display = "block";
+  overlay.style.display = "block";
 }
 // function to close the modal
 function closeModal() {
-    modal.style.display = "none";
-    overlay.style.display = "none";
+  modal.style.display = "none";
+  overlay.style.display = "none";
 }
 
-// 
+//
 addNoteBtn.addEventListener("click", function () {
-    closeModal()
-    createNote()
-    document.getElementById("note-text").value = ""
-})
+  closeModal();
+  createNote();
+  document.getElementById("note-text").value = "";
+});
 
+const noteInput = document.getElementById("note-text");
 
 function createNote() {
+  if (!noteInput.value) {
+    alert("kindly enter some text to create a note");
 
-    const noteInput = document.getElementById('note-text').value.trim()
+    // open modal
+    openModal();
+  } else {
+    const cardDiv = document.createElement("div");
+    cardDiv.className = "card";
+    cardDiv.innerHTML = `<p>${noteInput.value}</p>`;
 
+    // changes card background color randomly
+    cardDiv.style.backgroundColor = randomColor();
 
-    if (!noteInput) {
-        alert("Please enter note text")
-        openModal()
-    } else {
-        const cardDiv = document.createElement('div')
-        cardDiv.className = "card"
-        cardDiv.innerHTML = `<p>${noteInput}</p>`
+    const cardfooter = document.createElement("div");
+    cardfooter.className = "card-footer";
+    //  Creating a span element for date
+    const dateEl = document.createElement("span");
 
-        // changes card background color randomly
-        cardDiv.style.backgroundColor = randomColor()
+    //  Adding date to span element
+    dateEl.textContent = new Date().toLocaleDateString();
 
-        const cardfooter = document.createElement("div")
-        cardfooter.className = "card-footer"
-        //  Creating a span element for date
-        const dateEl = document.createElement('span')
-
-        //  Adding date to span element
-        dateEl.textContent = new Date().toLocaleDateString()
-
-        const editBtn = document.createElement('button')
-        editBtn.innerHTML = `<span class="material-symbols-outlined">
+    const editBtn = document.createElement("button");
+    editBtn.innerHTML = `<span class="material-symbols-outlined">
         edit_square
-        </span>`
+        </span>`;
 
-        editBtn.addEventListener('click', function () {
-            editNote(noteInput)
-        })
+    editBtn.addEventListener("click", function () {
+      editNote(noteInput);
+    });
 
-        const deletBtn = document.createElement("button")
-        deletBtn.innerHTML = `<span class="material-symbols-outlined">delete
-        </span>`
+    const deletBtn = document.createElement("button");
+    deletBtn.innerHTML = `<span class="material-symbols-outlined">delete
+        </span>`;
 
-        deletBtn.addEventListener("click", function(){
-            cardDiv.remove()
-        })
+    deletBtn.addEventListener("click", function () {
+      cardDiv.remove();
+    });
 
-        // Apppending  all children to their respective parent
-        cardDiv.appendChild(cardfooter)
-        cardfooter.appendChild(deletBtn)
-        cardfooter.appendChild(editBtn)
-        cardfooter.appendChild(dateEl)
-        cardContainer.appendChild(cardDiv)
+    // Apppending  all children to their respective parent
+    cardDiv.appendChild(cardfooter);
+    cardfooter.appendChild(deletBtn);
+    cardfooter.appendChild(editBtn);
+    cardfooter.appendChild(dateEl);
+    cardContainer.appendChild(cardDiv);
 
-
-    }
-
+    //  show sucess
+    // showAlert("Note added", "success")
+  }
 }
 
 // Function to generate random color for the card background color
 function randomColor() {
-    const color = "hsl(" + Math.random() * 360 + ", 100%, 75%)"
-    return color
+  const color = "hsl(" + Math.random() * 360 + ", 100%, 75%)";
+  return color;
 }
 
 //  function to edit note
 function editNote(noteInput) {
-    openModal()
-    document.getElementById("note-text").value = noteInput
-    // createNote().value = ""
-    // const updateDiv = document.getElementById("div")
+  openModal();
+  document.getElementById("note-text").value = noteInput;
+  // createNote().value = ""
+  // const updateDiv = document.getElementById("div")
 }
-
 
 // window.onclick = function (event) {
 //     shakeModal(event)
@@ -108,21 +104,3 @@ function editNote(noteInput) {
 //     }
 //     return true
 // }
-
-// function saveNotes() {
-
-//     // empty array to notes
-//     let notes = []
-
-//     // get all the P element in carddiv
-//     cardDiv.querySelectorAll("p").forEach(element => {
-//         notes.push(element.textContent.trim())
-//         console.log()
-
-//     });
-//     // set note to local storage and convert to JSON format
-//     localStorage.setItem("notes", JSON.stringify(notes))
-
-// }
-
-
