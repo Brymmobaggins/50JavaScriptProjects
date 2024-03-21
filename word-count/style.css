@@ -58,8 +58,8 @@ input:focus {
 /* error class */
 .error {
     font-family: tahoma;
-    color: red;
-    /* border: 1px solid red; */
+    color: #f39b9b;
+
 }
 
 
