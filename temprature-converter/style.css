@@ -11,8 +11,8 @@ body {
 header {
   background-color: #0084c2;
   color: #ffffff;
-  padding: 10px;
-  text-align: center;
+  padding: 1.5em;
+  text-align: left;
 }
 
 .container {

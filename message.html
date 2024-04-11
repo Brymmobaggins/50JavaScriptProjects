@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="customModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-message"></p>
+        <button id="okButton">OK</button>
+      </div>
+    </div>
+    <script>
+      // Get the modal element
+      var modal = document.getElementById("customModal");
+
+      // Get the <span> element that closes the modal
+      var closeButton = document.getElementsByClassName("close")[0];
+
+      // Get the message element
+      var message = document.getElementById("modal-message");
+
+      // Get the OK button
+      var okButton = document.getElementById("okButton");
+
+      // Function to display the modal with a custom message
+      function showModal(msg) {
+        message.textContent = msg;
+        modal.style.display = "block";
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      // Close the modal when the close button is clicked
+      closeButton.onclick = function () {
+        closeModal();
+      };
+
+      // Close the modal when the user clicks outside of it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          closeModal();
+        }
+      };
+
+      // Example usage
+      showModal("This is a custom message.");
+
+      // Handle button click
+      okButton.onclick = function () {
+        // Add your custom logic here
+        closeModal();
+      };
+    </script>
+  </body>
+</html>

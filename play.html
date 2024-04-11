@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Button Background Color</title>
+<style>
+  /* Style for the button with default background color */
+  #myButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Style for the button with red background color */
+  #myButton.red {
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+
+<input type="text" id="myInput" placeholder="Type something...">
+<button id="myButton">Submit</button>
+
+<script>
+  // Get the input element and button element
+  var inputElement = document.getElementById('myInput');
+  var buttonElement = document.getElementById('myButton');
+
+  // Add an event listener to the input element for the input event
+  inputElement.addEventListener('input', function() {
+    // When input event is triggered, change the button's background color to red
+    buttonElement.classList.add('red');
+  });
+</script>
+
+</body>
+</html>

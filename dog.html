@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<!-- Include Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="p-6">
+
+<div class="container mx-auto">
+  <h1 class="text-2xl font-bold mb-4">Shopping Cart</h1>
+  
+  <div class="flex justify-between border-b border-gray-300 pb-4 mb-4">
+    <div class="font-bold">Product</div>
+    <div class="font-bold">Price</div>
+  </div>
+
+  <!-- Sample product in the shopping cart -->
+  <div class="flex justify-between items-center mb-4">
+    <div>Sample Product</div>
+    <div>$19.99</div>
+  </div>
+
+  <button id="placeOrderBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">Place Order</button>
+  <p id="confirmationNumber" class="mt-4"></p>
+</div>
+
+<script>
+  // Function to generate a random confirmation number
+  function generateConfirmationNumber() {
+    return Math.floor(Math.random() * 1000000);
+  }
+
+  // Add an event listener to the "Place Order" button
+  document.getElementById('placeOrderBtn').addEventListener('click', function() {
+    // Generate a confirmation number
+    var confirmationNumber = generateConfirmationNumber();
+    // Display the confirmation number on the page
+    document.getElementById('confirmationNumber').innerText = "Your order has been placed. Confirmation number: " + confirmationNumber;
+  });
+</script>
+
+</body>
+</html>

@@ -4,6 +4,7 @@ const display = document.querySelector('#show-count')
 
 // reference all the buttons
 const allBtns = document.querySelector('#allBtns')
+console.log(allBtns)
 
 // Whenever any of the buttons is click
 allBtns.addEventListener('click', counter)

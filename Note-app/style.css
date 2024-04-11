@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font: 100%;
+  /* font-size: calc(1.5rem + 3vw); */
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -170,27 +174,37 @@ span {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+/*  */
 @media screen and (min-width: 768px) {
+  /* Typography */
   h1 {
     font-size: 50px;
   }
+
+  /* Header */
   header button {
     width: 50px;
     height: 50px;
   }
+
+  /* Cards */
   .card {
-    /* max-width: 100%; */
     height: 200px;
   }
+
   .cards-container {
     display: flex;
     flex-wrap: wrap;
   }
+
+  /* Modal */
   .modal {
     width: 650px;
     left: 25%;
     top: 20%;
   }
+
+  /* Textarea */
   textarea {
     width: 100%;
     padding: 10px;

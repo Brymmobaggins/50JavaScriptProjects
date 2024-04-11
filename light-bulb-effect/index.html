@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>light Switching</title>
     <style>
-        body {
-            background-color: rgb(72, 68, 68);
+      body {
+        background-color: rgb(72, 68, 68);
+      }
 
-        }
+      .canvas {
+        width: 600px;
+        height: 500px;
+        margin: 50px auto;
+        text-align: center;
+        box-sizing: border-box;
+      }
 
-        .canvas {
-            width: 600px;
-            height: 500px;
-            margin: 50px auto;
-            text-align: center;
-            box-sizing: border-box;
-        }
+      .bulb-off {
+        width: 265px;
+        height: 400px;
+        background: url(img/lightoff.png) no-repeat;
+        margin: auto;
+      }
 
-        .bulb-off {
-            width: 265px;
-            height: 400px;
-            background: url(img/lightoff.png) no-repeat;
-            margin: auto;
-        }
+      .bulb-on {
+        width: 265px;
+        height: 400px;
+        background: url(img/lighton.png) no-repeat;
+        margin: auto;
+      }
 
-        .bulb-on {
-            width: 265px;
-            height: 400px;
-            background: url(img/lighton.png) no-repeat;
-            margin: auto;
-        }
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px;
+      }
 
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: -50px;
-        }
+      button {
+        padding: 10px 45px;
+        margin-left: 10px;
+        color: antiquewhite;
+        border: 0;
+      }
 
-        button {
-            padding: 10px 45px;
-            margin-left: 10px;
-            color: antiquewhite;
-            border: 0;
-        }
+      button:hover {
+        cursor: pointer;
+      }
 
-        button:hover {
-            cursor: pointer;
-        }
+      #switch-off {
+        background-color: #c41c1c;
+      }
 
-        #switch-off {
-            background-color: #c41c1c;
-        }
-
-        #switch-on {
-            background-color: rgb(41, 105, 41);
-        }
+      #switch-on {
+        background-color: rgb(41, 105, 41);
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="canvas">
-        <div id="bulb" class="bulb-off"></div>
+      <div id="bulb" class="bulb-off"></div>
     </div>
     <div class="btn">
-        <button id="switch-off">OFF</button>
-        <button id="switch-on">ON</button>
-
+      <button id="switch-off">OFF</button>
+      <button id="switch-on">ON</button>
     </div>
     <script>
-        const offButton = document.querySelector('#switch-off')
-        const onButton = document.querySelector('#switch-on')
-        const bulb = document.querySelector('#bulb')
-         
-        // when `OFF` button is clicked
-        offButton.onclick = function () {
-            bulb.classList.remove("bulb-on")
+      const offButton = document.querySelector("#switch-off");
+      const onButton = document.querySelector("#switch-on");
+      const bulb = document.querySelector("#bulb");
 
-        }
-        // click `0N` button is clicked
-        onButton.onclick = function () {
-            bulb.classList.add("bulb-on")
-
-        }
-
+      // when `OFF` button is clicked
+      offButton.onclick = function () {
+        bulb.classList.remove("bulb-on");
+      };
+      // click `0N` button is clicked
+      onButton.onclick = function () {
+        bulb.classList.add("bulb-on");
+      };
     </script>
-
-
-</body>
-
+  </body>
 </html>

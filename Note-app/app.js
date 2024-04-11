@@ -71,6 +71,7 @@ function createNote() {
 
     // Create delete button
     const deletBtn = document.createElement("button");
+    deletBtn.id = "delete"
     deletBtn.innerHTML = `<span class="material-symbols-outlined">
         delete
         </span>`;
@@ -79,6 +80,10 @@ function createNote() {
     deletBtn.addEventListener("click", function () {
       cardDiv.remove();
     });
+    deletBtn.addEventListener("mouseover", function () {
+      showDeleteOrEdit(e)
+
+    })
 
     // Add children to footer
     cardfooter.append(deletBtn, editBtn, dateEl);
@@ -114,9 +119,32 @@ function saveToLocalStorage() {
     cardContent.push({
       noteText: card.querySelector("p").textContent,
       date: currentDate,
-      color: card.style.backgroundColor,
     });
   });
 
   localStorage.setItem("cardContent", JSON.stringify(cardContent));
+}
+function showDeleteOrEdit() {
+  const btnHover = e.target.id;
+  if (btnHover === "delete") {
+    showDeletePopup();
+  } else if (btnHover === "edit") {
+    showEditPopup();
+  }
+}
+
+function showDeletePopup() {
+  const deletePopup = document.createElement("div");
+  deletePopup.textContent = "Delete";
+  deletePopup.classList.add("delete-popup");
+
+  document.body.appendChild(deletePopup);
+}
+
+function showEditPopup() {
+  const editPopup = document.createElement("div");
+  editPopup.textContent = "Edit";
+  editPopup.classList.add("edit-popup");
+
+  document.body.appendChild(editPopup);
 }

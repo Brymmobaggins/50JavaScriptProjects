@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <html>
+      <head>
+        <title>Convert UuS Dollars to Euros 2</title>
+      </head>
+      <body>
+        <form>
+          <table border="1">
+            <tbody>
+              <tr>
+                <th colspan="3">Monetary Exchange Rates</th>
+              </tr>
+              <tr>
+                <th>Currency</th>
+                <th>Rate</th>
+                <th>Value</th>
+              </tr>
+              <tr>
+                <td>British Pound</td>
+                <td>
+                  <input
+                    type="text"
+                    style="text-align: right"
+                    &#010;name="bp"
+                    value="0.62905"
+                    size="12"
+                    disabled="true"
+                  />
+                </td>
+                <td><input type="text" id="BP" value="" /></td>
+              </tr>
+              <tr>
+                <td>Canadian Dollar</td>
+                <td>
+                  <input
+                    type="text"
+                    style="text-align: right"
+                    &#010;name="cd"
+                    value="0.98928"
+                    size="12"
+                    disabled="true"
+                  />
+                </td>
+                <td><input type="text" id="CD" value="" /></td>
+              </tr>
+              <tr>
+                <td>Euro</td>
+                <td>
+                  <input
+                    type="text"
+                    style="text-align: right"
+                    &#010;name="eu"
+                    value="0.79759"
+                    size="12"
+                    disabled="true"
+                  />
+                </td>
+                <td><input type="text" id="EU" value="" /></td>
+              </tr>
+              <tr>
+                <td>Japanese Yen</td>
+                <td>
+                  <input
+                    type="text"
+                    style="text-align: right"
+                    &#010;name="jy"
+                    value="78.5461"
+                    size="12"
+                    disabled="true"
+                  />
+                </td>
+                <td><input type="text" id="JY" value="" /></td>
+              </tr>
+              <tr>
+                <td>Mexican Peso</td>
+                <td>
+                  <input
+                    type="text"
+                    style="text-align: right"
+                    &#010;name="mp"
+                    value="13.0729"
+                    size="12"
+                    disabled="true"
+                  />
+                </td>
+                <td>
+                  <input type="text" id="MP" value="" />
+                  <!--&#010;td-->
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><b>Enter Amount of U.S. Dollars</b></td>
+                <td>
+                  <input
+                    type="text"
+                    id="amount"
+                    name="amount"
+                    size="10"
+                    value="1"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <input type="button" value="Calculate" onclick="calculate();" />
+          <input type="reset" value="Reset" />
+        </form>
+        <script>
+          var BP = "0.62905";
+          var CD = "0.98928";
+          var EU = "0.79759";
+          var JY = "78.5431";
+          var MP = "13.0729";
+
+          function calculate() {
+            var amount = parseFloat(document.getElementById("amount").value);
+            document.getElementById("BP").value = (amount * BP).toFixed(2);
+            document.getElementById("CD").value = (amount * CD).toFixed(2);
+            document.getElementById("EU").value = (amount * EU).toFixed(2);
+            document.getElementById("JY").value = (amount * JY).toFixed(2);
+            document.getElementById("MP").value = (amount * MP).toFixed(2);
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

@@ -12,8 +12,6 @@ function getAnime() {
             animeContainer.innerHTML = `<h3><strong>Name: </strong> ${data.results[0].artist_name}</h3>
             <img src="${data.results[0].url}" lazy="loading" />
 
-               
-            
             `;
         })
 }

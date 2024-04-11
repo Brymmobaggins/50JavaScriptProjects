@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Note App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      #app {
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        background-color: #fff;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Simple Note App</h1>
+      <div>
+        <input type="text" id="noteInput" placeholder="Enter a new note" />
+        <button onclick="addNote()">Add Note</button>
+      </div>
+      <div>
+        <input type="text" id="filterInput" placeholder="Filter notes" />
+      </div>
+      <ul id="noteList">
+        <!-- Notes will be added dynamically here -->
+      </ul>
+    </div>
+    <script>
+      // Function to add a new note
+      function addNote() {
+        const noteInput = document.getElementById("noteInput");
+        const noteList = document.getElementById("noteList");
+
+        if (noteInput.value.trim() !== "") {
+          // Create new list item
+          const li = document.createElement("li");
+          li.textContent = noteInput.value;
+
+          // Add click event listener to mark note as completed
+          li.addEventListener("click", function () {
+            li.classList.toggle("completed");
+          });
+
+          // Create a delete button
+          const deleteButton = document.createElement("button");
+          deleteButton.textContent = "Delete";
+          deleteButton.addEventListener("click", function () {
+            noteList.removeChild(li);
+          });
+
+          // Create an edit button
+          const editButton = document.createElement("button");
+          editButton.textContent = "Edit";
+          editButton.addEventListener("click", function () {
+            const newNoteText = prompt("Edit note:", li.textContent);
+            if (newNoteText !== null) {
+              li.textContent = newNoteText;
+            }
+          });
+
+          // Append delete and edit buttons to the list item
+          li.appendChild(deleteButton);
+          li.appendChild(editButton);
+
+          // Append the list item to the note list
+          noteList.appendChild(li);
+
+          // Clear the input field
+          noteInput.value = "";
+        }
+      }
+
+      // Function to filter notes
+      function filterNotes() {
+        const filterInput = document
+          .getElementById("filterInput")
+          .value.toLowerCase();
+        const notes = document.querySelectorAll("#noteList li");
+
+        notes.forEach((note) => {
+          const noteText = note.textContent.toLowerCase();
+          if (noteText.indexOf(filterInput) !== -1) {
+            note.style.display = "flex";
+          } else {
+            note.style.display = "none";
+          }
+        });
+      }
+
+      // Filter notes when typing in the filter input
+      document
+        .getElementById("filterInput")
+        .addEventListener("input", filterNotes);
+    </script>
+  </body>
+</html>

@@ -27,4 +27,4 @@ This project took me 14 lines of code with white space and comments
 
 ## Resources
 
-I was able to use the anime API from [nekos best API]("https://docs.nekos.best/api/endpoints.html")
+I was able to use the anime API from [Nekos best API]("https://docs.nekos.best/api/endpoints.html")

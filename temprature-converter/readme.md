@@ -6,7 +6,7 @@ amur.
 The user can choose which unit they want their input in and it will convert
 accordingly.  The result will be dispay on the result text box
 
-![Live Demo](https://temperature-conveter-website.netlify.app/)
+[Live Demo](https://temperature-conveter-website.netlify.app/)
 
 .
 ## Built with

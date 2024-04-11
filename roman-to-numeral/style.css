@@ -12,7 +12,14 @@ body {
     align-items: center;
     background: #faedcd;
 }
-
+small{
+    visibility:hidden;
+    text-align: left;
+}  
+small.show{
+    color:#ec7575;
+    visibility: visible;
+}
 .container {
     padding: 10px;
     height: 250px;
@@ -20,9 +27,6 @@ body {
     border-radius: 6px;
 }
 
-h2 {
-    display: block;
-}
 
 label {
     display: inline-block;

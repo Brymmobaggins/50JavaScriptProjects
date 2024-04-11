@@ -1,0 +1,79 @@
+  
+  [{
+    "id": 1,
+    "img": "Bedlington Terrier.webp",
+    "name": "Belington",
+    "price": 40000,
+    "description": "Belington",
+    "inCart": 0,
+    "tag": "Belington"
+
+
+  },
+  {
+    "id": 2,
+    "img": "Alaskan-Malamute.webp",
+    "name": "Alaskan Malamute",
+    "price": 50000,
+    "description": "Alaskan Malamute",
+    "inCart": 0,
+    "tag": "AlasKanMalamute"
+  },
+  {
+    "id": 3,
+    "img": "American-Eskimo.jpeg",
+    "name": "American Eskimo",
+    "price": 85000,
+    "description": "American Eskimo",
+    "inCart": 0,
+    "tag": "AmericanEskimo"
+
+  },
+  {
+    "id": 4,
+    "name": "Border Collie",
+    "price": 90000,
+    "description": "Border Collie",
+    "inCart": 0,
+    "tag": "BorderCollie",
+    "img": "Border-Collie.jpeg"
+  },
+  {
+    "id": 5,
+    "ame": "Jack Rusell Terrier",
+    "price": 85000,
+    "description": "Alaskan Malamute",
+    "inCart": 0,
+    "tag": "AlaskaMalamute",
+    "img": "JackRusell-terrier.webp"
+  },
+  {
+    "id": 6,
+    "name": "Shiba Inu",
+    "price": 120000,
+    "description": "Shiba Inu",
+    "inCart": 0,
+    "tag": "ShibaInu",
+    "img": "Shiba-Inu-2.webp"
+
+
+  },
+  {
+    "id": 7,
+    "name": "Rottweiler",
+    "price": 130000,
+    "description": "Rottweiler",
+    "inCart": 0,
+    "tag": "Rottweiler",
+    "img": "Rottweiler-4.avif"
+  },
+  {
+    "id": 8,
+    "name": "Dalmatian",
+    "price": 150000,
+    "description": "Dalmatian",
+    "nCart": 0,
+    "tag": "Dalmatian",
+    "img": "dalmatian-5.jpeg"
+  }
+  ]

@@ -1,0 +1,28 @@
+<script>
+  // Function to count vowels
+  function countVowels(text) {
+    try {
+      if (typeof text !== "string") {
+        throw new Error("Input must be a string.");
+      }
+
+      // Count vowels
+      const vowels = text.match(/[aeiou]/gi);
+      const vowelCount = vowels ? vowels.length : 0;
+
+      return vowelCount;
+    } catch (error) {
+      console.error("An error occurred:", error.message);
+      return -1; // Return -1 to indicate an error
+    }
+  }
+
+  // Example usage
+  const text = "Hello, World!";
+  const vowelCount = countVowels(text);
+  if (vowelCount !== -1) {
+    console.log(`Number of vowels: ${vowelCount}`);
+  } else {
+    console.log("Error counting vowels. Please check your input.");
+  }
+</script>

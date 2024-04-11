@@ -19,8 +19,8 @@ input.onfocus = function () {                     // when input is focus
     input.value = ""                              // clear input value
 }
 // check vowel
+let vowelCount = 0;                                // create variable that holds the count 
 function checkVowel() {
-    let vowelCount = 0;                                // create variable that holds the count 
     const userInput = document.getElementById('input').value // get the value with an input
     const vowels = ["a", "e", "i", "o", "u"]       // an array of vowel letters
     for (let i = 0; i < userInput.length; i++) {      // loop through the input value
