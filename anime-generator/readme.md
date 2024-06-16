@@ -10,7 +10,7 @@
 - DOM manipulation
 - Events
 - functions
-- fetch functions `fetch("url")`
+- fetch functions `fetch("url")` Asyn and await
 - string literals
 
 ## What i did
@@ -23,7 +23,7 @@ I accessed the key to get value which is the image and populate it on the DOM
 
 ## lines of codes
 
-This project took me 14 lines of code with white space and comments
+This project took me 25 lines of code with white space and comments
 
 ## Resources
 
