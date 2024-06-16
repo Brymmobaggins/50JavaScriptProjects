@@ -1,17 +1,25 @@
+const animeContainer = document.getElementById("anime-result");
+const animeButton = document.getElementById("anime-btn");
 
-const animeContainer = document.getElementById('anime-result')
-const animeButton = document.getElementById('anime-btn')
+// Add event listener when the DOM is loaded
+document.addEventListener("DOMContentLoaded", getAnime);
 
-animeButton.addEventListener('click', getAnime)
+// Add event listener to the button
+animeButton.addEventListener("click", getAnime);
 
-// using fetch to retrieve data 
-function getAnime() {
-    fetch('https://nekos.best/api/v2/neko')
-        .then(response => response.json())
-        .then(data => {
-            animeContainer.innerHTML = `<h3><strong>Name: </strong> ${data.results[0].artist_name}</h3>
-            <img src="${data.results[0].url}" lazy="loading" />
-
-            `;
-        })
+// Function to fetch anime data from the API
+async function getAnime() {
+    try {
+        const response = await fetch("https://nekos.best/api/v2/neko");
+        const data = await response.json();
+        // Update the HTML content with the fetched data
+        animeContainer.innerHTML = 
+        `
+        <h3><strong>Name:</strong> ${data.results[0].artist_name}</h3>
+        <h4></h4>
+        <img src="${data.results[0].url}" lazy="loading" />
+        `;
+    } catch (error) {
+        console.error("Error fetching anime data:", error);
+    }
 }
