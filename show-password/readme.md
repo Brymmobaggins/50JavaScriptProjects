@@ -1,14 +1,14 @@
 # Show password project
 
-## Built with 
+## Built with
 
 - html
-- css 
+- css
 - JavaScript
 
 This project is about checking your password by clicking on the checkbox, built with six line of javasScript codes
 
-```   
+```
 checkBox.addEventListener("click", function () {
         if (password) {
           input.setAttribute("type", "text");
@@ -17,5 +17,5 @@ checkBox.addEventListener("click", function () {
         }
         password = !password;
       });
-      
-``` 
+
+```

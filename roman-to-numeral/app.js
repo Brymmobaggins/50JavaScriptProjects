@@ -24,20 +24,17 @@ function romanToNumber() {
     let result = document.getElementById("show-roman")
     let num = 0
 
-    if (numInput == "" || numInput == null) {
+    if (numInput === "" || numInput == null) {
         errorMessage.classList.add("error")
 
         setTimeout(() => {
             errorMessage.classList.remove("error")
             result.innerHTML = ""
 
-        }, 2000);
+        }, 1000);
 
     }
     if (numInput !== roman) {
-
-        // showMessage.classList.add("show")
-
         setInterval(() => {
             errorMessage.classList.remove("error")
             result.value = ""
