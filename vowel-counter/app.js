@@ -22,7 +22,7 @@ function countVowel() {
     if (input == "") {
         showResult.textContent = `Please enter a word`;
     } else if (count > 1) {
-        showResult.textContent = `${input} have ${count} vowels`;
+        showResult.textContent = `${input} has ${count} vowels`;
     } else {
         showResult.textContent = `${input} has ${count} vowel`;
     }
