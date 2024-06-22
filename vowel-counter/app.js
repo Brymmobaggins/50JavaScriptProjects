@@ -1,12 +1,7 @@
 
-const form = document.querySelector("form")
+
 const showResult = document.querySelector("#show")
 
-// pevent default form submit
-form.onsubmit = function (e) {
-    e.preventDefault();
-    countVowel()
-}
 
 // function to count the vowel letter in a strings of letters
 function countVowel() {

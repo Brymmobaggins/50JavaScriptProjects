@@ -33,7 +33,7 @@
 
       h3 {
         font-weight: 800;
-        color:#000;
+        color: #000;
         margin-bottom: 20px;
         text-transform: capitalize;
       }
@@ -62,13 +62,14 @@
       .container p {
         position: absolute;
         color: #146eaa;
-        font-size: 20px;
         top: 50px;
         bottom: 0;
         left: 10px;
+        font-size: 1rem;
+        line-height: 1.5rem;
       }
 
-      form {
+      .container div {
         position: relative;
       }
 
@@ -95,16 +96,16 @@
     <main>
       <h3 style="text-align: center">VOWEL COUNTER</h3>
       <div class="container">
-        <form id="form">
+        <div class="">
           <input
             type="text"
             id="input"
             placeholder="type some words"
             autocomplete="off"
           />
-          <button onclick="checkVowel()">Count Vowels</button>
+          <button onclick="countVowel()">Count Vowels</button>
           <p id="show"></p>
-        </form>
+        </div>
       </div>
     </main>
     <script src="./app.js"></script>
