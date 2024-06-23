@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consonant counter</title>
+    <style>
+      body {
+        background-color: #f0f8ff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .container {
+        padding: 0 10px;
+        max-width: 300px;
+        width: 100%;
+        margin: 3rem auto;
+      }
+      label {
+        display: inline-block;
+        font-size: larger;
+        margin-bottom: 12px;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        display: block;
+        outline: none;
+      }
+      button {
+        border: 0;
+        background-color: #008000;
+        color: white;
+        font-weight: bold;
+        padding: 5px 10px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <label for="">Enter your word</label>
+        <input type="text" id="input" />
+        <p></p>
+        <button onclick="countConsonant()">Count</button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
