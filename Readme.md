@@ -1,6 +1,6 @@
 # 50 Javascript Projects 
 
-This repo consist of 50 projects built with Vanilla Javascript(written without the aid of external libraries) and concept use for to hone my skills in Javascript.
+This repo contains beginners projects and still counting, built with Vanilla Javascript(written without the aid of external libraries) and concept used. 
 
 
 
