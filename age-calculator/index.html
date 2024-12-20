@@ -1,12 +1,110 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Age calculator</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      /* global styling */
+      body {
+        font-family: "Outfit", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+      /* container styling */
+      .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 20px 0;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+      /*  */
+      label,
+      input {
+        font-size: 1rem;
+      }
+      /*  styling the input */
+      input {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+      }
+      /* styling the button */
+      button {
+        cursor: pointer;
+        background-color: #4caf50;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+      }
+      /* when cursor over on the button */
+      button:hover {
+        background-color: #45a049;
+      }
+      /* result */
+      .ageOutput {
+        margin-top: 20px;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Age Calculator</h1>
+        <form id="ageForm">
+          <label for="birth-date">Enter your date of birth:</label>
+          <input type="date" id="birth-date" required />
+          <button type="button" id="calculate-button">Calculate age</button>
+        </form>
+      </div>
+      <div id="ageOutput"></div>
+    </main>
+
+    <script>
+      const birthDateInput = document.getElementById("birth-date");
+      const ageOutput = document.getElementById("ageOutput");
+      const calculateButton = document.getElementById("calculate-button");
+
+      calculateButton.addEventListener("click", function () {
+        const birthDate = document.getElementById("birth-date").value;
+
+        if (birthDate === "") {
+          document.getElementById("ageOutput").textContent =
+            "Please enter your date of birth";
+          return;
+        }
+      });
+    </script>
+  </body>
 </html>
