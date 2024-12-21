@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,13 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anime generator</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Fira Code", serif;
+      }
+      body {
+        height: 100vh;
+      }
+
+      h3 {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      #anime-result img {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 350px;
+        border-radius: 8px;
+      }
+
+      button {
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 6px;
+        background-color: #010505;
+        border: 0;
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color:#010500;
+      }
+    </style>
   </head>
   <body>
-    <div id="anime-result">
-        
-    </div>
-    <button id="anime-btn">GET ANIME</button>
+    <div id="anime-result"></div>
+    <button type="button" id="anime-btn">GET ANIME</button>
 
     <script src="./app.js"></script>
   </body>
