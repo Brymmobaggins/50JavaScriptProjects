@@ -103,8 +103,30 @@
           document.getElementById("ageOutput").textContent =
             "Please enter your date of birth";
           return;
+
+          // vanish in 3 seconds
         }
+
+        const birthYear = new Date(birthDate).getFullYear();
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - birthYear;
+        ageOutput.textContent = `Your current age is ${age} years old`;
       });
+
+      // vanish in 3 seconds after displaying the age
+      // setTimeout(() => document.getElementById("ageOutput").remove(), 3000);
+
+      /* key features
+      1. The user can enter their date of birth in the input field.
+      2. The user can click the "Calculate age" button to display their current age.
+      3. The current year is automatically calculated.
+      4. The age is displayed in the output area.
+      5. If the user does not enter a date of birth, an error message is displayed.
+
+      concept used
+      1. Document object model (DOM) API to access HTML elements.
+      2. JavaScript's Date object to get the current year and calculate the age.
+      3. Event listeners to handle user interactions. */
     </script>
   </body>
 </html>
