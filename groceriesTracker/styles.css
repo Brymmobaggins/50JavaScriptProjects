@@ -1,0 +1,17 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%; 
+  /* background-color: aquamarine; */
+}
+.bg-image {
+  /* background-image: url("trolleys-with-fruit.jpg");? */
+  height: 100%;
+  background-size: cover;
+}
