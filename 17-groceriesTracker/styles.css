@@ -1,0 +1,56 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-color: #fff;
+  --bg-color: #f7f7ff;
+}
+body,
+html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  background: #0e0909;
+  color: var(--font-color);
+  padding: 1rem;
+  font-weight: bold;
+}
+body{
+  background: var(--bg-color);
+}
+.bg-image {
+  /* background-image: url("trolleys-with-fruit.jpg");? */
+  height: 100%;
+  background-size: cover;
+}
+.container {
+  border: 1px solid red;
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 50%;
+  text-align: center;
+}
+input {
+  padding: 5px 10px;
+  font-size: 18px;
+}
+button,
+input {
+  padding: 5px 10px;
+}
+button {
+  font-size: 18px;
+  background-color: #3c3c9b;
+  color: var(--font-color);
+  border: none;
+  border-radius: 5px;
+}
+button:hover{
+  opacity: 2;
+  cursor: pointer;
+}

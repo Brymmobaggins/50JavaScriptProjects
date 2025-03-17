@@ -78,12 +78,12 @@ input {
     color: var(--error-color);
 }
 
-#result.sucess {
+#result.success {
     color: var(--sucess-color);
     font-size: 25px;
 }
 
-#input.sucess {
+#input.success {
     border: 2px solid var(--sucess-color);
 }
 
