@@ -1,0 +1,49 @@
+/** @format */
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+header {
+  padding: 10px;
+  /* border: 1px solid #ff0000; */
+}
+h1 {
+  text-align: center;
+}
+main {
+  border: 1px solid wheat;
+}
+.input-parent {
+  margin: 0 auto;
+  width: 30%;
+}
+
+input {
+  width: 100%;
+  padding: 15px 10px;
+  display: block;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.btn{
+
+}
+button {
+  width: 50%;
+  padding: 10px;
+  display: block;
+  margin: 20px auto;
+  font-weight: bold;
+  background: #0000ff;
+  color: #ffffff;
+  outline: 0;
+  font-size: 20px;
+  border-radius: 5px;
+  opacity: 2;
+}
+button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
