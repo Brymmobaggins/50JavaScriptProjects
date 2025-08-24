@@ -1,4 +1,9 @@
 /** @format */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   background-color: #000000;
@@ -6,17 +11,23 @@ body {
 }
 header {
   padding: 10px;
-  /* border: 1px solid #ff0000; */
 }
 h1 {
   text-align: center;
 }
 main {
-  border: 1px solid wheat;
+  padding: 2rem;
+
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .input-parent {
   margin: 0 auto;
-  width: 30%;
+}
+label {
+  font-size: 20px;
+  display: inline-block;
 }
 
 input {
@@ -27,8 +38,7 @@ input {
   box-sizing: border-box;
   border-radius: 5px;
 }
-.btn{
-
+.btn {
 }
 button {
   width: 50%;
@@ -46,4 +56,8 @@ button {
 button:hover {
   opacity: 1;
   cursor: pointer;
+}
+#output > * {
+  font-size: 20px;
+  /* margin-top: 35px; */
 }
