@@ -1,0 +1,102 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Student Search</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #000000;
+        color: white;
+        padding: 2rem;
+      }
+      .container {
+        padding: 2rem;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        /* border: 1px solid gray; */
+      }
+      input {
+        width: 100%;
+        font-size: 20px;
+        padding: 10px 10px;
+      }
+      button {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 700;
+        background-color: #33a36f;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Async Student Search</h1></header>
+
+    <div class="container">
+      <div>
+        <label for="">Enter Student Name</label>
+        <input type="text" id="user-input" />
+      </div>
+      <div>
+        <button type="button" id="searchBtn">Search Student</button>
+      </div>
+
+      <div id="output" style="font-family: Arial"></div>
+    </div>
+
+    <script>
+      //   let students = [];
+
+      async function fetchStudent() {
+        const response = await fetch("student.json");
+        const students = await response.json();
+        return students;
+      }
+
+      async function searchValue() {
+        const userInput = document.getElementById("user-input").value;
+        const output = document.getElementById("output");
+
+        if (!userInput) {
+          return alert("Please fill in field");
+        }
+
+        // wait for students data
+        const students = await fetchStudent();
+
+        // find the student
+        const foundStudent = students.find(
+          (student) => student.name.toLowerCase() === userInput.toLowerCase()
+        );
+
+        if (foundStudent) {
+          output.innerHTML = `
+            <div>
+                <p><b>Name: </b>${foundStudent.name}</p>
+                <p><b>Age: </b>${foundStudent.age}</p>
+                <p><b>Course: </b>${foundStudent.course}</p>
+            </div>
+            `;
+        } else {
+          output.innerHTML = `<p style="color: red">Student Not found</p>`;
+        }
+        document.getElementById("output").value = "";
+      }
+      document
+        .getElementById("searchBtn")
+        .addEventListener("click", searchValue);
+    </script>
+  </body>
+</html>
