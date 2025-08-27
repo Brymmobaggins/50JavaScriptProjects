@@ -1,0 +1,129 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Student Search</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #000000;
+        color: white;
+        padding: 1.5rem 1rem;
+      }
+      .container {
+        padding: 2rem;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        /* border: 1px solid gray; */
+      }
+      label {
+        font-size: 18px;
+      }
+      input {
+        width: 100%;
+        font-size: 20px;
+        padding: 10px 10px;
+      }
+      button {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 700;
+        background-color: #33a36f;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Student Directory</h1></header>
+
+    <div class="container">
+      <div>
+        <label for="">Enter Student Name</label>
+        <input type="text" id="user-input" />
+      </div>
+      <div>
+        <button type="button" id="searchBtn">Search Student</button>
+        <button type="button" id="allStudentBtn">Show all student</button>
+      </div>
+
+      <div id="output" style="font-family: Arial"></div>
+    </div>
+
+    <script>
+      // 1️⃣ Fetch students from JSON file
+
+      const output = document.getElementById("output");
+
+      async function fetchStudents() {
+        const response = await fetch("student.json");
+        return await response.json();
+      }
+
+      function renderStudent(student) {
+        if (student) {
+          output.innerHTML = `
+                <div>
+                  <p><b>Name:</b> ${student.name}</p>
+                  <p><b>Age:</b> ${student.age}</p>
+                  <p><b>Course:</b> ${student.course}</p>
+                </div>
+              `;
+        } else {
+          output.innerHTML = `<p style="color: red; margin-top: 10px"> Student not found</p>`;
+        }
+      }
+
+      // 3️⃣ Search logic
+      async function searchValue() {
+        const userInput = document.getElementById("user-input").value.trim();
+
+        if (!userInput) {
+          return alert("⚠️ Please enter a student name");
+        }
+
+        const students = await fetchStudents();
+        const foundStudent = students.find(
+          (student) => student.name.toLowerCase() === userInput.toLowerCase()
+        );
+
+        renderStudent(foundStudent);
+      }
+
+      async function displayAllStudents() {
+        const allStudent = await fetchStudents();
+
+        output.innerHTML = "";
+        allStudent.forEach((student) => {
+          output.innerHTML += `
+            <div>
+                <p>${student.id}</p>
+                <p>${student.name}</p>
+                <p>${student.age}</p>
+            <div> 
+             <hr>   
+           
+            `;
+        });
+      }
+
+      // 4️⃣ Event listener
+      document
+        .getElementById("allStudentBtn")
+        .addEventListener("click", displayAllStudents);
+      document
+        .getElementById("searchBtn")
+        .addEventListener("click", searchValue);
+    </script>
+  </body>
+</html>
