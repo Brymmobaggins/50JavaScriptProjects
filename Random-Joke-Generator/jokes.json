@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "joke": "Why don’t skeletons fight each other?",
+    "answer": "They don’t have the guts."
+  },
+  {
+    "id": 2,
+    "joke": "What do you call fake spaghetti?",
+    "answer": "An impasta."
+  },
+  {
+    "id": 3,
+    "joke": "Why was the math book sad?",
+    "answer": "Because it had too many problems."
+  },
+  {
+    "id": 4,
+    "joke": "How does the ocean say hi?",
+    "answer": "It waves."
+  },
+  {
+    "id": 5,
+    "joke": "Why did the scarecrow win an award?",
+    "answer": "Because he was outstanding in his field."
+  },
+  {
+    "id": 6,
+    "joke": "Why don’t eggs tell jokes?",
+    "answer": "They’d crack each other up."
+  },
+  {
+    "id": 7,
+    "joke": "What do you call cheese that isn’t yours?",
+    "answer": "Nacho cheese."
+  },
+  {
+    "id": 8,
+    "joke": "Why did the bicycle fall over?",
+    "answer": "It was two-tired."
+  },
+  {
+    "id": 9,
+    "joke": "What did the big flower say to the little flower?",
+    "answer": "Hi, bud!"
+  },
+  {
+    "id": 10,
+    "joke": "Why can’t your nose be 12 inches long?",
+    "answer": "Because then it would be a foot."
+  },
+  {
+    "id": 11,
+    "joke": "Why did the golfer bring two pairs of pants?",
+    "answer": "In case he got a hole in one."
+  },
+  {
+    "id": 12,
+    "joke": "What do you call a sleeping bull?",
+    "answer": "A bulldozer."
+  },
+  {
+    "id": 13,
+    "joke": "Why don’t oysters donate to charity?",
+    "answer": "Because they’re shellfish."
+  },
+  {
+    "id": 14,
+    "joke": "How do you organize a space party?",
+    "answer": "You planet."
+  },
+  {
+    "id": 15,
+    "joke": "Why did the computer go to the doctor?",
+    "answer": "It caught a virus."
+  },
+  {
+    "id": 16,
+    "joke": "What do you call a belt made of watches?",
+    "answer": "A waist of time."
+  },
+  {
+    "id": 17,
+    "joke": "Why did the tomato blush?",
+    "answer": "Because it saw the salad dressing."
+  },
+  {
+    "id": 18,
+    "joke": "What do you call a boomerang that doesn’t come back?",
+    "answer": "A stick."
+  },
+  {
+    "id": 19,
+    "joke": "Why was the broom late?",
+    "answer": "It swept in."
+  },
+  {
+    "id": 20,
+    "joke": "Why don’t seagulls fly over the bay?",
+    "answer": "Because then they’d be bagels."
+  },
+  {
+    "id": 21,
+    "joke": "Why did the music teacher go to jail?",
+    "answer": "Because she got caught with sharp notes."
+  },
+  {
+    "id": 22,
+    "joke": "Why was the math lecture so long?",
+    "answer": "The teacher kept going off on a tangent."
+  },
+  {
+    "id": 23,
+    "joke": "How does a penguin build its house?",
+    "answer": "Igloos it together."
+  },
+  {
+    "id": 24,
+    "joke": "Why don’t fish play basketball?",
+    "answer": "They’re afraid of the net."
+  },
+  {
+    "id": 25,
+    "joke": "Why can’t you trust stairs?",
+    "answer": "Because they’re always up to something."
+  },
+  {
+    "id": 26,
+    "joke": "What did the janitor say when he jumped out of the closet?",
+    "answer": "Supplies!"
+  },
+  {
+    "id": 27,
+    "joke": "Why did the cookie go to the hospital?",
+    "answer": "Because it felt crumby."
+  },
+  {
+    "id": 28,
+    "joke": "What do you call a can opener that doesn’t work?",
+    "answer": "A can’t opener."
+  },
+  {
+    "id": 29,
+    "joke": "Why did the cow go to space?",
+    "answer": "To see the moooon."
+  },
+  {
+    "id": 30,
+    "joke": "What do you call a bear with no teeth?",
+    "answer": "A gummy bear."
+  },
+  {
+    "id": 31,
+    "joke": "Why was the computer cold?",
+    "answer": "It left its Windows open."
+  },
+  {
+    "id": 32,
+    "joke": "Why don’t scientists trust atoms?",
+    "answer": "Because they make up everything."
+  },
+  {
+    "id": 33,
+    "joke": "Why did the stadium get hot?",
+    "answer": "All the fans left."
+  },
+  {
+    "id": 34,
+    "joke": "Why can’t you give Elsa a balloon?",
+    "answer": "Because she’ll let it go."
+  },
+  {
+    "id": 35,
+    "joke": "Why did the barber win the race?",
+    "answer": "Because he took a shortcut."
+  },
+  {
+    "id": 36,
+    "joke": "Why do cows wear bells?",
+    "answer": "Because their horns don’t work."
+  },
+  {
+    "id": 37,
+    "joke": "What do you call an alligator in a vest?",
+    "answer": "An investigator."
+  },
+  {
+    "id": 38,
+    "joke": "Why did the banana go to the doctor?",
+    "answer": "Because it wasn’t peeling well."
+  },
+  {
+    "id": 39,
+    "joke": "Why don’t some couples go to the gym?",
+    "answer": "Because some relationships don’t work out."
+  },
+  {
+    "id": 40,
+    "joke": "What’s brown and sticky?",
+    "answer": "A stick."
+  },
+  {
+    "id": 41,
+    "joke": "Why did the man run around his bed?",
+    "answer": "Because he was trying to catch up on sleep."
+  },
+  {
+    "id": 42,
+    "joke": "Why do ducks have feathers?",
+    "answer": "To cover their butt quacks."
+  },
+  {
+    "id": 43,
+    "joke": "Why don’t programmers like nature?",
+    "answer": "Too many bugs."
+  },
+  {
+    "id": 44,
+    "joke": "Why did the math student bring a ladder to school?",
+    "answer": "Because he wanted to go to high school."
+  },
+  {
+    "id": 45,
+    "joke": "Why did the chicken join a band?",
+    "answer": "Because it had the drumsticks."
+  },
+  {
+    "id": 46,
+    "joke": "Why did the bicycle stand up by itself?",
+    "answer": "It was two-tired."
+  },
+  {
+    "id": 47,
+    "joke": "Why was the belt arrested?",
+    "answer": "For holding up pants."
+  },
+  {
+    "id": 48,
+    "joke": "Why was the picture sent to jail?",
+    "answer": "Because it was framed."
+  },
+  {
+    "id": 49,
+    "joke": "Why did the orange stop?",
+    "answer": "Because it ran out of juice."
+  },
+  {
+    "id": 50,
+    "joke": "Why do bees have sticky hair?",
+    "answer": "Because they use honeycombs."
+  }
+]

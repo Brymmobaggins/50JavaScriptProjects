@@ -1,0 +1,69 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Jokes Generator</title>
+    <script defer src="./app.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        padding: 10px 15px;
+        background-color: #808080;
+        color: #ffffff;
+      }
+
+      body {
+        /* color: #ffffff; */
+        font-family: tahoma;
+        height: 100vh;
+      }
+      button {
+        padding: 10px 12px;
+        border-radius: 5px;
+        opacity: 1;
+        background: #000;
+        color: #ffffff;
+        outline: none;
+        font-weight: bold;
+        font-family: inherit;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+      #output {
+        /* border: 1px solid red; */
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 10rem;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Random Joke Generator</h1>
+    </header>
+
+    <div id="output"></div>
+    <div class="container">
+      <div style="display: flex; gap: 10px">
+        <button type="button" id="getJokeBtn">Get Joke</button>
+        <button type="button" id="saveJokeBtn">Save Joke</button>
+      </div>
+    </div>
+  </body>
+</html>
