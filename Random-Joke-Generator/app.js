@@ -5,7 +5,7 @@ let jokesArr = [];
 
 async function fetchJoke() {
   const response = await fetch("jokes.json");
-  jokesArr = await response.json(); // store jokes in the array
+  jokesArr = await response.json(); 
 }
 
 function randomJoke() {
@@ -20,12 +20,12 @@ function randomJoke() {
   output.innerHTML = `
     <div style="text-align:center">
       <p style="font-size: 1.5rem">${jokes.joke}</p> <br/>
-      <small>${jokes.answer}</small>
+      <small style="color:green; font-size: 1.2rem">${jokes.answer}</small>
     </div>
   `;
 }
 
 document.getElementById("getJokeBtn").addEventListener("click", randomJoke);
 
-// 4️⃣ Load jokes as soon as the page opens
+// Load jokes as soon as the page opens
 fetchJoke();
