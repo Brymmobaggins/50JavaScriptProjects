@@ -1,0 +1,79 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mini Weather Application</title>
+    <script defer src="./app.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Joti One", serif;
+        background-color: #f5e3ce;
+      }
+      header {
+        text-align: center;
+        padding: 1.5rem;
+      }
+      .container {
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 4rem;
+        display: grid;
+        row-gap: 10px;
+      }
+      input {
+        width: 100%;
+        padding: 10px 15px;
+        outline: 0;
+        font-size: 18px;
+        /* height: 40px; */
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #5555a0;
+        color: white;
+        letter-spacing: 1.5px;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        opacity: 0.9;
+      }
+      button:hover {
+        opacity: 9;
+
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Local Weather Application</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div>
+          <input type="text" id="input" placeholder="Enter City" />
+        </div>
+        <div>
+          <button id="getWeatherBtn" type="button">Get Weather</button>
+        </div>
+        <div id="output">
+         
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
