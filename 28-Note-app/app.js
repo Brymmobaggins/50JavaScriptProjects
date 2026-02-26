@@ -56,7 +56,6 @@ addNoteBtn.addEventListener("click", function () {
   saveToLocalStorage();
 });
 
-
 // Get user input
 let inputEl = document.getElementById("note-text");
 
@@ -86,8 +85,10 @@ function createNote() {
     const dateEl = document.createElement("span");
     dateEl.textContent = new Date().toLocaleDateString();
 
-    const timeEl = document.createElement("span")
-    timeEl.textContent  = new Date().toLocaleTimeString()
+    const timeEl = document.createElement("span");
+    timeEl.textContent = new Date().toLocaleTimeString("default", {
+      month: "short",
+    });
 
     // Create edit button
     const editBtn = document.createElement("button");
@@ -110,10 +111,8 @@ function createNote() {
     // Delete note on click
     deletBtn.addEventListener("click", function () {
       cardDiv.remove();
-      saveToLocalStorage()
+      saveToLocalStorage();
     });
-   ;
-
     // Add children to footer
     cardfooter.append(deletBtn, editBtn, dateEl, timeEl);
 
@@ -136,9 +135,7 @@ function editNote(cardDiv) {
   document.getElementById("note-text").value = noteText;
 }
 
-function backgroundColorOption(){
-
-}
+function backgroundColorOption() {}
 
 // Generate random color
 function randomColor() {
