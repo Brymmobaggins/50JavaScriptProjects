@@ -1,3 +1,5 @@
+/** @format */
+
 // Select DOM elements
 const openModalBtn = document.querySelector("#open-modal");
 const overlay = document.querySelector("#overlay");
@@ -16,6 +18,13 @@ function openModal() {
   overlay.style.display = "block";
 }
 
+// close the modal when user clicks outside the modal
+overlay.addEventListener("click", function (event) {
+  if ((event.target === overlay)) {
+    closeModal();
+  }
+});
+
 // Close modal
 function closeModal() {
   modal.style.display = "none";
@@ -32,7 +41,7 @@ addNoteBtn.addEventListener("click", function () {
 // Get user input
 let inputEl = document.getElementById("note-text");
 
-// Create note card
+// function Create note card
 function createNote() {
   // Get user input
   let userInput = inputEl.value;
@@ -71,7 +80,7 @@ function createNote() {
 
     // Create delete button
     const deletBtn = document.createElement("button");
-    deletBtn.id = "delete"
+    deletBtn.id = "delete";
     deletBtn.innerHTML = `<span class="material-symbols-outlined">
         delete
         </span>`;
@@ -81,9 +90,8 @@ function createNote() {
       cardDiv.remove();
     });
     deletBtn.addEventListener("mouseover", function () {
-      showDeleteOrEdit(e)
-
-    })
+      showDeleteOrEdit(e);
+    });
 
     // Add children to footer
     cardfooter.append(deletBtn, editBtn, dateEl);
