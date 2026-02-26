@@ -86,6 +86,9 @@ function createNote() {
     const dateEl = document.createElement("span");
     dateEl.textContent = new Date().toLocaleDateString();
 
+    const timeEl = document.createElement("span")
+    timeEl.textContent  = new Date().toLocaleTimeString()
+
     // Create edit button
     const editBtn = document.createElement("button");
     editBtn.innerHTML = `<span class="material-symbols-outlined">
@@ -112,7 +115,7 @@ function createNote() {
    ;
 
     // Add children to footer
-    cardfooter.append(deletBtn, editBtn, dateEl);
+    cardfooter.append(deletBtn, editBtn, dateEl, timeEl);
 
     // Add footer to card
     cardDiv.appendChild(cardfooter);
@@ -133,6 +136,9 @@ function editNote(cardDiv) {
   document.getElementById("note-text").value = noteText;
 }
 
+function backgroundColorOption(){
+
+}
 
 // Generate random color
 function randomColor() {
