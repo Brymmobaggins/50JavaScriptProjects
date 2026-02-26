@@ -1,5 +1,7 @@
 /** @format */
 
+// onst { IconGear } = require("@stackoverflow/stacks-icons/icons");c
+
 // Select DOM elements
 const openModalBtn = document.querySelector("#open-modal");
 const overlay = document.querySelector("#overlay");
@@ -7,6 +9,8 @@ const closeModalBtn = document.querySelector(".close");
 const modal = document.querySelector(".modal");
 const addNoteBtn = document.querySelector("#add-note");
 const cardContainer = document.querySelector(".cards-container");
+
+let editingCard = null;
 
 // Add event listeners
 openModalBtn.addEventListener("click", openModal);
@@ -20,23 +24,38 @@ function openModal() {
 
 // close the modal when user clicks outside the modal
 overlay.addEventListener("click", function (event) {
-  if ((event.target === overlay)) {
+  if (event.target === overlay) {
     closeModal();
   }
 });
-
 // Close modal
 function closeModal() {
   modal.style.display = "none";
   overlay.style.display = "none";
+  editingCard = null;
+  addNoteBtn.textContent = "Add Note";
 }
 
-// Close modal and create note on click
+// Close modal and create/update note on click
 addNoteBtn.addEventListener("click", function () {
+  let userInput = document.getElementById("note-text").value;
+
+  if (!userInput) {
+    alert("Please enter some text to create a note");
+    return;
+  }
+  if (editingCard) {
+    editingCard.querySelector("p").textContent = userInput;
+    editingCard.style.backgroundColor = randomColor();
+    editingCard = null;
+  } else {
+    createNote();
+  }
   closeModal();
-  createNote();
   document.getElementById("note-text").value = "";
+  saveToLocalStorage();
 });
+
 
 // Get user input
 let inputEl = document.getElementById("note-text");
@@ -75,7 +94,7 @@ function createNote() {
 
     // Edit note on click
     editBtn.addEventListener("click", function () {
-      editNote(userInput);
+      editNote(cardDiv);
     });
 
     // Create delete button
@@ -88,10 +107,9 @@ function createNote() {
     // Delete note on click
     deletBtn.addEventListener("click", function () {
       cardDiv.remove();
+      saveToLocalStorage()
     });
-    deletBtn.addEventListener("mouseover", function () {
-      showDeleteOrEdit(e);
-    });
+   ;
 
     // Add children to footer
     cardfooter.append(deletBtn, editBtn, dateEl);
@@ -106,12 +124,15 @@ function createNote() {
     saveToLocalStorage();
   }
 }
-
 // Edit note
-function editNote(userInput) {
+function editNote(cardDiv) {
+  editingCard = cardDiv;
+  addNoteBtn.textContent = "Update Note";
   openModal();
-  document.getElementById("note-text").value = userInput;
+  const noteText = cardDiv.querySelector("p").textContent;
+  document.getElementById("note-text").value = noteText;
 }
+
 
 // Generate random color
 function randomColor() {
@@ -121,12 +142,12 @@ function randomColor() {
 // Save notes to local storage
 function saveToLocalStorage() {
   let cardContent = [];
-  let currentDate = new Date().toLocaleDateString();
+  // let currentDate = new Date().toLocaleDateString();
 
   document.querySelectorAll(".card").forEach(function (card) {
     cardContent.push({
       noteText: card.querySelector("p").textContent,
-      date: currentDate,
+      date: card.querySelector(".card-footer span").textContent,
     });
   });
 
