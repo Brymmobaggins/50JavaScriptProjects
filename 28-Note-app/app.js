@@ -77,6 +77,8 @@ function createNote() {
     // Random background color
     cardDiv.style.backgroundColor = randomColor();
 
+    cardDiv.style.opacity = "5"
+
     // Create footer
     const cardfooter = document.createElement("div");
     cardfooter.className = "card-footer";
